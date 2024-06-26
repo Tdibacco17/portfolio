@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
 @layer base {
   h1 {
     @apply text-2xl;

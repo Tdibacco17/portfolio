@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Internationalization from "@/components/Internationalization/Internationalization";
-import { cookies } from "next/headers";
 import getLocale from "@/utils/getLocale";
+import Navigation from "@/components/Navigation/Navigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -35,22 +34,19 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const langLocale = await getLocale();
-  const cookieLang = cookies().get('lang')?.value;
+  const { lang } = await getLocale();
 
   return (
-    <html lang="en">
+    <html lang="en" >
       <body className={inter.className}>
-        <main className="min-h-[100vh] max-h-[100vh] min-w-[100vw] max-w-[100vw] overflow-hidden flex">
-          <section className="min-h-[100vh] max-h-[100vh] w-20 bg-slate-600">
-            <Internationalization langLocale={langLocale} cookieLang={cookieLang} />
+        <div id="layout" className="flex min-w-[100vw] max-w-[100vw]">
+          <section className="min-w-20 max-w-20 sticky top-0 h-[100vh] bg-slate-600">
+            <Navigation localeLang={lang.locale} cookieLang={lang.cookie} />
           </section>
-          <section className="min-h-[100vh] max-h-[100vh] w-full bg-red-400 flex justify-center">
-            <div className="max-w-wrapper min-w-wrapper bg-blue-600 overflow-y-auto">
-              {children}
-            </div>
-          </section>
-        </main>
+          <main className="flex justify-center w-full">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

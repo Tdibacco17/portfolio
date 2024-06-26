@@ -15,8 +15,8 @@ const fetchCookieData = async (lang: string) => {
     return rawRseponse
 }
 
-export default function Internationalization({ langLocale, cookieLang }: { langLocale: LocaleType, cookieLang: string | undefined }) {
-    const changeLang: LocaleType = langLocale === 'en' ? 'es' : 'en';
+export default function Internationalization({ localeLang, cookieLang }: { localeLang: LocaleType, cookieLang: LocaleType | undefined }) {
+    const changeLang: LocaleType = localeLang === 'en' ? 'es' : 'en';
 
     const handleSetCookie = async () => {
         const fetchCookie = await fetchCookieData(changeLang)
@@ -25,10 +25,10 @@ export default function Internationalization({ langLocale, cookieLang }: { langL
     }
 
     useEffect(() => {
-        if (!cookieLang || cookieLang !== langLocale) {
-            fetchCookieData(langLocale)
+        if (!cookieLang || cookieLang !== localeLang) {
+            fetchCookieData(localeLang)
         }
-    }, [cookieLang, langLocale])
+    }, [cookieLang, localeLang])
 
     return <button onClick={handleSetCookie}>
         Cambiar idioma

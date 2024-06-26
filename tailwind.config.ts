@@ -8,10 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       maxWidth: {
-        wrapper: '42rem'
+        content: '42rem'
       },
       minWidth: {
-        wrapper: '42rem'
+        content: '42rem'
       },
       colors: {
         'light-primary': '#FFFFFF',
