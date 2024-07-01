@@ -1,61 +1,20 @@
-import { getDictionary } from "@/utils/dictionaries";
+import AboutMe from "@/components/AboutMe/AboutMe";
+import Experience from "@/components/Experience/Experience";
+import PersonalIdentity from "@/components/PersonalIdentity/PersonalIdentity";
 import getLocale from "@/utils/getLocale";
+import { getUserAgent } from "@/utils/getUserAgent";
+import { headers } from "next/headers";
 
 export default async function Home() {
   const { flag } = await getLocale();
-  const dict = await getDictionary(flag)
+
+  const { isMobile } = await getUserAgent(headers().get('user-agent'));
 
   return (
-    <div className="bg-red-950 h-full max-w-content min-w-content flex flex-col items-center">
-      <div>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-      </div>
-      <br></br><br></br><br></br>
-      <div>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-      </div>
-      <br></br><br></br><br></br>
-      <div>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-      </div>
-      <br></br><br></br><br></br>
-      <div>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-      </div>
-      <br></br><br></br><br></br>
-      <div>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-        {dict.presentation.roll}<br></br>
-      </div>
-    </div>
+    <main>
+      <PersonalIdentity flag={flag} isMobile={isMobile} />
+      <AboutMe flag={flag} />
+      <Experience flag={flag} />
+    </main>
   );
 }

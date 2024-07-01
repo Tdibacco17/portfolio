@@ -15,7 +15,7 @@ const fetchCookieData = async (lang: string) => {
     return rawRseponse
 }
 
-export default function Internationalization({ localeLang, cookieLang }: { localeLang: LocaleType, cookieLang: LocaleType | undefined }) {
+export default function LanguageHandler({ localeLang, cookieLang }: { localeLang: LocaleType, cookieLang: LocaleType | undefined }) {
     const changeLang: LocaleType = localeLang === 'en' ? 'es' : 'en';
 
     const handleSetCookie = async () => {
@@ -31,7 +31,7 @@ export default function Internationalization({ localeLang, cookieLang }: { local
     }, [cookieLang, localeLang])
 
     return <button onClick={handleSetCookie}>
-        Cambiar idioma
+        Idioma
     </button>
 }
 

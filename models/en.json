@@ -1,11 +1,23 @@
 {
-    "presentation":{
+    "personalIdentity": {
         "name": "Tomás Di Bacco",
         "roll": "Fullstack Developer",
-        "img":{
-            "blurData": "data:image/svg+xml;base64,CiAgICAgICAgPHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA4IDUnPgogICAgICAgIDxmaWx0ZXIgaWQ9J2InIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0nc1JHQic+CiAgICAgICAgICAgIDxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249JzEnLz4KICAgICAgICA8L2ZpbHRlcj4KICAgICAgICAgICAgPGltYWdlIHByZXNlcnZlQXNwZWN0UmF0aW89J25vbmUnIGZpbHRlcj0ndXJsKCNiKScgeD0nMCcgeT0nMCcgaGVpZ2h0PScxMDAlJyB3aWR0aD0nMTAwJScgaHJlZj0nZGF0YTppbWFnZS93ZWJwO2Jhc2U2NCwvOWovNEFBUVNrWkpSZ0FCQVFBQUFRQUJBQUQvMndDRUFBRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBUUVCQVFFQkFRRUJBZi9DQUJFSUFCVUFFQU1CRVFBQ0VRRURFUUgveEFBdEFBRUJBUUFBQUFBQUFBQUFBQUFBQUFBSENRZ0JBQUlEQVFBQUFBQUFBQUFBQUFBQUFBUUhCUVlJQ2YvYUFBd0RBUUFDRUFNUUFBQUF2ZXlxZ2M2RVFzeWVjR3Rqd3lBMVRXV1dYakIvLzhRQUlCQUFBZ0lEQVFBREFRRUFBQUFBQUFBQUJBVURCZ0VDQndnSkVoTVVKZi9hQUFnQkFRQUJQd0N5d2tlVHVKVzIrOXRlYnVrOU1jS2prTkw0dExZdW5tbW0yYVlwT3l4bE5JdEFVN1dGaExtRVk4cWQ3R0orRWJWbzZMVzRXL3ZyeFMvODA5ZXA2bjBpbkpidlh5K2xWNjNQWWFyMEtyYTBtOEpUK2QyVmZTYkpYemFqRE1XSGdOUnVXczJXT2F5ZTRxN0ZWTUNXc2Fsd0hpVGtSemZKcDByeUs0NTkxcFhXcTc1K1MwUUFlbWN2Nnh5aXZydlEzU1owSkJFNnV4U1VwSXozRTVta2tKblhuU3hYcXVMM0IyNEp3RzNLWU5NQnRKSzJKN2c4ZzB6aFhjNlFUeit1MHVvalhXc1JSa1ZwU1Fyb0puZkh3ODF1WlhhcnlCTEdZYlM2MlVOUDlYeUhkWldqWFFTTEppVmUzMkkyYytWL1VQUXVzY3RyMTV1MGE5aFpyRFFWRnFmRnc0SWdnT3NwZjdZUFp3UXlTenpoNkZ6UWtTNUYxTGx4SGduU1BXWFA4K041UGtNOUNYWUh6MmpwS0RSY21INldhYWxzSm13WWpQN3JrZWtqNldEUU00WGVML1ZKU0R3bVM2eWFUUlF6VGJCeVFFWWhuaS8veEFBZ0VRQURBUUFDQWdJREFBQUFBQUFBQUFBQkFnTUVCUkVHRXhJaEFBY2kvOW9BQ0FFQ0FRRS9BTGVSZUlMdVRseG4yYXN5eE10R3VrWlNaTkRYbU1naWpPV2RJdVhvd01DZ1lJblRxNUg1NHQreU1NdU54WnNJTThFSkNjZEZtdWhxbmJPK2lsYnFqbDcxTDFMVkNtaGN2UHVZSVRUelhLNnJMcDVMS01sUFptaVJLdEZxcXBOV3VkYU1FN0s2Z1FvcUJkZmdEWVRQVER5RHlybitKejVPUTR6dStDRTNGcXFmZU12enBPYzg5c28xNTNNYWsrcU5jM3NSSzlMWUxOVkxaOXRxdjFYcGl5clZtL3JzdlFJN250bWR2c3UzZmJFbjY3SlBaUE5jcFhOeE42TW50ZzhMeDBadzVrYlFyU0dhMHhWUVRJdWwyS3NFY0l3WDVJNjlxZi9FQUNNUkFBTUFBZ0lDQWdJREFBQUFBQUFBQUFFQ0F3UUZFaE1HRVJRaUFCVUhJVkgvMmdBSUFRTUJBVDhBdzlQNVRrNG8xZU44Vk0yMXkyTmppN3N0WUpDdGNrMGZpb1Zxb0Fxa1ZWMkJad1VjS3A4cjhQemsyMlkyemdFMmRIbWJZc0dRMGtTaTlFa2pIbDduT1hXaTlSZFFnWG14WjFML0FNZXB2dm5Sekt6MW1EcG9pelRsbjR0SzUrelNzSFNSakUzQ2F5Ymw1c3RNcUhjQWxKblhRTENqZWJVekJ1TXpQYkR3VEYxaEpNbVVTT05RT3ZxcUpDVEZpaFFyWU1BemZVS29SQlRDbjM0R0xrT1F0YlNram1TaEZQMTR0NlFsdnIvUUtyN1BIL1QrYnZYWXY2RHpMTnFIZjlQcEs3Q0NJL1d6VlRJbWc5VjR2d1pReEtPVWNLM3JranI3VS8vWicvPgogICAgICAgIDwvc3ZnPgogICAg",
-            "src":"/assets/img/tomas.webp",
-            "alt": "Image Profile"
+        "contact": {
+            "gmail": "Contact me",
+            "or": "or",
+            "copy": "Copy email",
+            "success": "Copied"
         }
+    },
+    "aboutMe": {
+        "section": "About",
+        "description": {
+            "first": "Desarrollador Full Stack, optimista y transparente, con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB.",
+            "thrid": "Desarrollador Full Stack, optimista y transparente, con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB.",
+            "second": "Con la misión de crear productos que optimicen procesos y mejoren la experiencia del usuario."
+        }
+    },
+    "experience": {
+        "section": "Experience"
     }
 }

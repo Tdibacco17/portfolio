@@ -7,16 +7,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      maxWidth: {
-        content: '42rem'
-      },
-      minWidth: {
-        content: '42rem'
-      },
       colors: {
-        'light-primary': '#FFFFFF',
-        'light-secondary': '#A0A0A0',
-        'black-primary': '#161616',
         'react': '#61DAFB',
         'redux': '#764ABC',
         'next': '#000000',
@@ -31,25 +22,48 @@ const config: Config = {
         'postgresql': '#336791',
         'express': '#000000',
         'javascript': '#F7DF1E',
-        'typescript': '#007ACC'
+        'typescript': '#007ACC',
+        //en uso
+        "soft": '#707070',
+        'lightPrimary': '#A0A0A0',
+        'lightSecondary': '#EDEDED',
+        'darkPrimary': '#161616',
+        'darkSecondary': "#161616e6"
       },
       backgroundColor: {
-        'dark-primary': '#232323',
-        'dark-secondary': '#282828',
-        'dark-secondary-hover': '#343434',
-        'light-primary': '#FFFFFF',
+        //en uso
+        'darkPrimary': '#282828',
+        'darkPrimaryHover': '#2e2e2e',
+        'lightPrimary': '#FFFFFF',
+        'lightPrimary-hover': '#ffffffe6'
       },
       fontFamily: {
-        'inter': ['var(--font-inter)']
+        'inter': ['var(--font-inter)'],
       },
       borderRadius: {
-        'outer': '12px',
-        'inner': '8px'
+        //en uso
+        'custom': '8px',
+        'otherCustom': '12px'
       },
       borderColor: {
-        'custom': '#363636',
-        'custom-hover': '#3e3e3e'
-      }
+        'card': '#363636',
+        'card-hover': '#3e3e3e',
+        'layout': '#343434',
+        //en uso
+        'darkPrimary': '#2e2e2e',
+        'darkPrimaryHover': '#3e3e3e',
+        'lightPrimary': '#ededed',
+      },
+      fill: {
+        //en uso
+        "soft": '#707070',
+        "softHover": '#A0A0A0',
+      },
+      stroke: {
+        //en uso
+        "soft": '#707070',
+        "softHover": '#A0A0A0',
+      },
     }
   },
   plugins: [],

@@ -2,10 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  outline: none;
+}
+
+body {
+  color: #ffffff;
+  background-color: #232323;
+  padding: 0px;
+  margin: 0px;
+  min-width: 360px;
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  /* 30rem max width => ajustar el @media*/
+  max-width: 42rem;
+  margin: 3.5rem auto 10rem auto;
+}
+
+@media (max-width:723px) {
+  main {
+    margin: 3.5rem 1.5rem 10rem 1.5rem;
+  }
+}
+
 /* Firefox */
 * {
   scrollbar-width: none;
   scrollbar-color: transparent;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Chrome, Edge, and Safari */
@@ -14,28 +48,25 @@
   background-color: transparent;
 }
 
-@layer base {
-  h1 {
-    @apply text-2xl;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  text-wrap: nowrap;
+}
 
-  h2 {
-    @apply text-xl;
-  }
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: .375rem;
+  padding-left: 1.625rem;
+  list-style: disc;
+}
 
-  html {
-    @apply scroll-smooth overflow-x-hidden outline-none
-  }
+li {
+  padding-left: .375rem,
+}
 
-  body {
-    @apply text-light-primary bg-dark-primary scroll-smooth p-0 m-0
-  }
-
-  * {
-    @apply box-border p-0 m-0
-  }
-
-  a {
-    @apply inline-block no-underline
-  }
+li::marker {
+  color: #707070;
 }
