@@ -12,12 +12,14 @@
     "aboutMe": {
         "section": "About",
         "description": {
-            "first": "Desarrollador Full Stack, optimista y transparente, con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB.",
-            "thrid": "Desarrollador Full Stack, optimista y transparente, con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB.",
-            "second": "Con la misión de crear productos que optimicen procesos y mejoren la experiencia del usuario."
+            "first": "Soy desarrollador Full Stack, optimista, transparente y con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB.",
+            "second": "Con la misión de crear productos que optimicen procesos y mejoren la experiencia del usuario. Un breve resumen de mi trabajo hasta ahora."
         }
     },
     "experience": {
         "section": "Experience"
+    },
+    "education": {
+        "section": "Education"
     }
 }

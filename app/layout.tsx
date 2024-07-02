@@ -1,18 +1,8 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import getLocale from "@/utils/getLocale";
 import LanguageHandler from "@/components/LanguageHandler/LanguageHandler";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ['400', '500'],
-  fallback: ['sans-serif', 'system-ui'],
-  display: 'swap',
-  style: 'normal',
-  variable: '--font-inter',
-  preload: true,
-});
 
 export const metadata: Metadata = {
   title: "Tomás Di Bacco",
@@ -38,7 +28,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={GeistSans.className}>
         <LanguageHandler localeLang={lang.locale} cookieLang={lang.cookie} />
         {children}
       </body>

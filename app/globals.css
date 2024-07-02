@@ -21,15 +21,14 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 10rem;
-  /* 30rem max width => ajustar el @media*/
+  gap: 12rem;
   max-width: 42rem;
-  margin: 3.5rem auto 10rem auto;
+  margin: 3.5rem auto 12rem auto;
 }
 
 @media (max-width:723px) {
   main {
-    margin: 3.5rem 1.5rem 10rem 1.5rem;
+    margin: 3.5rem 1.5rem 12rem 1.5rem;
   }
 }
 

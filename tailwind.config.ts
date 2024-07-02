@@ -37,9 +37,6 @@ const config: Config = {
         'lightPrimary': '#FFFFFF',
         'lightPrimary-hover': '#ffffffe6'
       },
-      fontFamily: {
-        'inter': ['var(--font-inter)'],
-      },
       borderRadius: {
         //en uso
         'custom': '8px',
@@ -53,6 +50,7 @@ const config: Config = {
         'darkPrimary': '#2e2e2e',
         'darkPrimaryHover': '#3e3e3e',
         'lightPrimary': '#ededed',
+        "soft": '#707070',
       },
       fill: {
         //en uso
@@ -63,6 +61,7 @@ const config: Config = {
         //en uso
         "soft": '#707070',
         "softHover": '#A0A0A0',
+        "dark": "#161616e6"
       },
     }
   },

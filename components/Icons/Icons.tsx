@@ -44,7 +44,7 @@ export const IconComponent = ({
             <svg stroke="none" fill="none" viewBox={iconData.viewBox} xmlns="http://www.w3.org/2000/svg">
                 <path
                     strokeWidth="2"
-                    className={`${stroke ? "stroke-soft" : ""} ${fill ? "fill-soft" : ""}`}
+                    className={`${stroke ? "stroke-dark" : ""} ${fill ? "fill-soft" : ""}`}
                     d={iconData.path}>
                 </path>
             </svg>

@@ -38,14 +38,14 @@ export default async function PersonalIdentity({ flag, isMobile }: { flag: Local
             </div>
             <div className="flex items-center justify-center gap-4 text-base sm:flex-row flex-col w-full sm:w-auto">
                 <Link target="_blank" rel="noopener noreferrer" aria-label={`${data.personalIdentity.contact.gmail.title}`} href={data.personalIdentity.contact.gmail.link}
-                    className="cursor-pointer sm:w-44 w-full h-10 text-darkSecondary flex items-center justify-center gap-2 py-2 px-4 rounded-custom border-solid border-[1px] bg-lightPrimary hover:bg-lightPrimary-hover border-lightPrimary font-semibold">
+                    className={`cursor-pointer sm:w-44 w-full h-10 text-darkSecondary flex items-center justify-center gap-2 py-2 px-4 rounded-custom border-solid border-[1px] bg-lightPrimary border-lightPrimary font-bold ${isMobile ? "" : "hover:bg-lightPrimary-hover"}`}>
                     {dict.personalIdentity.contact.gmail}
                     <IconComponent iconData={data.personalIdentity.contact.gmail} stroke={true} />
                 </Link>
                 <p className="text-soft">
                     {dict.personalIdentity.contact.or}
                 </p>
-                <CopyToClipboard dict={dict} />
+                <CopyToClipboard dict={dict} isMobile={isMobile}/>
             </div>
         </section>
     )
