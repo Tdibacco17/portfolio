@@ -30,8 +30,8 @@ export default function LanguageHandler({ localeLang, cookieLang }: { localeLang
         }
     }, [cookieLang, localeLang])
 
-    return <button onClick={handleSetCookie}>
-        Idioma
+    return <button onClick={handleSetCookie} className="absolute right-0 top-0 text-sm">
+        {localeLang === 'en' ? 'EN' : 'ES'}
     </button>
 }
 

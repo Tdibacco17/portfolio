@@ -10,16 +10,70 @@
         }
     },
     "aboutMe": {
-        "section": "About",
+        "section": "About me",
         "description": {
-            "first": "Soy desarrollador Full Stack, optimista, transparente y con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB.",
-            "second": "Con la misión de crear productos que optimicen procesos y mejoren la experiencia del usuario. Un breve resumen de mi trabajo hasta ahora."
+            "first": "I'm a Full Stack developer, optimistic, transparent, and full of energy to contribute. Currently, I'm working as a Front End developer at House of CB.",
+            "second": "With the mission of creating products that optimize processes and enhance user experience. Here's a summary of my work so far."
         }
     },
     "experience": {
-        "section": "Experience"
+        "section": "Experience",
+        "houseofcb": {
+            "title": "House of CB",
+            "subTitle": "Front End Developer, May 2024 - Present",
+            "firstParagraph": {
+                "link": "House of CB",
+                "text": " is a leading British women's clothing brand, internationally acclaimed for its designer pieces. With over 40 stores worldwide and a strong presence on social media. I currently work as a Front End Developer in their ",
+                "otherLink": "ecommerce"
+            }
+        },
+        "strongwood": {
+            "title": "Strongwood",
+            "subTitle": "Front End Developer, Apr 2023 - Sep 2023",
+            "firstParagraph": {
+                "link": "Strongwood",
+                "text": " is a company dedicated to manufacturing and selling furniture. They wanted to build a portfolio showcasing their completed projects to enhance the credibility of the brand."
+            },
+            "secondParagraph": {
+                "text": "I developed the ",
+                "link": "website ",
+                "otherText": " using Next.js, React.js, TypeScript, and Sass. I handled every aspect of the page, from design to user experience. I conducted meetings with the client throughout the development process to showcase progress and ensure that we met their expectations and functional requirements."
+            }
+        },
+        "watts": {
+            "title": "25Watts",
+            "subTitle": "Front End Developer, Oct 2022 - Apr 2024",
+            "firstParagraph": {
+                "text": "I joined the ",
+                "link": "25Watts",
+                "otherText": " team where I worked on creating websites, portfolios, ecommerce sites, blogs, and landing pages."
+            },
+            "list": [
+                "WordPress development with Elementor and WooCommerce.",
+                "Next.js development with React.js, TypeScript, Node.js, and Sass. Experience in consuming data from a REST API to process dynamic information on the site.",
+                "Implementation of email sending with Nodemailer. Form validations with reCaptcha v2 and v3. Integration of maps using the Google Maps API.",
+                "Development of components following design patterns, with a focus on quality and performance. Experience in implementing best practices."
+            ],
+            "secondParagraph": {
+                "text": "I learned the application of Agile methodologies - specifically Scrum. I am proficient in tools such as Jira, Figma, Docker, and Git workflow management."
+            }
+        }
     },
     "education": {
-        "section": "Education"
+        "section": "Education",
+        "title": "Henry Bootcamp",
+        "subTitle": "Full Stack Developer, Mar. 2022 — Aug. 2024",
+        "firstParagraph": {
+            "text": "With over 700 hours of practice, I learned multiple technologies, applied them in real projects, participated in a group project using SCRUM methodology to develop an ecommerce platform, and completed an individual project consisting of a Single Page Application (SPA)."
+        },
+        "individualProyect": {
+            "title": "Individual Project: ",
+            "description": "I developed a Single Page Application (SPA) based on an external API of dogs, allowing dynamic pagination and manipulation through filtering and sorting functionalities."
+        },
+        "grupalProyect": {
+            "title": "Group Project: ",
+            "description": "It is a web application designed for buying and selling computer products. It features a shopping cart, Custom PC Builder, Wish List, product filtering and pagination. It also includes integration with Mercado Pago, user registration, and different roles for navigation."
+        },
+        "certificate": "Certificate"
     }
 }

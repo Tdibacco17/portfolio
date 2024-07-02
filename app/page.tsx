@@ -12,11 +12,11 @@ export default async function Home() {
   const { isMobile } = await getUserAgent(headers().get('user-agent'));
 
   return (
-    <main>
+    <>
       <PersonalIdentity flag={flag} isMobile={isMobile} />
       <AboutMe flag={flag} />
       <Experience flag={flag} />
-      <Education flag={flag}/>
-    </main>
+      <Education flag={flag} />
+    </>
   );
 }

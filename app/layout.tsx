@@ -29,8 +29,10 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
-        <LanguageHandler localeLang={lang.locale} cookieLang={lang.cookie} />
-        {children}
+        <main>
+          <LanguageHandler localeLang={lang.locale} cookieLang={lang.cookie} />
+          {children}
+        </main>
       </body>
     </html>
   );

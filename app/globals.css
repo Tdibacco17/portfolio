@@ -24,6 +24,7 @@ main {
   gap: 12rem;
   max-width: 42rem;
   margin: 3.5rem auto 12rem auto;
+  position: relative;
 }
 
 @media (max-width:723px) {
