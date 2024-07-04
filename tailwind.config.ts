@@ -8,21 +8,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'react': '#61DAFB',
-        'redux': '#764ABC',
-        'next': '#000000',
-        'html': '#F37A1D',
-        'css': '#4F8FD3',
-        'sass': '#CC6699',
-        'tailwind': '#38bdf8',
-        'mysql': '#00758F',
-        'mongodb': '#47A248',
-        'sequelize': '#00AEEF',
-        'nodejs': '#8CC84B',
-        'postgresql': '#336791',
-        'express': '#000000',
-        'javascript': '#F7DF1E',
-        'typescript': '#007ACC',
         //en uso
         "soft": '#707070',
         'lightPrimary': '#A0A0A0',

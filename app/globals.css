@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --react-color: #61DAFB;
+  --redux-color: #764ABC;
+  --nextjs-color: #000000;
+  --bootstrap-color: #7952B3;
+  --html-color: #F37A1D;
+  --css-color: #4F8FD3;
+  --sass-color: #CC6699;
+  --mysql-color: #00758F;
+  --mongodb-color: #47A248;
+  --sequelize-color: #00AEEF;
+  --nodejs-color: #8CC84B;
+  --postgresql-color: #336791;
+  --express-color: #000000;
+  --javascript-color: #F7DF1E;
+  --typescript-color: #007ACC;
+  --gmail-color: #FF0000;
+  --linkedin-color: #0077B5;
+  --whatsapp-color: #075E54;
+  --github-color: #181717;
+  --tailwind-color: #38bdf8;
+}
+
 html,
 body {
   scroll-behavior: smooth;
@@ -70,3 +93,51 @@ li {
 li::marker {
   color: #707070;
 }
+
+
+#icon-container path,
+#icon-container p {
+  transition: fill 2.2s ease-in-out, color 2.2s ease-in-out;
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+#icon-container:hover path,
+#icon-container:hover p {
+  transition: fill 0s ease-in-out, color 0s ease-in-out;
+}
+
+#icon-container:hover .color-react,
+#icon-container:hover .color-redux,
+#icon-container:hover .color-nextjs,
+#icon-container:hover .color-html,
+#icon-container:hover .color-css,
+#icon-container:hover .color-sass,
+#icon-container:hover .color-tailwind,
+#icon-container:hover .color-mysql,
+#icon-container:hover .color-mongodb,
+#icon-container:hover .color-sequelize,
+#icon-container:hover .color-nodejs,
+#icon-container:hover .color-postgresql,
+#icon-container:hover .color-express,
+#icon-container:hover .color-javascript,
+#icon-container:hover .color-typescript {
+  fill: var(--hover-color);
+  color: var(--hover-color);
+}
+
+.color-react { --hover-color: var(--react-color); }
+.color-redux { --hover-color: var(--redux-color); }
+.color-nextjs { --hover-color: var(--nextjs-color); }
+.color-html { --hover-color: var(--html-color); }
+.color-css { --hover-color: var(--css-color); }
+.color-sass { --hover-color: var(--sass-color); }
+.color-tailwind { --hover-color: var(--tailwind-color); }
+.color-mysql { --hover-color: var(--mysql-color); }
+.color-mongodb { --hover-color: var(--mongodb-color); }
+.color-sequelize { --hover-color: var(--sequelize-color); }
+.color-nodejs { --hover-color: var(--nodejs-color); }
+.color-postgresql { --hover-color: var(--postgresql-color); }
+.color-express { --hover-color: var(--express-color); }
+.color-javascript { --hover-color: var(--javascript-color); }
+.color-typescript { --hover-color: var(--typescript-color); }

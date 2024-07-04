@@ -2,6 +2,8 @@
 import { LocaleType } from "@/utils/dictionaries"
 import { notFound } from "next/navigation"
 import { useEffect } from "react";
+import { IconComponent } from "../Icons/Icons";
+import data from "@/models/data.json"
 
 const fetchCookieData = async (lang: string) => {
     const response = await fetch(`${process.env.BASE_PATH}/api/cookie`, {
@@ -30,8 +32,9 @@ export default function LanguageHandler({ localeLang, cookieLang }: { localeLang
         }
     }, [cookieLang, localeLang])
 
-    return <button onClick={handleSetCookie} className="absolute right-0 top-0 text-sm">
-        {localeLang === 'en' ? 'EN' : 'ES'}
+    return <button onClick={handleSetCookie} className="absolute right-0 sm:top-0 -top-8 text-base flex gap-2 items-center uppercase">
+        {localeLang === 'en' ? 'en' : 'es'}
+        <IconComponent iconData={data.language} fill={true} reduce={true} />
     </button>
 }
 

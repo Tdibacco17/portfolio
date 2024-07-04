@@ -12,7 +12,7 @@
     "aboutMe": {
         "section": "About me",
         "description": {
-            "first": "I'm a Full Stack developer, optimistic, transparent, and full of energy to contribute. Currently, I'm working as a Front End developer at House of CB.",
+            "first": "I'm a Fullstack developer, optimistic, transparent, and full of energy to contribute. Currently, I'm working as a Front End developer at House of CB.",
             "second": "With the mission of creating products that optimize processes and enhance user experience. Here's a summary of my work so far."
         }
     },
@@ -58,6 +58,9 @@
                 "text": "I learned the application of Agile methodologies - specifically Scrum. I am proficient in tools such as Jira, Figma, Docker, and Git workflow management."
             }
         }
+    },
+    "technologies": {
+        "title": "Stack"
     },
     "education": {
         "section": "Education",

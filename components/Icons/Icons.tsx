@@ -11,7 +11,15 @@ export interface LinkIconInterface {
 export interface IconInterface {
     iconId: number,
     path: string,
-    viewBox: string
+    viewBox: string,
+    strokeWidth: string
+}
+
+export interface TechIconInterface {
+    iconId: number,
+    path: string,
+    title: string,
+    color: string,
 }
 
 export const IconLinkComponent = ({ iconData, isMobile }: { iconData: LinkIconInterface, isMobile?: boolean }) => {
@@ -43,8 +51,8 @@ export const IconComponent = ({
         <div className={`flex justify-center items-center ${reduce ? "w-5 h-5" : "w-6 h-6"}`}>
             <svg stroke="none" fill="none" viewBox={iconData.viewBox} xmlns="http://www.w3.org/2000/svg">
                 <path
-                    strokeWidth="2"
-                    className={`${stroke ? "stroke-dark" : ""} ${fill ? "fill-soft" : ""}`}
+                    strokeWidth={iconData.strokeWidth}
+                    className={`${stroke ? "stroke-dark" : fill ? "fill-soft" : ""}`}
                     d={iconData.path}>
                 </path>
             </svg>
@@ -52,14 +60,25 @@ export const IconComponent = ({
     )
 };
 
-// <div className={`${styles['icon-container']} card`}>
-//     <div className={`${styles['container-icon-svg']}`}>
-//         <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-//             <path
-//                 className={`${styles['icon-svg']} ${styles[`fill-${iconData.color}`]}`}
-//                 d={iconData.path}>
-//             </path>
-//         </svg>
-//     </div>
-//     <small className={`${styles["text-icon"]} ${styles[`color-${iconData.color}`]}`}>{iconData.title}</small>
-// </div>
+export const TechIconComponent = ({
+    iconData,
+    isMobile
+}: {
+    iconData: TechIconInterface,
+    isMobile: boolean
+}) => {
+    return (
+        <div id="icon-container" className={`flex flex-col justify-center gap-3 items-center rounded-custom p-6 border-solid border-[1px] bg-darkPrimary border-darkPrimary ${isMobile ? "" : "hover:darkPrimaryHover hover:bg-darkPrimaryHover"}`}>
+            <svg className="max-h-[2.25rem] max-w-[2.25rem]" stroke="none" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    strokeWidth="0"
+                    className={`color-${iconData.color}`}
+                    d={iconData.path}>
+                </path>
+            </svg>
+            <p className={`text-xs font-medium uppercase color-${iconData.color}`}>
+                {iconData.title}
+            </p>
+        </div>
+    )
+}

@@ -59,6 +59,9 @@
             }
         }
     },
+    "technologies": {
+        "title": "Tecnologías"
+    },
     "education": {
         "section": "Educación",
         "title": "Henry Bootcamp",
