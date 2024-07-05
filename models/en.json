@@ -12,8 +12,8 @@
     "aboutMe": {
         "section": "About me",
         "description": {
-            "first": "I'm a Fullstack developer, optimistic, transparent, and full of energy to contribute. Currently, I'm working as a Front End developer at House of CB.",
-            "second": "With the mission of creating products that optimize processes and enhance user experience. Here's a summary of my work so far."
+            "first": "Full Stack Developer, optimistic, transparent and with a lot of energy to contribute. I am currently working as a Front End developer at House of CB, where I help with the development of the brand's ecommerce.",
+            "second": "I find in software development the opportunity to create products that optimize processes and improve the user experience. A brief summary of my work so far."
         }
     },
     "experience": {
@@ -23,8 +23,10 @@
             "subTitle": "Front End Developer, May 2024 - Present",
             "firstParagraph": {
                 "link": "House of CB",
-                "text": " is a leading British women's clothing brand, internationally acclaimed for its designer pieces. With over 40 stores worldwide and a strong presence on social media. I currently work as a Front End Developer in their ",
-                "otherLink": "ecommerce"
+                "text": " is a leading British womenswear brand, internationally acclaimed for its designer pieces. With more than 40 stores around the world and a strong presence on social networks."
+            },
+            "secondParagraph": {
+                "text": "I am currently working on migrating the site to Next.js 14. This involves optimizing processes, documenting, and reorganizing the entire project structure. In addition, implement multi-language, currency, and cache functionalities, and set up Google Analytics."
             }
         },
         "strongwood": {
@@ -46,13 +48,13 @@
             "firstParagraph": {
                 "text": "I joined the ",
                 "link": "25Watts",
-                "otherText": " team where I worked on creating websites, portfolios, ecommerce sites, blogs, and landing pages."
+                "otherText": " team where I worked on the creation of websites, portfolios, ecommerce, blogs and landing pages."
             },
             "list": [
-                "WordPress development with Elementor and WooCommerce.",
-                "Next.js development with React.js, TypeScript, Node.js, and Sass. Experience in consuming data from a REST API to process dynamic information on the site.",
-                "Implementation of email sending with Nodemailer. Form validations with reCaptcha v2 and v3. Integration of maps using the Google Maps API.",
-                "Development of components following design patterns, with a focus on quality and performance. Experience in implementing best practices."
+                "WordPress developments with Elementor and WooCommerce.",
+                "Next.js developments with React.js, TypeScript, Node.js and Sass. Experience consuming data from a REST API to process dynamic information on the site.",
+                "Implementation of sending emails with Nodemailer. Form validations with reCaptcha v2 and v3. Map integrations with the Google Maps API.",
+                "I learned the application of agile methodologies - SRUM. Management of tools such as Jira, Figma, Docker and the workflow with Git."
             ],
             "secondParagraph": {
                 "text": "I learned the application of Agile methodologies - specifically Scrum. I am proficient in tools such as Jira, Figma, Docker, and Git workflow management."
@@ -67,15 +69,15 @@
         "title": "Henry Bootcamp",
         "subTitle": "Full Stack Developer, Mar. 2022 — Aug. 2024",
         "firstParagraph": {
-            "text": "With over 700 hours of practice, I learned multiple technologies, applied them in real projects, participated in a group project using SCRUM methodology to develop an ecommerce platform, and completed an individual project consisting of a Single Page Application (SPA)."
+            "text": "With more than 700 hours of practice where I learned multiple technologies, real application in projects, development of a group project with SCRUM modality to carry out an ecommerce and an individual project consisting of a SPA."
         },
         "individualProyect": {
             "title": "Individual Project: ",
-            "description": "I developed a Single Page Application (SPA) based on an external API of dogs, allowing dynamic pagination and manipulation through filtering and sorting functionalities."
+            "description": "I developed a SPA-type application, based on an external API of dogs to be able to visualize them in a dynamic pagination and manipulate them through filtering and ordering."
         },
         "grupalProyect": {
             "title": "Group Project: ",
-            "description": "It is a web application designed for buying and selling computer products. It features a shopping cart, Custom PC Builder, Wish List, product filtering and pagination. It also includes integration with Mercado Pago, user registration, and different roles for navigation."
+            "description": "It is a web application that has been designed for the purchase and sale of computer products. It features Shopping Cart, Custom PC Builder, Wish List, filtering, and product pagination. It also has the implementation of a paid market, user registration and different roles for navigation."
         },
         "certificate": "Certificate"
     }

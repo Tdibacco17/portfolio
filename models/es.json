@@ -12,8 +12,8 @@
     "aboutMe": {
         "section": "Sobre mi",
         "description": {
-            "first": "Desarrollador Full Stack, optimista, transparente y con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB.",
-            "second": "Con la misión de crear productos que optimicen procesos y mejoren la experiencia del usuario. Un breve resumen de mi trabajo hasta ahora."
+            "first": "Desarrollador Full Stack, optimista, transparente y con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB, donde ayudo con el desarrollo del ecommerce de la marca.",
+            "second": "Encuentro en el desarrollo de software la oportunindad de crear productos que optimicen procesos y mejoren la experiencia del usuario. Un breve resumen de mi trabajo hasta ahora."
         }
     },
     "experience": {
@@ -23,8 +23,10 @@
             "subTitle": "Desarrollador Front End, may. 2024 - actualidad",
             "firstParagraph": {
                 "link": "House of CB",
-                "text": " es una marca británica líder en ropa de mujer, aclamada internacionalmente por sus piezas de diseñador. Con más de 40 tiendas alrededor del mundo y una fuerte presencia en redes sociales. Actualmente trabajo como desarrollador Front End en su ",
-                "otherLink": "ecommerce"
+                "text": " es una marca británica líder en ropa de mujer, aclamada internacionalmente por sus piezas de diseñador. Con más de 40 tiendas alrededor del mundo y una fuerte presencia en redes sociales."
+            },
+            "secondParagraph":{
+                "text": "Actualmente estoy trabajando en la migración del sitio a Next.js 14. Esto implica optimizar procesos, documentar y reorganizar toda la estructura del proyecto. Además, implemente funcionalidades de multidioma, moneda y caché, y configurado Google Analytics."
             }
         },
         "strongwood": {
@@ -32,12 +34,12 @@
             "subTitle": "Desarrollador Front End, abr. 2023 — sep. 2023",
             "firstParagraph": {
                 "link": "Strongwood",
-                "text": " es una empresa dedicada a la fabricación y venta de muebles. Querían construir un portfolio de sus proyectos realizados para dar más credibilidad a la marca."
+                "text": " it is a company dedicated to the manufacture and sale of furniture. They wanted to build a portfolio of their projects carried out to give more credibility to the brand."
             },
             "secondParagraph": {
-                "text": "Desarrollé el ",
-                "link": "sitio web",
-                "otherText": " utilizando Next.js, React.js, TypeScript y Sass. Me encargué de cada aspecto de la página, desde el diseño hasta la experiencia de usuario. Realicé reuniones con el cliente para llevar a cabo el desarrollo y mostrar avances, asegurando cumplir con sus expectativas y funcionalidades."
+                "text": "I developed the ",
+                "link": "website",
+                "otherText": " using Next.js, React.js, TypeScript, and Sass. I took care of every aspect of the page, from the design to the user experience. I held meetings with the client to carry out the development and show progress, ensuring that their expectations and functionalities were met."
             }
         },
         "watts": {
