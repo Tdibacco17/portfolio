@@ -32,7 +32,7 @@ export default function LanguageHandler({ localeLang, cookieLang, isMobile }: { 
         }
     }, [cookieLang, localeLang])
 
-    return <button onClick={handleSetCookie} className={`absolute right-0 sm:-top-3 -top-11 text-base flex gap-2 items-center uppercase rounded-custom p-3 ${isMobile ? "text-white [&_path]:fill-white" : "hover:bg-darkPrimaryHover text-lightPrimary hover:text-white [&_path]:fill-softHover [&_path]:hover:fill-white"}`}>
+    return <button onClick={handleSetCookie} className={`absolute right-0 sm:-top-3 -top-12 text-base flex gap-2 items-center uppercase rounded-custom p-3 ${isMobile ? "text-white [&_path]:fill-white bg-darkPrimaryHover" : "hover:bg-darkPrimaryHover text-lightPrimary hover:text-white [&_path]:fill-softHover [&_path]:hover:fill-white"}`}>
         {localeLang === 'en' ? 'en' : 'es'}
         <IconComponent iconData={data.language} fill={true} reduce={true} />
     </button>

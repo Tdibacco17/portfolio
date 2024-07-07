@@ -32,7 +32,8 @@ export default async function PersonalIdentity({ flag, isMobile }: { flag: Local
                     return <IconLinkComponent
                         key={iconData.iconId}
                         iconData={iconData}
-                        isMobile={iconData.iconId === 3 ? isMobile : false}
+                        isMobile={isMobile}
+                        otherLink={iconData.iconId === 3}
                     />
                 })}
             </div>
@@ -45,7 +46,7 @@ export default async function PersonalIdentity({ flag, isMobile }: { flag: Local
                 <p className="text-soft">
                     {dict.personalIdentity.contact.or}
                 </p>
-                <CopyToClipboard dict={dict} isMobile={isMobile}/>
+                <CopyToClipboard dict={dict} isMobile={isMobile} />
             </div>
         </section>
     )

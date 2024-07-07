@@ -84,5 +84,6 @@
             "description": "It is a web application that has been designed for the purchase and sale of computer products. It features Shopping Cart, Custom PC Builder, Wish List, filtering, and product pagination. It also has the implementation of a paid market, user registration and different roles for navigation."
         },
         "certificate": "Certificate"
-    }
+    },
+    "scrollToTop": "Scroll to top"
 }

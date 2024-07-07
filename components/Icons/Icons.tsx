@@ -22,11 +22,11 @@ export interface TechIconInterface {
     color: string,
 }
 
-export const IconLinkComponent = ({ iconData, isMobile }: { iconData: LinkIconInterface, isMobile?: boolean }) => {
+export const IconLinkComponent = ({ iconData, isMobile, otherLink }: { iconData: LinkIconInterface, isMobile?: boolean, otherLink: boolean }) => {
     return (
-        <Link target="_blank" rel="noopener noreferrer" aria-label={`${iconData.title}`} href={isMobile ? iconData.otherLink! : iconData.link}
-            className="[&_path]:hover:fill-softHover cursor-pointer p-3">
-            <div className="flex justify-center items-center w-6 h-6">
+        <Link target="_blank" rel="noopener noreferrer" aria-label={`${iconData.title}`} href={otherLink ? iconData.otherLink! : iconData.link}
+            className={`${isMobile ? "" : "[&_path]:hover:fill-softHover"} cursor-pointer p-3`}>
+            <div className={`flex justify-center items-center w-6 h-6 ${isMobile ? "" : "hover:text-link-hover"}`}>
                 <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
                         className="fill-soft"

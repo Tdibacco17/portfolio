@@ -85,5 +85,6 @@
             "description": "Es una aplicación web que ha sido pensada para la compra y venta de productos de computación. Cuenta con Carrito de compras, Custom PC Builder, Wish List, filtrados y paginado de productos. Tambien cuenta con la implementación de mercado pago, registro de usuarios y distintos roles para su navegación."
         },
         "certificate": "Certificado"
-    }
+    },
+    "scrollToTop": "Volver arriba"
 }

@@ -7,7 +7,7 @@ export default async function Stack({ flag, isMobile }: { flag: LocaleType, isMo
     const dict = await getDictionary(flag);
 
     return (
-        <section className="relative w-full">
+        <section className="relative">
             <Section text={dict.technologies.title} />
             <div className="grid grid-cols-[repeat(auto-fill,minmax(125px,1fr))] w-full gap-[.675rem]">
                 {Object.values(data.technologies).map((iconData: TechIconInterface) => {

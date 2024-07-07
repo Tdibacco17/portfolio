@@ -11,14 +11,13 @@ const config: Config = {
         "soft": '#707070',
         'lightPrimary': '#A0A0A0',
         'lightSecondary': '#EDEDED',
-        'darkPrimary': '#161616',
-        'darkSecondary': "#161616e6"
+        'darkSecondary': "#161616e6",
+        'link-hover': '#a586df'
       },
       backgroundColor: {
         'darkPrimary': '#282828',
         'darkPrimaryHover': '#2e2e2e',
         'lightPrimary': '#FFFFFF',
-        'lightPrimary-hover': '#ffffffe6'
       },
       borderRadius: {
         'custom': '8px',
@@ -26,9 +25,7 @@ const config: Config = {
       },
       borderColor: {
         'darkPrimary': '#2e2e2e',
-        'darkPrimaryHover': '#3e3e3e',
         'lightPrimary': '#ededed',
-        "soft": '#707070',
       },
       fill: {
         "soft": '#707070',
