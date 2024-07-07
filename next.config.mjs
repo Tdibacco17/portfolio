@@ -6,6 +6,9 @@ const nextConfig = {
         minimumCacheTTL: 315360000,
         formats: ['image/avif', 'image/webp'],
     },
+    env:{
+        BASE_PATH: process.env.BASE_PATH
+    }
 };
 
 export default nextConfig;

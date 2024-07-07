@@ -6,19 +6,24 @@ import { IconComponent } from "../Icons/Icons";
 import data from "@/models/data.json"
 
 const fetchCookieData = async (lang: string) => {
-    const response = await fetch(`${process.env.BASE_PATH}/api/cookie`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(lang),
-    })
-    const rawRseponse = await response.json();
-    return rawRseponse
+    try {
+        const response = await fetch(`${process.env.BASE_PATH}/api/cookie`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(lang),
+        })
+        const rawRseponse = await response.json();
+        return rawRseponse
+    } catch(e){
+        console.log(e)
+    }
 }
 
 export default function LanguageHandler({ localeLang, cookieLang, isMobile }: { localeLang: LocaleType, cookieLang: LocaleType | undefined, isMobile: boolean }) {
     const changeLang: LocaleType = localeLang === 'en' ? 'es' : 'en';
+    console.log(`${process.env.BASE_PATH}/api/cookie`)
 
     const handleSetCookie = async () => {
         const fetchCookie = await fetchCookieData(changeLang)
