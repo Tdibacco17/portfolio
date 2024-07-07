@@ -30,7 +30,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                     </div>
                     <p className="text-base">
                         <Link target="_blank" rel="noopener noreferrer" href={"https://www.instagram.com/houseofcb/"} aria-label={"Instagram"}
-                            className={`underline-offset-2 underline decoration-[#707070] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
+                            className={`underline-offset-2 underline decoration-[#A0A0A0] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
                             {dict.experience.houseofcb.firstParagraph.link}
                         </Link>
                         {dict.experience.houseofcb.firstParagraph.text}
@@ -39,7 +39,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                         <li>
                             {dict.experience.houseofcb.secondParagraph.text}
                             <Link target="_blank" rel="noopener noreferrer" href={"https://www.houseofcb.com/"} aria-label={"https://www.houseofcb.com/"}
-                                className={`underline-offset-2 underline decoration-[#707070] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
+                                className={`underline-offset-2 underline decoration-[#A0A0A0] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
                                 {dict.experience.houseofcb.secondParagraph.link}
                             </Link>
                             {dict.experience.houseofcb.secondParagraph.otherText}
@@ -65,7 +65,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                     </div>
                     <p className="text-base">
                         <Link target="_blank" rel="noopener noreferrer" href={"https://www.instagram.com/strongwood_ar/"} aria-label={"https://www.instagram.com/strongwood_ar/"}
-                            className={`underline-offset-2 underline decoration-[#707070] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
+                            className={`underline-offset-2 underline decoration-[#A0A0A0] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
                             {dict.experience.strongwood.firstParagraph.link}
                         </Link>
                         {dict.experience.strongwood.firstParagraph.text}
@@ -74,7 +74,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                         <li>
                             {dict.experience.strongwood.secondParagraph.text}
                             <Link target="_blank" rel="noopener noreferrer" href={"https://www.strongwood.com.ar/"} aria-label={"https://www.strongwood.com.ar/"}
-                                className={`underline-offset-2 underline decoration-[#707070] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
+                                className={`underline-offset-2 underline decoration-[#A0A0A0] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
                                 {dict.experience.strongwood.secondParagraph.link}
                             </Link>
                             {dict.experience.strongwood.secondParagraph.otherText}<br></br>
@@ -102,7 +102,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                     <p>
                         {dict.experience.watts.firstParagraph.text}
                         <Link target="_blank" rel="noopener noreferrer" href={"https://25watts.com.ar/"} aria-label={"https://25watts.com.ar/"}
-                            className={`underline-offset-2 underline decoration-[#707070] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
+                            className={`underline-offset-2 underline decoration-[#A0A0A0] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
                             {dict.experience.watts.firstParagraph.link}
                         </Link>
                         {dict.experience.watts.firstParagraph.otherText}

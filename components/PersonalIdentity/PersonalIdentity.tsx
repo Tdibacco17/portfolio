@@ -48,6 +48,15 @@ export default async function PersonalIdentity({ flag, isMobile }: { flag: Local
                 </p>
                 <CopyToClipboard dict={dict} isMobile={isMobile} />
             </div>
+            <div className="py-4">
+                <a href={data.personalIdentity.cv.pdfSrc}
+                    download={"TomasDiBacco_CV.pdf"}
+                    className={`text-lightPrimary font-bold underline-offset-2 underline decoration-[#A0A0A0] ${isMobile ? "" : "hover:text-link-hover"}`}
+                    aria-label={dict.personalIdentity.cv}
+                    rel="noopener noreferrer" target="_blank">
+                    {dict.personalIdentity.cv}
+                </a>
+            </div>
         </section>
     )
 }

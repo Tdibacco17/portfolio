@@ -18,6 +18,7 @@ const config: Config = {
         'darkPrimary': '#282828',
         'darkPrimaryHover': '#2e2e2e',
         'lightPrimary': '#FFFFFF',
+        'lightPrimary-hover' :"#ffffffe6"
       },
       borderRadius: {
         'custom': '8px',
