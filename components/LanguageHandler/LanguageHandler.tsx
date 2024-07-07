@@ -23,7 +23,6 @@ const fetchCookieData = async (lang: string) => {
 
 export default function LanguageHandler({ localeLang, cookieLang, isMobile }: { localeLang: LocaleType, cookieLang: LocaleType | undefined, isMobile: boolean }) {
     const changeLang: LocaleType = localeLang === 'en' ? 'es' : 'en';
-    console.log(`${process.env.BASE_PATH}/api/cookie`)
 
     const handleSetCookie = async () => {
         const fetchCookie = await fetchCookieData(changeLang)
