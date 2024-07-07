@@ -95,33 +95,33 @@ li::marker {
 }
 
 
-#icon-container path,
-#icon-container p {
+.icon-container path,
+.icon-container p {
   transition: fill 2.2s ease-in-out, color 2.2s ease-in-out;
   fill: #ffffff;
   color: #ffffff;
 }
 
-#icon-container:hover path,
-#icon-container:hover p {
+.icon-container:hover path,
+.icon-container:hover p {
   transition: fill 0s ease-in-out, color 0s ease-in-out;
 }
 
-#icon-container:hover .color-react,
-#icon-container:hover .color-redux,
-#icon-container:hover .color-nextjs,
-#icon-container:hover .color-html,
-#icon-container:hover .color-css,
-#icon-container:hover .color-sass,
-#icon-container:hover .color-tailwind,
-#icon-container:hover .color-mysql,
-#icon-container:hover .color-mongodb,
-#icon-container:hover .color-sequelize,
-#icon-container:hover .color-nodejs,
-#icon-container:hover .color-postgresql,
-#icon-container:hover .color-express,
-#icon-container:hover .color-javascript,
-#icon-container:hover .color-typescript {
+.icon-container:hover .color-react,
+.icon-container:hover .color-redux,
+.icon-container:hover .color-nextjs,
+.icon-container:hover .color-html,
+.icon-container:hover .color-css,
+.icon-container:hover .color-sass,
+.icon-container:hover .color-tailwind,
+.icon-container:hover .color-mysql,
+.icon-container:hover .color-mongodb,
+.icon-container:hover .color-sequelize,
+.icon-container:hover .color-nodejs,
+.icon-container:hover .color-postgresql,
+.icon-container:hover .color-express,
+.icon-container:hover .color-javascript,
+.icon-container:hover .color-typescript {
   fill: var(--hover-color);
   color: var(--hover-color);
 }
@@ -141,3 +141,19 @@ li::marker {
 .color-express { --hover-color: var(--express-color); }
 .color-javascript { --hover-color: var(--javascript-color); }
 .color-typescript { --hover-color: var(--typescript-color); }
+
+.mobile-color-react { fill: var(--react-color); color: var(--react-color); }
+.mobile-color-redux { fill: var(--redux-color); color: var(--redux-color); }
+.mobile-color-nextjs { fill: var(--nextjs-color); color: var(--nextjs-color); }
+.mobile-color-html {  fill: var(--html-color); color: var(--html-color); }
+.mobile-color-css { fill: var(--css-color); color: var(--css-color); }
+.mobile-color-sass { fill: var(--sass-color); color: var(--sass-color); }
+.mobile-color-tailwind { fill: var(--tailwind-color); color: var(--tailwind-color); }
+.mobile-color-mysql { fill: var(--mysql-color); color: var(--mysql-color); }
+.mobile-color-mongodb { fill: var(--mongodb-color); color: var(--mongodb-color); }
+.mobile-color-sequelize { fill: var(--sequelize-color); color: var(--sequelize-color); }
+.mobile-color-nodejs { fill: var(--nodejs-color); color: var(--nodejs-color); }
+.mobile-color-postgresql { fill: var(--postgresql-color); color: var(--postgresql-color); }
+.mobile-color-express { fill: var(--express-color); color: var(--express-color); }
+.mobile-color-javascript { fill: var(--javascript-color); color: var(--javascript-color); }
+.mobile-color-typescript { fill: var(--typescript-color); color: var(--typescript-color); }

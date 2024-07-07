@@ -27,7 +27,7 @@ export default async function PersonalIdentity({ flag, isMobile }: { flag: Local
                 <h1 className="text-2xl">{dict.personalIdentity.name}</h1>
                 <h2 className="text-lightPrimary text-xl">{dict.personalIdentity.roll}</h2>
             </div>
-            <div className="flex items-center gap-7 py-6">
+            <div className="flex items-center gap-4 py-6">
                 {Object.values(data.personalIdentity.networks).map((iconData: LinkIconInterface) => {
                     return <IconLinkComponent
                         key={iconData.iconId}

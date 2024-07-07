@@ -33,11 +33,17 @@ export default async function Experience({ flag }: { flag: LocaleType }) {
                         {dict.experience.houseofcb.firstParagraph.link}
                     </Link>
                     {dict.experience.houseofcb.firstParagraph.text}
-                    <Link target="_blank" rel="noopener noreferrer" href={"https://www.houseofcb.com/"} aria-label={"https://www.houseofcb.com/"}
-                        className="underline-offset-2 underline decoration-[#707070] font-semibold">
-                        {dict.experience.houseofcb.firstParagraph.otherLink}
-                    </Link>.
                 </p>
+                <ul className="text-base">
+                    <li>
+                        {dict.experience.houseofcb.secondParagraph.text}
+                        <Link target="_blank" rel="noopener noreferrer" href={"https://www.houseofcb.com/"} aria-label={"https://www.houseofcb.com/"}
+                            className="underline-offset-2 underline decoration-[#707070] font-semibold">
+                            {dict.experience.houseofcb.secondParagraph.link}
+                        </Link>
+                        {dict.experience.houseofcb.secondParagraph.otherText}
+                    </li>
+                </ul>
             </div>
             <div className="flex flex-col gap-5">
                 <div className="max-h-64 overflow-hidden rounded-otherCustom flex justify-center items-center select-none pointer-events-none">
@@ -63,14 +69,17 @@ export default async function Experience({ flag }: { flag: LocaleType }) {
                     </Link>
                     {dict.experience.strongwood.firstParagraph.text}
                 </p>
-                <p className="text-base">
-                    {dict.experience.strongwood.secondParagraph.text}
-                    <Link target="_blank" rel="noopener noreferrer" href={"https://www.strongwood.com.ar/"} aria-label={"https://www.strongwood.com.ar/"}
-                        className="underline-offset-2 underline decoration-[#707070] font-semibold">
-                        {dict.experience.strongwood.secondParagraph.link}
-                    </Link>
-                    {dict.experience.strongwood.secondParagraph.otherText}
-                </p>
+                <ul className="text-base">
+                    <li>
+                        {dict.experience.strongwood.secondParagraph.text}
+                        <Link target="_blank" rel="noopener noreferrer" href={"https://www.strongwood.com.ar/"} aria-label={"https://www.strongwood.com.ar/"}
+                            className="underline-offset-2 underline decoration-[#707070] font-semibold">
+                            {dict.experience.strongwood.secondParagraph.link}
+                        </Link>
+                        {dict.experience.strongwood.secondParagraph.otherText}<br></br>
+                        {dict.experience.strongwood.secondParagraph.otherOtherText}
+                    </li>
+                </ul>
             </div>
             <div className="flex flex-col gap-5">
                 <div className="max-h-64 overflow-hidden rounded-otherCustom flex justify-center items-center select-none pointer-events-none">

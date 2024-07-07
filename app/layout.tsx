@@ -3,6 +3,8 @@ import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import getLocale from "@/utils/getLocale";
 import LanguageHandler from "@/components/LanguageHandler/LanguageHandler";
+import { getUserAgent } from "@/utils/getUserAgent";
+import { headers } from "next/headers";
 
 export const metadata: Metadata = {
   title: "Tomás Di Bacco",
@@ -25,12 +27,13 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { lang } = await getLocale();
+  const { isMobile } = await getUserAgent(headers().get('user-agent'));
 
   return (
     <html lang="en">
       <body className={GeistSans.className}>
         <main>
-          <LanguageHandler localeLang={lang.locale} cookieLang={lang.cookie} />
+          <LanguageHandler localeLang={lang.locale} cookieLang={lang.cookie} isMobile={isMobile} />
           {children}
         </main>
       </body>

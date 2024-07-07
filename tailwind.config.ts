@@ -8,7 +8,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        //en uso
         "soft": '#707070',
         'lightPrimary': '#A0A0A0',
         'lightSecondary': '#EDEDED',
@@ -16,34 +15,26 @@ const config: Config = {
         'darkSecondary': "#161616e6"
       },
       backgroundColor: {
-        //en uso
         'darkPrimary': '#282828',
         'darkPrimaryHover': '#2e2e2e',
         'lightPrimary': '#FFFFFF',
         'lightPrimary-hover': '#ffffffe6'
       },
       borderRadius: {
-        //en uso
         'custom': '8px',
         'otherCustom': '12px'
       },
       borderColor: {
-        'card': '#363636',
-        'card-hover': '#3e3e3e',
-        'layout': '#343434',
-        //en uso
         'darkPrimary': '#2e2e2e',
         'darkPrimaryHover': '#3e3e3e',
         'lightPrimary': '#ededed',
         "soft": '#707070',
       },
       fill: {
-        //en uso
         "soft": '#707070',
         "softHover": '#A0A0A0',
       },
       stroke: {
-        //en uso
         "soft": '#707070',
         "softHover": '#A0A0A0',
         "dark": "#161616e6"

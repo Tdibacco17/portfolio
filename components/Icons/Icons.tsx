@@ -25,7 +25,7 @@ export interface TechIconInterface {
 export const IconLinkComponent = ({ iconData, isMobile }: { iconData: LinkIconInterface, isMobile?: boolean }) => {
     return (
         <Link target="_blank" rel="noopener noreferrer" aria-label={`${iconData.title}`} href={isMobile ? iconData.otherLink! : iconData.link}
-            className="[&_path]:hover:fill-softHover cursor-pointer">
+            className="[&_path]:hover:fill-softHover cursor-pointer p-3">
             <div className="flex justify-center items-center w-6 h-6">
                 <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -68,15 +68,15 @@ export const TechIconComponent = ({
     isMobile: boolean
 }) => {
     return (
-        <div id="icon-container" className={`flex flex-col justify-center gap-3 items-center rounded-custom p-6 border-solid border-[1px] bg-darkPrimary border-darkPrimary ${isMobile ? "" : "hover:darkPrimaryHover hover:bg-darkPrimaryHover"}`}>
+        <div className={`flex flex-col justify-center gap-3 items-center rounded-custom p-6 border-solid border-[1px] bg-darkPrimary border-darkPrimary ${isMobile ? "" : "icon-container hover:darkPrimaryHover hover:bg-darkPrimaryHover"}`}>
             <svg className="max-h-[2.25rem] max-w-[2.25rem]" stroke="none" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path
                     strokeWidth="0"
-                    className={`color-${iconData.color}`}
+                    className={`${isMobile ? `mobile-color-${iconData.color}` : `color-${iconData.color}`}`}
                     d={iconData.path}>
                 </path>
             </svg>
-            <p className={`text-xs font-medium uppercase color-${iconData.color}`}>
+            <p className={`text-xs font-medium uppercase ${isMobile ? `mobile-color-${iconData.color}` : `color-${iconData.color}`}`}>
                 {iconData.title}
             </p>
         </div>

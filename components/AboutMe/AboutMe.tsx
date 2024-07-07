@@ -9,6 +9,7 @@ export default async function AboutMe({ flag }: { flag: LocaleType }) {
             <Section text={dict.aboutMe.section} />
             <p>{dict.aboutMe.description.first}</p>
             <p>{dict.aboutMe.description.second}</p>
+            <p>{dict.aboutMe.description.third}</p>
         </section>
     )
 }

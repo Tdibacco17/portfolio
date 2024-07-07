@@ -17,7 +17,7 @@ const fetchCookieData = async (lang: string) => {
     return rawRseponse
 }
 
-export default function LanguageHandler({ localeLang, cookieLang }: { localeLang: LocaleType, cookieLang: LocaleType | undefined }) {
+export default function LanguageHandler({ localeLang, cookieLang, isMobile }: { localeLang: LocaleType, cookieLang: LocaleType | undefined, isMobile: boolean }) {
     const changeLang: LocaleType = localeLang === 'en' ? 'es' : 'en';
 
     const handleSetCookie = async () => {
@@ -32,7 +32,7 @@ export default function LanguageHandler({ localeLang, cookieLang }: { localeLang
         }
     }, [cookieLang, localeLang])
 
-    return <button onClick={handleSetCookie} className="absolute right-0 sm:top-0 -top-8 text-base flex gap-2 items-center uppercase">
+    return <button onClick={handleSetCookie} className={`absolute right-0 sm:-top-3 -top-11 text-base flex gap-2 items-center uppercase rounded-custom p-3 ${isMobile ? "text-white [&_path]:fill-white" : "hover:bg-darkPrimaryHover text-lightPrimary hover:text-white [&_path]:fill-softHover [&_path]:hover:fill-white"}`}>
         {localeLang === 'en' ? 'en' : 'es'}
         <IconComponent iconData={data.language} fill={true} reduce={true} />
     </button>
