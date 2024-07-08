@@ -19,7 +19,7 @@ export default async function Home() {
       <Experience flag={flag} isMobile={isMobile} />
       <Stack flag={flag} isMobile={isMobile} />
       <Education flag={flag} isMobile={isMobile} />
-      <ScrollToTop flag={flag} isMobile={isMobile} />
+      <ScrollToTop flag={flag} />
     </>
   );
 }
