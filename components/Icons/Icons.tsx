@@ -27,7 +27,7 @@ export const IconLinkComponent = ({ iconData, isMobile, otherLink }: { iconData:
         <Link target="_blank" rel="noopener noreferrer" aria-label={`${iconData.title}`} href={otherLink ? iconData.otherLink! : iconData.link}
             className={`${isMobile ? "" : "[&_path]:hover:fill-softHover"} cursor-pointer p-3`}>
             <div className={`flex justify-center items-center w-6 h-6 ${isMobile ? "" : "hover:text-link-hover"}`}>
-                <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                     <path
                         className="fill-soft"
                         d={iconData.path}>
@@ -49,7 +49,7 @@ export const IconComponent = ({
 }) => {
     return (
         <div className={`flex justify-center items-center ${reduce ? "w-5 h-5" : "w-6 h-6"}`}>
-            <svg stroke="none" fill="none" viewBox={iconData.viewBox} xmlns="http://www.w3.org/2000/svg">
+            <svg stroke="none" fill="none" viewBox={iconData.viewBox} xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                 <path
                     strokeWidth={iconData.strokeWidth}
                     className={`${stroke ? "stroke-dark" : fill ? "fill-soft" : ""}`}
