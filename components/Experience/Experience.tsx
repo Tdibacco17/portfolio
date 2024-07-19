@@ -45,6 +45,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                             {dict.experience.houseofcb.secondParagraph.otherText}
                         </li>
                     </ul>
+                    <p className="text-base">{dict.experience.houseofcb.secondParagraph.otherOtherText}</p>
                 </div>
                 <div className="flex flex-col gap-5">
                     <div className="max-h-64 overflow-hidden rounded-otherCustom flex justify-center items-center select-none pointer-events-none">
