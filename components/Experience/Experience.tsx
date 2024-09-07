@@ -44,6 +44,9 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                             </Link>
                             {dict.experience.houseofcb.secondParagraph.otherText}
                         </li>
+                        <li>
+                            {dict.experience.houseofcb.secondParagraph.newText}
+                        </li>
                     </ul>
                     <p className="text-base">{dict.experience.houseofcb.secondParagraph.otherOtherText}</p>
                 </div>
@@ -88,8 +91,8 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                         <Image
                             src={data.experience.watts.img.src}
                             alt={data.experience.watts.img.alt}
-                            width={1200}
-                            height={675}
+                            width={1920}
+                            height={847}
                             priority
                             quality={100}
                             placeholder="blur"
