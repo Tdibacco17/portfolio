@@ -13,7 +13,7 @@
     "aboutMe": {
         "section": "Sobre mi",
         "description": {
-            "first": "Desarrollador Full Stack, optimista, transparente y con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador Front End en House of CB, donde aporto con el desarrollo del ecommerce de la marca.",
+            "first": "Desarrollador Full Stack, optimista, transparente y con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador en House of CB, donde aporto con el desarrollo de la marca.",
             "second": "Encuentro en el desarrollo de software la oportunidad de crear productos que optimicen procesos y mejoren la experiencia del usuario.",
             "third": "Un breve resumen de mi trabajo hasta ahora."
         }
@@ -22,17 +22,19 @@
         "section": "Experiencia",
         "houseofcb": {
             "title": "House of CB",
-            "subTitle": "Desarrollador Front End, may. 2024 - actualidad",
+            "subTitle": "Desarrollador Full Stack, may. 2024 - actualidad",
             "firstParagraph": {
                 "link": "House of CB",
                 "text": " es una marca británica líder en ropa de mujer, aclamada internacionalmente por sus piezas de diseñador. Con más de 40 tiendas alrededor del mundo y una fuerte presencia en redes sociales."
             },
             "secondParagraph": {
-                "text": "En 2024, trabaje en la migración del ",
+                "text": "En 2024, como Desarrollador Front End",
+                "text_1": "Trabaje en la migración del ",
                 "link": "sitio web",
-                "otherText": " a Next.js 14. Esto implicó optimizar procesos, documentar y reorganizar toda la estructura del proyecto. Además, implementé funcionalidades de multidioma, moneda y caché.",
+                "otherText": " a Next.js 14. Esto implicó optimizar procesos, documentar y reorganizar toda la estructura del proyecto. Implementé funcionalidades de multidioma, moneda y caché.",
+                "newText": "Trabaje en el nuevo rediseño, creación de animaciones, nuevas funcionalidades y mejoras en la performance.",
                 "otherOtherText": "Mejoré en el uso de Git Flow, lectura de código ajeno y aprendí a utilizar Docker.",
-                "newText": "Actualmente trabajando en el nuevo rediseño."
+                "text_2": "Actualmente, como Desarrollador Full Stack."
             }
         },
         "strongwood": {
@@ -46,7 +48,8 @@
                 "text": "Desarrollé el ",
                 "link": "sitio web",
                 "otherText": " utilizando Next.js, React.js, TypeScript y Sass. Me encargué de cada aspecto de la página, desde el diseño hasta la experiencia de usuario.",
-                "otherOtherText": "Realicé reuniones con el cliente para llevar a cabo el desarrollo y mostrar avances, asegurando cumplir con sus expectativas y funcionalidades."
+                "otherOtherText": "Realicé reuniones con el cliente para llevar a cabo el desarrollo y mostrar avances, asegurando cumplir con sus expectativas y funcionalidades.",
+                "text_1": "En 2025, desarrollé un dashboard para el envío de emails, con el objetivo de ofrecer sus servicios a potenciales clientes."
             }
         },
         "watts": {

@@ -24,6 +24,7 @@
   --github-color: #181717;
   --tailwind-color: #38bdf8;
   --docker-color: #2496ED;
+  --php-color: #777BB4;
 }
 
 html,
@@ -123,7 +124,8 @@ li::marker {
 .icon-container:hover .color-express,
 .icon-container:hover .color-javascript,
 .icon-container:hover .color-typescript,
-.icon-container:hover .color-docker {
+.icon-container:hover .color-docker,
+.icon-container:hover .color-php  {
   fill: var(--hover-color);
   color: var(--hover-color);
 }
@@ -190,6 +192,10 @@ li::marker {
 
 .color-docker {
   --hover-color: var(--docker-color);
+}
+
+.color-php {
+  --hover-color: var(--php-color);
 }
 
 .mobile-color-react {
@@ -270,4 +276,9 @@ li::marker {
 .mobile-color-docker {
   fill: var(--docker-color);
   color: var(--docker-color);
+}
+
+.mobile-color-php {
+  fill: var(--php-color);
+  color: var(--php-color);
 }

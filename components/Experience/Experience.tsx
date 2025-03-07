@@ -35,9 +35,12 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                         </Link>
                         {dict.experience.houseofcb.firstParagraph.text}
                     </p>
+                    <p>
+                        {dict.experience.houseofcb.secondParagraph.text}
+                    </p>
                     <ul className="text-base">
                         <li>
-                            {dict.experience.houseofcb.secondParagraph.text}
+                            {dict.experience.houseofcb.secondParagraph.text_1}
                             <Link target="_blank" rel="noopener noreferrer" href={"https://www.houseofcb.com/"} aria-label={"https://www.houseofcb.com/"}
                                 className={`underline-offset-2 underline decoration-[#A0A0A0] font-semibold ${isMobile ? "" : "hover:text-link-hover"}`}>
                                 {dict.experience.houseofcb.secondParagraph.link}
@@ -47,8 +50,11 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                         <li>
                             {dict.experience.houseofcb.secondParagraph.newText}
                         </li>
+                    <li className="text-base">{dict.experience.houseofcb.secondParagraph.otherOtherText}</li>
                     </ul>
-                    <p className="text-base">{dict.experience.houseofcb.secondParagraph.otherOtherText}</p>
+                    <p>
+                        {dict.experience.houseofcb.secondParagraph.text_2}
+                    </p>
                 </div>
                 <div className="flex flex-col gap-5">
                     <div className="max-h-64 overflow-hidden rounded-otherCustom flex justify-center items-center select-none pointer-events-none">
@@ -85,6 +91,9 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                             {dict.experience.strongwood.secondParagraph.otherOtherText}
                         </li>
                     </ul>
+                    <p>
+                        {dict.experience.strongwood.secondParagraph.text_1}
+                    </p>
                 </div>
                 <div className="flex flex-col gap-5">
                     <div className="max-h-64 overflow-hidden rounded-otherCustom flex justify-center items-center select-none pointer-events-none">

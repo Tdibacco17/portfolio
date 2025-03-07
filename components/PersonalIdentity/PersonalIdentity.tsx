@@ -11,7 +11,7 @@ export default async function PersonalIdentity({ flag, isMobile }: { flag: Local
 
     return (
         <section className="flex flex-col items-center gap-4">
-            <div className="w-28 h-28 overflow-hidden rounded-full flex justify-center items-center select-none pointer-events-none">
+            <div className="w-40 min-w-40 min-h-40 h-40 overflow-hidden rounded-full flex justify-center items-center select-none pointer-events-none">
                 <Image
                     src={data.personalIdentity.img.src}
                     alt={data.personalIdentity.img.alt}
