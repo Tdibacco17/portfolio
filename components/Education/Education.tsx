@@ -16,14 +16,6 @@ export default async function Education({ flag, isMobile }: { flag: LocaleType, 
                 <p className="text-base">
                     {dict.education.firstParagraph.text}
                 </p>
-                <ul className="text-base">
-                    <li>
-                        <strong className="font-bold">{dict.education.individualProyect.title}</strong> {dict.education.individualProyect.description}
-                    </li>
-                    <li>
-                        <strong className="font-bold">{dict.education.grupalProyect.title}</strong> {dict.education.grupalProyect.description}
-                    </li>
-                </ul>
                 <p className="text-base">
                     <Link target="_blank" rel="noopener noreferrer" href={"https://certificates.soyhenry.com/cert?id=ab1a5fb5-9b2e-454b-a8fb-5e4d3ae64eb1"} aria-label="https://certificates.soyhenry.com/cert?id=ab1a5fb5-9b2e-454b-a8fb-5e4d3ae64eb1"
                         className={`underline-offset-2 underline decoration-[#A0A0A0] font-bold ${isMobile ? "" : "hover:text-link-hover"}`}>

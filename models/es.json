@@ -13,7 +13,7 @@
     "aboutMe": {
         "section": "Sobre mi",
         "description": {
-            "first": "Desarrollador Full Stack, optimista, transparente y con mucha energia para aportar. Actualmente me encuentro trabajando como desarrollador en House of CB, donde aporto con el desarrollo de la marca.",
+            "first": "Desarrollador Full Stack con sólida experiencia en Next.js, React y tecnologías modernas del ecosistema web. Actualmente, trabajo como Full Stack en House of CB.",
             "second": "Encuentro en el desarrollo de software la oportunidad de crear productos que optimicen procesos y mejoren la experiencia del usuario.",
             "third": "Un breve resumen de mi trabajo hasta ahora."
         }
@@ -23,52 +23,29 @@
         "houseofcb": {
             "title": "House of CB",
             "subTitle": "Desarrollador Full Stack, may. 2024 - actualidad",
-            "firstParagraph": {
-                "link": "House of CB",
-                "text": " es una marca británica líder en ropa de mujer, aclamada internacionalmente por sus piezas de diseñador. Con más de 40 tiendas alrededor del mundo y una fuerte presencia en redes sociales."
-            },
-            "secondParagraph": {
-                "text": "En 2024, como Desarrollador Front End.",
-                "text_1": "Trabaje en la migración del ",
-                "link": "sitio web",
-                "otherText": " a Next.js 14. Esto implicó optimizar procesos, documentar y reorganizar toda la estructura del proyecto. Implementé funcionalidades de multidioma, moneda y caché.",
-                "newText": "Trabaje en el nuevo rediseño, creación de animaciones, nuevas funcionalidades y mejoras en la performance.",
-                "otherOtherText": "Mejoré en el uso de Git Flow, lectura de código ajeno y aprendí a utilizar Docker.",
-                "text_2": "Actualmente, como Desarrollador Full Stack."
-            }
+            "list": [
+                "Migré el sitio web de alto tráfico a Next.js 14, logrando una estructura más escalable, eficiente y ordenada, con mejoras de rendimiento.",
+                "Reorganicé el proyecto, desarrollé componentes reutilizables y propuse mejoras de performance y UX.",
+                "Diseñé pantallas con React y Tailwind, colaboré con backend en PHP, maquetado de emails y tareas de staging.",
+                "Participo en decisiones técnicas y en la organización del área frontend."
+            ]
         },
         "strongwood": {
             "title": "Strongwood",
             "subTitle": "Desarrollador Front End, abr. 2023 — sep. 2023",
-            "firstParagraph": {
-                "link": "Strongwood",
-                "text": " es una empresa dedicada a la fabricación y venta de muebles. Querían construir un portfolio de sus proyectos realizados para dar más credibilidad a la marca."
-            },
-            "secondParagraph": {
-                "text": "Desarrollé el ",
-                "link": "sitio web",
-                "otherText": " utilizando Next.js, React.js, TypeScript y Sass. Me encargué de cada aspecto de la página, desde el diseño hasta la experiencia de usuario.",
-                "otherOtherText": "Realicé reuniones con el cliente para llevar a cabo el desarrollo y mostrar avances, asegurando cumplir con sus expectativas y funcionalidades.",
-                "text_1": "En 2025, desarrollé un dashboard para el envío de emails, con el objetivo de ofrecer sus servicios a potenciales clientes."
-            }
+            "list":[
+                "Proyecto freelance para una empresa de fabricación de muebles, desarrollado con Next.js y React.",
+                "Me encargué solo del sitio web, incluyendo estructura, diseño y UX/UI, priorizando una interfaz limpia y funcional.",
+                "Coordiné reuniones con el cliente para relevar requerimientos y presentar avances."
+            ]
         },
         "watts": {
             "title": "25Watts",
             "subTitle": "Desarrollador Front End, oct. 2022 — abr. 2024",
-            "firstParagraph": {
-                "text": "En 2022, me uní al equipo de ",
-                "link": "25Watts",
-                "otherText": " donde trabaje en la creación de páginas web, portfolios, ecommerce, blogs y landing pages."
-            },
             "list": [
-                "Desarrollos en WordPress con Elementor y WooCommerce.",
-                "Desarrollos en Next.js con React.js, TypeScript, Node.js y Sass. Experiencia consumiendo datos de una API REST para procesar información dinámica en el sitio.",
-                "Implementación de envío de emails con Nodemailer. Validaciones de formularios con reCaptcha v2 y v3. Integraciones de mapas con la API de Google Maps.",
-                "Desarrollo de componentes bajo patrones de diseño, enfocado en la calidad y el rendimiento. Experiencia en la implementación de buenas prácticas."
-            ],
-            "secondParagraph": {
-                "text": "Aprendí la aplicación de metodologías ágiles - SRUM. Manejo de herramientas como Jira, Figma, Docker y el flujo de trabajo con Git."
-            }
+                "I developed custom websites for different clients (portfolios, e-commerce, blogs, landings) using WordPress, Next.js and React.",
+                "I implemented new functionalities and integrations with APIs and worked with agile methodologies (Scrum), applying good practices."
+            ]
         }
     },
     "technologies": {
@@ -79,15 +56,7 @@
         "title": "Henry Bootcamp",
         "subTitle": "Desarrollador Full Stack, mar. 2022 — ago. 2024",
         "firstParagraph": {
-            "text": "Con más de 700 horas de práctica donde aprendí múltiples tecnologías, aplicación real en proyectos, desarrollo de un proyecto grupal con modalidad SCRUM para realizar un ecommerce y un proyecto individual consistente en un SPA."
-        },
-        "individualProyect": {
-            "title": "Proyecto Individual: ",
-            "description": "Desarrollé una aplicación de tipo SPA, basada en una API externa de perros para poder visualizarlos en un paginado dinámico y manipularlos mediante filtrados y ordenamientos."
-        },
-        "grupalProyect": {
-            "title": "Proyecto Grupal: ",
-            "description": "Es una aplicación web que ha sido pensada para la compra y venta de productos de computación. Cuenta con Carrito de compras, Custom PC Builder, Wish List, filtrados y paginado de productos. Tambien cuenta con la implementación de mercado pago, registro de usuarios y distintos roles para su navegación."
+            "text": "Más de 700 horas de aprendizaje intensivo en desarrollo Full Stack, aplicando metodologías ágiles (Scrum). Desarrollo de un proyecto individual (SPA) y uno grupal enfocado en e-commerce."
         },
         "certificate": "Certificado"
     },
