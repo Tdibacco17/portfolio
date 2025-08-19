@@ -13,9 +13,9 @@
     "aboutMe": {
         "section": "Sobre mi",
         "description": {
-            "first": "Desarrollador Full Stack con sólida experiencia en Next.js, React y tecnologías modernas del ecosistema web. Actualmente, trabajo como Full Stack en House of CB.",
-            "second": "Encuentro en el desarrollo de software la oportunidad de crear productos que optimicen procesos y mejoren la experiencia del usuario.",
-            "third": "Un breve resumen de mi trabajo hasta ahora."
+            "first": "Desarrollador Full Stack con sólida experiencia en Next.js, React y tecnologías modernas del ecosistema web. Actualmente formo parte del equipo de House of CB.",
+            "second": "Apasionado por crear productos de software que optimicen procesos y mejoren la experiencia del usuario, contribuyendo al desarrollo de aplicaciones escalables y de alto rendimiento.",
+            "third": "Con experiencia en trabajo en equipo, metodologías ágiles y diseño de arquitecturas modernas de frontend."
         }
     },
     "experience": {
@@ -24,28 +24,29 @@
             "title": "House of CB",
             "subTitle": "Desarrollador Full Stack, may. 2024 - actualidad",
             "list": [
-                "Migré el sitio web de alto tráfico a Next.js 14, logrando una estructura más escalable, eficiente y ordenada, con mejoras de rendimiento.",
-                "Reorganicé el proyecto, desarrollé componentes reutilizables y propuse mejoras de performance y UX.",
-                "Diseñé pantallas con React y Tailwind, colaboré con backend en PHP, maquetado de emails y tareas de staging.",
-                "Participo en decisiones técnicas y en la organización del área frontend.",
-                "Actualmente trabajando con React Native junto con la creación de un dashboard para gestionar la aplicación."
+                "Migré una plataforma de e-commerce de alto tráfico a Next.js 14, logrando una arquitectura más escalable, eficiente y con mejor rendimiento.",
+                "Reorganicé la estructura del proyecto, desarrollé componentes reutilizables y propuse mejoras en UX y performance.",
+                "Diseñé páginas responsivas con React y Tailwind CSS, colaboré con el equipo backend en PHP y contribuí en plantillas de email y tareas de staging.",
+                "Participé en la toma de decisiones técnicas y en la organización del área de frontend dentro del equipo.",
+                "Actualmente trabajando en desarrollo con React Native y en la construcción de un dashboard para la gestión de la aplicación móvil."
             ]
         },
         "strongwood": {
             "title": "Strongwood",
             "subTitle": "Desarrollador Front End, abr. 2023 — sep. 2023",
-            "list":[
+            "list": [
                 "Proyecto freelance para una empresa de fabricación de muebles, desarrollado con Next.js y React.",
-                "Me encargué solo del sitio web, incluyendo estructura, diseño y UX/UI, priorizando una interfaz limpia y funcional.",
-                "Coordiné reuniones con el cliente para relevar requerimientos y presentar avances."
+                "Diseñé e implementé toda la arquitectura del sitio web, UI/UX y funcionalidades de frontend.",
+                "Coordiné directamente con el cliente para relevar requerimientos y presentar entregables."
             ]
         },
         "watts": {
             "title": "25Watts",
             "subTitle": "Desarrollador Front End, oct. 2022 — abr. 2024",
             "list": [
-                "Desarrollé sitios web a medida para distintos clientes (portfolios, e-commerce, blogs, landings) usando WordPress, Next.js y React.",
-                "Implementé nuevas funcionalidades e integraciones con APIs y trabajé con metodologías ágiles (Scrum), aplicando buenas prácticas."
+                "Desarrollé sitios web personalizados para clientes (portfolios, e-commerce, blogs, landing pages) utilizando WordPress, Next.js y React.",
+                "Implementé nuevas funcionalidades e integraciones con APIs, asegurando un correcto funcionamiento y rendimiento.",
+                "Trabajé bajo metodologías ágiles (Scrum) aplicando buenas prácticas en calidad de código y control de versiones."
             ]
         }
     },
@@ -60,6 +61,13 @@
             "text": "Más de 700 horas de aprendizaje intensivo en desarrollo Full Stack, aplicando metodologías ágiles (Scrum). Desarrollo de un proyecto individual (SPA) y uno grupal enfocado en e-commerce."
         },
         "certificate": "Certificado"
+    },
+    "languages": {
+        "section": "Idiomas",
+        "list": [
+            "Español - (Nativo)",
+            "Inglés - (Basico A2)"
+        ]
     },
     "scrollToTop": "Volver arriba"
 }

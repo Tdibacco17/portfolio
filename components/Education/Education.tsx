@@ -22,6 +22,21 @@ export default async function Education({ flag, isMobile }: { flag: LocaleType, 
                         {dict.education.certificate}
                     </Link>.
                 </p>
+
+                <div className="pt-6 flex flex-col gap-2">
+                    <div className="text-lightPrimary">
+                        <p className="font-bold">{dict.languages.section}</p>
+                    </div>
+                    <ul className="text-base ">
+                        {dict.languages.list.map((item: string, index: number) => {
+                            return (
+                                <li key={index}>
+                                    {item}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
             </div>
         </section>
     )
