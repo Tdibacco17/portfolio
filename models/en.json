@@ -13,7 +13,7 @@
     "aboutMe": {
         "section": "About me",
         "description": {
-            "first": "Full Stack Developer with strong experience in Next.js, React, and modern web technologies. Currently working as part of the House of CB team.",
+            "first": "Full Stack Developer with 3+ years of professional experience in Next.js, React, and modern web technologies. Currently working as part of the House of CB team.",
             "second": "Passionate about building software products that optimize processes and enhance user experience, while contributing to scalable and high-performance applications.",
             "third": "Skilled in team collaboration, Agile practices, and designing modern frontend architectures."
         }
@@ -24,8 +24,8 @@
             "title": "House of CB",
             "subTitle": "Full Stack Developer, May 2024 - Present",
             "list": [
-                "Migrated a high-traffic e-commerce platform to Next.js 14, achieving a more scalable and efficient architecture with improved performance.",
-                "Reorganized project structure, developed reusable UI components, and proposed UX and performance enhancements.",
+                "Migrated a high-traffic e-commerce platform to Next.js 14, achieving a more scalable and efficient architecture with improved performance by 30%.",
+                "Reorganized project structure, developed reusable UI components, and proposed UX and performance enhancements for a platform handling +3000 users per hour.",
                 "Designed responsive pages with React and Tailwind CSS, collaborated with backend team in PHP, and contributed to email templates and staging tasks.",
                 "Participated in technical decision-making and frontend organization within the team.",
                 "Currently working on React Native development and building a dashboard for mobile app management."

@@ -13,7 +13,7 @@
     "aboutMe": {
         "section": "Sobre mi",
         "description": {
-            "first": "Desarrollador Full Stack con sólida experiencia en Next.js, React y tecnologías modernas del ecosistema web. Actualmente formo parte del equipo de House of CB.",
+            "first": "Desarrollador Full Stack con más de 3 años de experiencia profesional en Next.js, React y tecnologías modernas del ecosistema web. Actualmente formo parte del equipo de House of CB.",
             "second": "Apasionado por crear productos de software que optimicen procesos y mejoren la experiencia del usuario, contribuyendo al desarrollo de aplicaciones escalables y de alto rendimiento.",
             "third": "Con experiencia en trabajo en equipo, metodologías ágiles y diseño de arquitecturas modernas de frontend."
         }
@@ -24,8 +24,8 @@
             "title": "House of CB",
             "subTitle": "Desarrollador Full Stack, may. 2024 - actualidad",
             "list": [
-                "Migré una plataforma de e-commerce de alto tráfico a Next.js 14, logrando una arquitectura más escalable, eficiente y con mejor rendimiento.",
-                "Reorganicé la estructura del proyecto, desarrollé componentes reutilizables y propuse mejoras en UX y performance.",
+                "Migré una plataforma de e-commerce de alto tráfico a Next.js 14, logrando una arquitectura más escalable, eficiente y con una mejora del 30% en el rendimiento.",
+                "Reorganicé la estructura del proyecto, desarrollé componentes reutilizables y propuse mejoras en UX y performance para una plataforma que maneja más de 3000 usuarios por hora.",
                 "Diseñé páginas responsivas con React y Tailwind CSS, colaboré con el equipo backend en PHP y contribuí en plantillas de email y tareas de staging.",
                 "Participé en la toma de decisiones técnicas y en la organización del área de frontend dentro del equipo.",
                 "Actualmente trabajando en desarrollo con React Native y en la construcción de un dashboard para la gestión de la aplicación móvil."
