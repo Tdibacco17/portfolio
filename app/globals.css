@@ -21,8 +21,6 @@
   --fill-soft: #707070;
   --fill-softHover: #a0a0a0;
 
-  --stroke-soft: #707070;
-  --stroke-softHover: #a0a0a0;
   --stroke-dark: #161616e6;
 }
 
@@ -38,285 +36,165 @@
 }
 
 @layer base {
-:root {
-  --react-color: #61DAFB;
-  --redux-color: #764ABC;
-  --nextjs-color: #000000;
-  --bootstrap-color: #7952B3;
-  --html-color: #F37A1D;
-  --css-color: #4F8FD3;
-  --sass-color: #CC6699;
-  --mysql-color: #00758F;
-  --mongodb-color: #47A248;
-  --sequelize-color: #00AEEF;
-  --nodejs-color: #8CC84B;
-  --postgresql-color: #336791;
-  --express-color: #000000;
-  --javascript-color: #F7DF1E;
-  --typescript-color: #007ACC;
-  --gmail-color: #FF0000;
-  --linkedin-color: #0077B5;
-  --whatsapp-color: #075E54;
-  --github-color: #181717;
-  --tailwind-color: #38bdf8;
-  --docker-color: #2496ED;
-  --php-color: #777BB4;
-}
+  :root {
+    --react-color: #61DAFB;
+    --nextjs-color: #000000;
+    --css-color: #4F8FD3;
+    --mysql-color: #00758F;
+    --nodejs-color: #8CC84B;
+    --postgresql-color: #336791;
+    --express-color: #000000;
+    --javascript-color: #F7DF1E;
+    --typescript-color: #007ACC;
+    --tailwind-color: #38bdf8;
+  }
 
-html,
-body {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  outline: none;
-}
+  html,
+  body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
 
-body {
-  color: #ffffff;
-  background-color: #232323;
-  padding: 0px;
-  margin: 0px;
-  min-width: 360px;
-  font-weight: 400;
-}
+  body {
+    color: #ffffff;
+    background-color: #232323;
+    padding: 0px;
+    margin: 0px;
+    min-width: 360px;
+    font-weight: 400;
+  }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 12rem;
-  max-width: 42rem;
-  margin: 3.5rem auto 12rem auto;
-  position: relative;
-}
-
-@media (max-width:723px) {
   main {
-    margin: 4.5rem 1.5rem 12rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12rem;
+    max-width: 42rem;
+    margin: 3.5rem auto 12rem auto;
+    position: relative;
+    scroll-margin-top: 3.5rem;
+  }
+
+  @media (max-width:723px) {
+    main {
+      margin: 4.5rem 1.5rem 12rem 1.5rem;
+      scroll-margin-top: 4.5rem;
+    }
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: transparent;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    text-wrap: nowrap;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: .375rem;
+    padding-left: 1.625rem;
+    list-style: disc;
+  }
+
+  li::marker {
+    color: #707070;
   }
 }
 
-/* Firefox */
-* {
-  scrollbar-width: none;
-  scrollbar-color: transparent;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+@layer components {
+  .icon-container path,
+  .icon-container p {
+    transition: fill 2.2s ease-in-out, color 2.2s ease-in-out;
+    fill: #ffffff;
+    color: #ffffff;
+  }
+
+  @media (hover: hover) {
+    .icon-container:hover path,
+    .icon-container:hover p {
+      transition: fill 0s ease-in-out, color 0s ease-in-out;
+    }
+
+    .icon-container:hover [class*="color-"] {
+      fill: var(--hover-color);
+      color: var(--hover-color);
+    }
+  }
+
+  .color-react {
+    --hover-color: var(--react-color);
+  }
+
+  .color-nextjs {
+    --hover-color: var(--nextjs-color);
+  }
+
+  .color-css {
+    --hover-color: var(--css-color);
+  }
+
+  .color-tailwind {
+    --hover-color: var(--tailwind-color);
+  }
+
+  .color-mysql {
+    --hover-color: var(--mysql-color);
+  }
+
+  .color-nodejs {
+    --hover-color: var(--nodejs-color);
+  }
+
+  .color-postgresql {
+    --hover-color: var(--postgresql-color);
+  }
+
+  .color-express {
+    --hover-color: var(--express-color);
+  }
+
+  .color-javascript {
+    --hover-color: var(--javascript-color);
+  }
+
+  .color-typescript {
+    --hover-color: var(--typescript-color);
+  }
 }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 0px;
-  background-color: transparent;
-}
+@layer base {
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 2px solid #a586df;
+    outline-offset: 4px;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  display: inline-block;
-  text-wrap: nowrap;
-}
-
-ul {
-  display: flex;
-  flex-direction: column;
-  gap: .375rem;
-  padding-left: 1.625rem;
-  list-style: disc;
-}
-
-li {
-  padding-left: .375rem,
-}
-
-li::marker {
-  color: #707070;
-}
+  @media (prefers-reduced-motion: reduce) {
+    html, body {
+      scroll-behavior: auto;
+    }
+  }
 }
 
 @layer components {
-.icon-container path,
-.icon-container p {
-  transition: fill 2.2s ease-in-out, color 2.2s ease-in-out;
-  fill: #ffffff;
-  color: #ffffff;
-}
-
-.icon-container:hover path,
-.icon-container:hover p {
-  transition: fill 0s ease-in-out, color 0s ease-in-out;
-}
-
-.icon-container:hover .color-react,
-.icon-container:hover .color-redux,
-.icon-container:hover .color-nextjs,
-.icon-container:hover .color-html,
-.icon-container:hover .color-css,
-.icon-container:hover .color-sass,
-.icon-container:hover .color-tailwind,
-.icon-container:hover .color-mysql,
-.icon-container:hover .color-mongodb,
-.icon-container:hover .color-sequelize,
-.icon-container:hover .color-nodejs,
-.icon-container:hover .color-postgresql,
-.icon-container:hover .color-express,
-.icon-container:hover .color-javascript,
-.icon-container:hover .color-typescript,
-.icon-container:hover .color-docker,
-.icon-container:hover .color-php  {
-  fill: var(--hover-color);
-  color: var(--hover-color);
-}
-
-.color-react {
-  --hover-color: var(--react-color);
-}
-
-.color-redux {
-  --hover-color: var(--redux-color);
-}
-
-.color-nextjs {
-  --hover-color: var(--nextjs-color);
-}
-
-.color-html {
-  --hover-color: var(--html-color);
-}
-
-.color-css {
-  --hover-color: var(--css-color);
-}
-
-.color-sass {
-  --hover-color: var(--sass-color);
-}
-
-.color-tailwind {
-  --hover-color: var(--tailwind-color);
-}
-
-.color-mysql {
-  --hover-color: var(--mysql-color);
-}
-
-.color-mongodb {
-  --hover-color: var(--mongodb-color);
-}
-
-.color-sequelize {
-  --hover-color: var(--sequelize-color);
-}
-
-.color-nodejs {
-  --hover-color: var(--nodejs-color);
-}
-
-.color-postgresql {
-  --hover-color: var(--postgresql-color);
-}
-
-.color-express {
-  --hover-color: var(--express-color);
-}
-
-.color-javascript {
-  --hover-color: var(--javascript-color);
-}
-
-.color-typescript {
-  --hover-color: var(--typescript-color);
-}
-
-.color-docker {
-  --hover-color: var(--docker-color);
-}
-
-.color-php {
-  --hover-color: var(--php-color);
-}
-
-.mobile-color-react {
-  fill: var(--react-color);
-  color: var(--react-color);
-}
-
-.mobile-color-redux {
-  fill: var(--redux-color);
-  color: var(--redux-color);
-}
-
-.mobile-color-nextjs {
-  fill: var(--nextjs-color);
-  color: var(--nextjs-color);
-}
-
-.mobile-color-html {
-  fill: var(--html-color);
-  color: var(--html-color);
-}
-
-.mobile-color-css {
-  fill: var(--css-color);
-  color: var(--css-color);
-}
-
-.mobile-color-sass {
-  fill: var(--sass-color);
-  color: var(--sass-color);
-}
-
-.mobile-color-tailwind {
-  fill: var(--tailwind-color);
-  color: var(--tailwind-color);
-}
-
-.mobile-color-mysql {
-  fill: var(--mysql-color);
-  color: var(--mysql-color);
-}
-
-.mobile-color-mongodb {
-  fill: var(--mongodb-color);
-  color: var(--mongodb-color);
-}
-
-.mobile-color-sequelize {
-  fill: var(--sequelize-color);
-  color: var(--sequelize-color);
-}
-
-.mobile-color-nodejs {
-  fill: var(--nodejs-color);
-  color: var(--nodejs-color);
-}
-
-.mobile-color-postgresql {
-  fill: var(--postgresql-color);
-  color: var(--postgresql-color);
-}
-
-.mobile-color-express {
-  fill: var(--express-color);
-  color: var(--express-color);
-}
-
-.mobile-color-javascript {
-  fill: var(--javascript-color);
-  color: var(--javascript-color);
-}
-
-.mobile-color-typescript {
-  fill: var(--typescript-color);
-  color: var(--typescript-color);
-}
-
-.mobile-color-docker {
-  fill: var(--docker-color);
-  color: var(--docker-color);
-}
-
-.mobile-color-php {
-  fill: var(--php-color);
-  color: var(--php-color);
-}
+  @media (prefers-reduced-motion: reduce) {
+    .icon-container path,
+    .icon-container p {
+      transition: none;
+    }
+  }
 }

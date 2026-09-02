@@ -2,14 +2,10 @@
 
 const nextConfig = {
     images: {
-        deviceSizes: [2560],
+        imageSizes: [32, 48, 64, 96, 128, 160, 256, 320, 384, 480],
         qualities: [75, 100],
-        minimumCacheTTL: 315360000,
         formats: ['image/avif', 'image/webp'],
     },
-    env:{
-        BASE_PATH: process.env.BASE_PATH
-    }
 };
 
 export default nextConfig;

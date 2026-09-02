@@ -6,7 +6,8 @@
             "gmail": "Contactame",
             "or": "o",
             "copy": "Copiar email",
-            "success": "Copiado"
+            "success": "Copiado",
+            "error": "No se pudo copiar. Podés usar Contactame o volver a intentarlo."
         },
         "cv": "Descargar curriculum"
     },
@@ -69,5 +70,10 @@
             "Inglés - (Basico A2)"
         ]
     },
-    "scrollToTop": "Volver arriba"
+    "scrollToTop": "Volver arriba",
+    "languageHandler": {
+        "switchLabel": "ES: cambiar a inglés",
+        "error": "No se pudo guardar el idioma. Permití las cookies y volvé a intentarlo.",
+        "changed": "Idioma actualizado a español."
+    }
 }

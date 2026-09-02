@@ -1,62 +1,33 @@
 # Flujos de ejecución
 
-## Render de la home
+## Render e idioma
 
-1. `app/layout.tsx` espera las lecturas asíncronas de `cookies()` y `headers()` para obtener locale y clasificación de dispositivo.
-2. El layout renderiza `LanguageHandler` y después la ruta solicitada.
-3. `app/page.tsx` vuelve a obtener locale y dispositivo para componer las seis áreas de la home.
-4. Los componentes servidor cargan el diccionario correspondiente y pasan a los componentes cliente sólo los datos necesarios para interacción.
+1. Layout y página consumen `getLocale()`, memoizado con `React.cache` sólo dentro de la solicitud.
+2. Una cookie `lang` válida (`en` o `es`) tiene prioridad. Sin ella, se negocia `Accept-Language`: variantes regionales, mayúsculas y calidad `q`; se descartan entradas inválidas y `q=0`.
+3. Sin coincidencia compatible, se usa español. Empates de calidad conservan el orden del header.
+4. El resultado es `{ locale, needsCookie }`. El servidor usa ese locale para el documento y el contenido desde el primer render.
+5. `getDictionary(locale)` importa el JSON en servidor y también se memoiza por solicitud. No usar caché global para preferencias de visitantes.
 
-La composición actual de `app/page.tsx` define tanto el orden visual como los puntos de entrada de cada sección.
+## Persistencia y cambios
 
-## Selección y cambio de idioma
+- `POST /api/cookie` conserva el cuerpo JSON como string: `"en"` o `"es"`.
+- Devuelve HTTP 200 con `{ locale }`; JSON o locale inválido devuelve 400 y no escribe cookies. Un fallo de escritura devuelve 500 con un mensaje genérico.
+- Cookie `lang`: Max-Age 2592000 (30 días), Path=/, SameSite=Lax y Secure bajo HTTPS, incluyendo terminación TLS informada por `x-forwarded-proto`.
+- La cookie no es HttpOnly: contiene una preferencia no sensible y el cliente comprueba su persistencia mediante `document.cookie`.
+- Si falta, es inválida o venció, `LanguageHandler` persiste automáticamente el idioma resuelto después de hidratar. Una visita con cookie válida no la renueva.
+- Una elección manual inicia otros 30 días. Tras confirmarse la escritura, `router.refresh()` actualiza contenido y `html[lang]`.
+- La inicialización comparte una única promesa entre efectos de Strict Mode. El botón permanece deshabilitado durante la escritura y el refresh; una referencia evita cambios manuales duplicados.
+- La URL cliente es relativa. `setLocale` comprueba HTTP, cuerpo y cookie persistida; la solicitud tiene un límite de 10 segundos.
+- Los fallos dejan el contenido actual, presentan un mensaje visible con `role=status` y permiten reintentar. No redirigir a not-found, no refrescar en bucle ni anunciar éxito si se bloqueó la cookie.
+- Sin JavaScript, el contenido inicial y su idioma siguen renderizados en servidor; la persistencia y el selector requieren hidratación.
 
-```text
-cookie lang válida
-  -> getLocale usa cookie
-sin cookie válida
-  -> Accept-Language compatible (en/es)
-sin coincidencia
-  -> inglés por defecto
-```
+## Interacción y límites cliente/servidor
 
-- `utils/getLocale.ts` reconoce únicamente `en` y `es`; `defaultLocale` es `en`.
-- `models/en.json` y `models/es.json` son cargados por `utils/dictionaries.ts` mediante imports dinámicos del lado servidor.
-- `LanguageHandler` recibe el locale resuelto y la cookie. Si falta o no coincide, llama a `POST /api/cookie` desde un `useEffect`.
-- Al pulsar el selector, publica el locale opuesto como un string JSON, y luego ejecuta `router.refresh()` para volver a renderizar los Server Components sin recargar la ruta.
-- `app/api/cookie/route.ts` espera `cookies()` y guarda `lang` por un día, con `sameSite: 'strict'` y `path: '/'`.
-- Si el cambio de idioma no devuelve estado lógico `201`, `LanguageHandler` invoca `notFound()`; el `app/not-found.tsx` actual redirige a `/`.
-- El atributo `<html lang>` está actualmente fijo en `en`; no asumas que refleja el locale elegido.
+Sólo `language-handler.tsx` y `copy-to-clipboard.tsx` declaran `'use client'`. Reciben textos mínimos e iconos como ReactNode, sin importar `models/data.json` ni diccionarios completos.
 
-## Detección de dispositivo
-
-```text
-header User-Agent de la solicitud
-  -> utils/getUserAgent.ts
-  -> POST ${BASE_PATH}/api/userAgent
-  -> userAgent(request) de Next.js
-  -> isMobile = mobile o tablet
-```
-
-- `next.config.mjs` expone `process.env.BASE_PATH` al código que construye las URLs internas.
-- El servidor local necesita compilarse con un `BASE_PATH` absoluto que apunte al origen donde se ejecutará; sin esa variable el fetch servidor de user-agent intenta resolver `undefined/api/userAgent`.
-- Ante una respuesta lógica distinta de `201`, `getUserAgent` conserva el `isMobile` devuelto por la API.
-- `isMobile` no sólo acompaña el layout responsivo: desactiva varios estados hover. La elección de `otherLink` (`wa.me`) para WhatsApp es un acoplamiento separado basado en el `iconId`.
-- `PersonalIdentity`, `Experience`, `Stack`, `LanguageHandler`, `CopyToClipboard` e iconos reciben o propagan este indicador.
-
-## Límites server/client
-
-Componentes cliente explícitos:
-
-- `components/LanguageHandler/LanguageHandler.tsx`: `useEffect`, fetch, click y `useRouter`.
-- `components/CopyToClipboard/CopyToClipboard.tsx`: `useState`, Clipboard API y timeout.
-- `components/ScrollToTop/ScrollToTop.client.tsx`: click, `window` y scroll.
-
-Mantén las lecturas asíncronas de `headers()` y `cookies()` del lado servidor. Si una pieza compartida pasa a usar hooks o APIs del navegador, revisa el límite de bundle que crea `'use client'`.
-
-## Contratos internos actuales
-
-- `POST /api/cookie` recibe el cuerpo JSON como string de locale, no como objeto.
-- `POST /api/userAgent` toma la clasificación del header `User-Agent` de la solicitud reenviada.
-- Ambas APIs devuelven un campo `status` dentro del JSON; los consumidores verifican ese campo, no sólo el status HTTP.
-- Las rutas de fetch se construyen con `process.env.BASE_PATH`; un cambio de despliegue debe comprobar cliente y servidor.
+- Hover de escritorio: utilities de Tailwind y reglas globales limitadas a `(hover: hover)`.
+- Táctil: `(hover: none)` conserva la apariencia activa del selector de idioma; las tecnologías mantienen sus colores de reposo.
+- `IconLink` usa `otherLink ?? link`: conserva el destino WhatsApp sin depender de un ID numérico ni de user-agent.
+- Copiar email: botón nativo, aviso de éxito/error, bloqueo de escrituras simultáneas y limpieza del temporizador al desmontar.
+- Volver arriba: enlace a main con `id=top` y `tabIndex=-1`. `scroll-margin-top` compensa el margen inicial, de modo que el destino sea el inicio del documento y reciba foco.
+- `prefers-reduced-motion` desactiva desplazamiento suave y transiciones de tecnologías.

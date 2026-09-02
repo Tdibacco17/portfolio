@@ -1,76 +1,60 @@
 # Mapa del repositorio
 
-## Identidad y stack
+## Identidad y convenciones
 
-- Repositorio remoto: `Tdibacco17/portfolio`.
-- Aplicación: portfolio personal de una sola página.
-- Framework: Next.js 16.3.4 con App Router y React 19.2.8.
-- Runtime y lenguaje: Node.js 22 o posterior, TypeScript 6 estricto y alias `@/*` apuntando a la raíz.
-- UI: Tailwind CSS 4.3.3 mediante `@tailwindcss/postcss`, CSS global y fuente Geist.
-- Persistencia: no hay base de datos. El contenido vive en JSON y los assets en `public/`.
+- Paquete `portfolio`, remoto `Tdibacco17/portfolio`: portfolio personal de una sola página, sin base de datos.
+- Next.js 16.3.4 (App Router), React 19.2.8, TypeScript 6 estricto, Tailwind CSS 4.3.3 y Geist.
+- Node.js mínimo 22.12.0, requerido por Vite, dependencia de Vitest. El alias `@/*` apunta a la raíz.
+- Componentes directamente en `components/`, archivos kebab-case y funciones React PascalCase. No crear una carpeta por componente.
+- `components/icons/` agrupa `icon.tsx`, `icon-link.tsx` y `tech-icon.tsx`; el icono básico no importa enlaces ni datos del portfolio.
+- Concentrar la documentación de mantenimiento en esta skill. Entregar informes de tareas y mediciones en la conversación, sin agregar archivos Markdown al repositorio salvo pedido explícito.
 
-## Entradas principales
+## Entradas y responsabilidades
 
-| Ruta | Responsabilidad actual |
+| Ruta | Responsabilidad |
 | --- | --- |
-| `app/layout.tsx` | Metadata, viewport, fuente, contenedor raíz, locale inicial, detección de dispositivo y selector de idioma. |
-| `app/page.tsx` | Compone la home en orden: identidad, presentación, experiencia, stack, educación y volver arriba. |
-| `app/globals.css` | Reset, layout global, scrollbar y colores/transiciones de iconos de tecnologías. |
-| `app/not-found.tsx` | Redirige cualquier estado not-found a `/`. |
-| `app/robots.ts` | Reglas de rastreo y URL de sitemap. No existe actualmente un `app/sitemap.ts`. |
-| `app/api/cookie/route.ts` | `POST` que persiste el idioma en la cookie `lang`. |
-| `app/api/userAgent/route.ts` | `POST` que clasifica móvil/tablet con `userAgent` de Next.js. |
+| `app/layout.tsx` | Metadata, fuente, idioma del documento, main y selector de idioma. |
+| `app/page.tsx` | Carga el diccionario y compone identidad, presentación, experiencia, stack, educación y volver arriba. |
+| `app/globals.css` | Layout, tokens, hover de tecnologías, foco visible y movimiento reducido. |
+| `app/api/cookie/route.ts` | Valida y guarda la cookie de idioma mediante POST. |
+| `app/not-found.tsx` | Conserva la redirección de rutas inexistentes a la home. |
+| `app/robots.ts` | Reglas de rastreo. No anuncia un sitemap inexistente. |
 
 ## Componentes
 
-| Área | Archivo | Papel |
-| --- | --- | --- |
-| Identidad | `components/PersonalIdentity/PersonalIdentity.tsx` | Foto, nombre/rol, redes, contacto y descarga del CV. |
-| Copiar email | `components/CopyToClipboard/CopyToClipboard.tsx` | Componente cliente con Clipboard API y estado temporal de éxito. |
-| Presentación | `components/AboutMe/AboutMe.tsx` | Renderiza los tres párrafos de “Sobre mí”. |
-| Experiencia | `components/Experience/Experience.tsx` | Renderiza House of CB, Strongwood y 25Watts con imagen y bullets. |
-| Tecnologías | `components/Stack/Stack.tsx` | Recorre `models/data.json` con `Object.values`; el orden del JSON es visible. |
-| Educación | `components/Education/Education.tsx` | Bootcamp, certificado e idiomas. |
-| Idioma | `components/LanguageHandler/LanguageHandler.tsx` | Componente cliente que inicializa/cambia la cookie y refresca los Server Components. |
-| Iconos | `components/Icons/Icons.tsx` | Tipos y renderizadores compartidos para enlaces, acciones y tecnologías. |
-| Secciones | `components/Section/Section.tsx` | Rótulo visual reutilizado por las secciones. |
-| Volver arriba | `components/ScrollToTop/ScrollToTop.tsx` | Wrapper servidor que obtiene el diccionario. |
-| Volver arriba | `components/ScrollToTop/ScrollToTop.client.tsx` | Interacción cliente de scroll suave. |
-
-Los componentes sin `'use client'` son compatibles con Server Components. `Icons.tsx` puede quedar incluido en el bundle cliente cuando lo importa un componente cliente.
-
-## Utilidades y fuentes de verdad
-
-| Necesidad | Fuente principal | Consumidores destacados |
-| --- | --- | --- |
-| Selección de idioma | `utils/getLocale.ts` | `app/layout.tsx`, `app/page.tsx`. |
-| Carga de traducciones | `utils/dictionaries.ts` | Componentes de contenido. |
-| Copia traducible | `models/en.json`, `models/es.json` | Diccionarios cargados en servidor y props hacia clientes. |
-| Links, SVG, imágenes y tecnologías | `models/data.json` | Identidad, iconos, experiencia y stack. |
-| Clasificación móvil | `utils/getUserAgent.ts` y `app/api/userAgent/route.ts` | Layout, página y props `isMobile`. |
-| Scroll suave | `utils/scrollToSection.ts` | `ScrollToTop.client.tsx`. |
-| Assets públicos | `public/assets/img/`, `public/assets/pdf/` | Rutas absolutas desde `models/data.json`. |
-
-`models/backup.data-old.json` es un respaldo histórico y no tiene imports vigentes. No lo trates como fuente de verdad ni lo elimines sin una solicitud explícita.
-
-## Configuración
-
-| Archivo | Qué controla |
+| Archivo dentro de `components/` | Papel |
 | --- | --- |
-| `package.json` | Dependencias, requisito de Node.js y scripts. |
-| `package-lock.json` | Árbol reproducible de dependencias para `npm ci`. |
-| `next.config.mjs` | Optimización de imágenes, allowlist de calidad que conserva `quality={100}` y exposición de `BASE_PATH`. |
-| `app/globals.css` | Import de Tailwind, tokens `@theme`, compatibilidad de bordes, capas base/componentes y estilos globales. |
-| `tsconfig.json` | TypeScript estricto, JSX moderno, tipos generados de Next y alias `@/*`. |
-| `eslint.config.mjs` | Flat Config con `next/core-web-vitals` e ignores de artefactos generados. |
-| `postcss.config.mjs` | Pipeline de Tailwind 4 mediante `@tailwindcss/postcss`. |
+| `personal-identity.tsx` | Foto, identidad, redes, contacto y CV. |
+| `copy-to-clipboard.tsx` | Cliente: botón de copia, estado accesible y temporizador. |
+| `about-me.tsx` | Presentación. |
+| `experience.tsx` | Un solo renderizador para el catálogo completo de experiencias. |
+| `stack.tsx` | Recorre tecnologías en el orden de `models/data.json`. |
+| `education.tsx` | Educación, certificado e idiomas. |
+| `language-handler.tsx` | Cliente: persistencia automática, cambio de idioma y errores recuperables. |
+| `section-heading.tsx` | Encabezado h2 con el posicionamiento visual de los rótulos de sección. |
+| `scroll-to-top.tsx` | Enlace nativo a `#top`, sin JavaScript cliente. |
 
-## Comandos disponibles
+## Fuentes de verdad
 
-- `npm run dev`: servidor de desarrollo.
-- `npm run build`: build de producción con Next.js.
-- `npm run start`: sirve el build.
-- `npm run lint`: ejecuta ESLint con Flat Config sobre el repositorio.
-- `npm run typecheck`: comprueba TypeScript sin emitir archivos.
+| Necesidad | Archivo |
+| --- | --- |
+| Locales, cookie y negociación pura | `utils/locale.ts` |
+| Lectura de cookies/headers, memoizada por solicitud | `utils/get-locale.ts` |
+| Carga de diccionarios en servidor | `utils/dictionaries.ts` |
+| Escritura cliente y comprobación de persistencia | `utils/set-locale.ts` |
+| Contrato bilingüe | `models/dictionary.ts` |
+| Catálogo ordenado de experiencias, IDs e imágenes | `models/experiences.ts` |
+| Textos traducibles | `models/en.json`, `models/es.json` |
+| Perfil, enlaces, SVG y tecnologías | `models/data.json` |
 
-No hay script de tests ni framework de pruebas configurado. Elige la verificación proporcional al cambio y no afirmes que existe cobertura automatizada.
+No hay API de user-agent ni variable `BASE_PATH`: los estados hover se resuelven con CSS. El respaldo histórico y el asset alternativo de 25Watts sin consumidores fueron retirados; no son fuentes de contenido.
+
+## Configuración y verificación
+
+- `next.config.mjs`: tamaños responsivos y calidades 75/100; mantiene AVIF/WebP. Usa el TTL predeterminado de Next.
+- `vitest.config.ts`: pruebas Node, alias de la raíz e inclusión de `tests/**/*.test.ts`.
+- `npm run dev` / `npm run start`: desarrollo / producción.
+- `npm run test`: negociación, endpoint, persistencia cliente y contratos de contenido.
+- `npm run lint` / `npm run typecheck`: ESLint y TypeScript.
+- `npm run build`: ejecuta las pruebas antes del build; detecta traducciones y assets faltantes antes de publicar.
+- Para el flujo de idioma, consultar `runtime-flows.md`.

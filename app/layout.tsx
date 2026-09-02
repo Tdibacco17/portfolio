@@ -1,10 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
-import getLocale from "@/utils/getLocale";
-import LanguageHandler from "@/components/LanguageHandler/LanguageHandler";
-import { getUserAgent } from "@/utils/getUserAgent";
-import { headers } from "next/headers";
+import { getLocale } from '@/utils/get-locale';
+import { getDictionary } from '@/utils/dictionaries';
+import LanguageHandler from '@/components/language-handler';
+import Icon from '@/components/icons/icon';
+import data from '@/models/data.json';
 
 export const metadata: Metadata = {
   title: "Tomás Di Bacco",
@@ -16,7 +17,6 @@ export const viewport: Viewport = {
   themeColor: '#232323',
   width: 'device-width',
   initialScale: 1,
-  // maximumScale: 1,
   userScalable: true,
   colorScheme: 'dark',
 }
@@ -26,14 +26,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { lang } = await getLocale();
-  const { isMobile } = await getUserAgent((await headers()).get('user-agent'));
+  const { locale, needsCookie } = await getLocale();
+  const dict = await getDictionary(locale);
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={GeistSans.className}>
-        <main>
-          <LanguageHandler localeLang={lang.locale} cookieLang={lang.cookie} isMobile={isMobile} />
+        <main id="top" tabIndex={-1}>
+          <LanguageHandler locale={locale} needsCookie={needsCookie} labels={dict.languageHandler}
+            icon={<Icon iconData={data.language} fill reduce />} />
           {children}
         </main>
       </body>

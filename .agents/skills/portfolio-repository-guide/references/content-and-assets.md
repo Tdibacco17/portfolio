@@ -1,71 +1,42 @@
 # Contenido, datos y assets
 
-## Separación de responsabilidades
+## Fuentes y contratos
 
-- `models/en.json` y `models/es.json`: todo texto visible que cambia por idioma.
-- `models/data.json`: datos no traducibles, links, metadatos de iconos, rutas de imágenes, blur placeholders y tecnologías.
-- `public/assets/img/`: foto personal e imágenes de experiencia.
-- `public/assets/pdf/TomasDiBacco_Resume.pdf`: CV descargable actual.
+- `models/en.json` y `models/es.json`: textos visibles y mensajes accesibles traducibles.
+- `models/experiences.ts`: catálogo ordenado, IDs y metadatos de imágenes de experiencias.
+- `models/data.json`: perfil, enlaces, SVG, CV y tecnologías. No importar este JSON completo desde componentes cliente.
+- `models/dictionary.ts`: contrato común; exige traducciones para cada `ExperienceId` derivado del catálogo.
+- `tests/content.test.ts`: compara claves y tipos de ambos idiomas, IDs únicos/correspondientes y assets existentes con capitalización correcta.
 
-Evita duplicar copy traducible en componentes o `data.json`. Evita mover SVG paths o blur data a los diccionarios de idioma.
+Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technologies`, `education`, `languages`, `scrollToTop` y `languageHandler`. Un cambio estructural exige actualizar ambos idiomas. No usar fallbacks silenciosos para ocultar claves ausentes: el build corre las pruebas de contenido.
 
-## Paridad bilingüe
+## Agregar una experiencia
 
-Los dos diccionarios deben mantener la misma forma. Las ramas vigentes son:
+1. Añadir la imagen a `public/assets/img/`.
+2. Agregar una entrada al array `experiences` en `models/experiences.ts`, en su posición de presentación. Definir un ID estable, `src`, `alt`, `blurData`, `width` y `height`.
+3. Agregar ese mismo ID bajo `experience` en ambos diccionarios, con `title`, `subTitle` y `list`.
+4. Ejecutar `npm run build` y comprobar el render en ambas lenguas. No modificar el JSX del renderizador.
 
-- `personalIdentity`
-- `aboutMe`
-- `experience.houseofcb`
-- `experience.strongwood`
-- `experience.watts`
-- `technologies`
-- `education`
-- `languages`
-- `scrollToTop`
-
-Cuando agregues, elimines o renombres una clave, actualiza ambos idiomas y todos sus consumidores en la misma tarea. Un cambio sólo de redacción puede modificar un único idioma si ésa es la intención explícita.
-
-## `models/data.json`
-
-- `language` cumple el contrato de icono de acción.
-- `personalIdentity.img` aporta `src`, `alt` y `blurData`.
-- `personalIdentity.networks` se recorre con `Object.values`.
-- `personalIdentity.contact` contiene Gmail, copiar y éxito.
-- `personalIdentity.cv.pdfSrc` apunta al PDF público.
-- `experience.*.img` aporta imagen y placeholder para cada experiencia.
-- `technologies` se recorre con `Object.values`; el orden de las propiedades es el orden visible de las tarjetas.
-
-El archivo contiene paths SVG y blur data extensos. Haz ediciones puntuales y evita reformatearlo completo, porque un diff masivo oculta cambios reales.
-
-## Acoplamientos de iconos y tecnologías
-
-- Las interfaces viven en `components/Icons/Icons.tsx`: `LinkIconInterface`, `IconInterface` y `TechIconInterface`.
-- `IconLinkComponent` usa `otherLink` cuando el consumidor lo solicita. En identidad, esa selección está acoplada actualmente a `iconId === 3` para WhatsApp, independientemente de `isMobile`.
-- Cada `technologies.<id>.color` genera la clase CSS `color-<valor>`.
-- Ese valor debe tener su variable `--<valor>-color` y selector correspondiente en `app/globals.css`.
-- Los SVG generales tienen dimensiones explícitas mediante clases `w-full h-full`; conserva ese detalle salvo que verifiques los navegadores relevantes.
+El orden vigente es House of CB, Strongwood y 25Watts. Las medidas del catálogo conservan las proporciones declaradas previamente; la imagen original de House of CB mide 2560×1128, mientras el atributo histórico de alto es 1127. Al sustituirla, comprobar el recorte real.
 
 ## Imágenes y CV
 
-Rutas actualmente activas:
-
 - Perfil: `/assets/img/tomas.webp`.
-- House of CB: `/assets/img/houseofcb.avif`.
-- Strongwood: `/assets/img/strongwood.png`.
-- 25Watts: `/assets/img/25Watts.jpg`.
+- Experiencias: `/assets/img/houseofcb.avif`, `/assets/img/strongwood.png`, `/assets/img/25Watts.jpg`.
 - CV: `/assets/pdf/TomasDiBacco_Resume.pdf`.
 
-Si cambia el nombre del CV, sincroniza como mínimo:
+Sólo el perfil se precarga. Su `sizes` es 160px; las experiencias usan `(max-width: 723px) calc(100vw - 3rem), 42rem` y carga diferida de Next/Image. Se conserva calidad 100 y blur.
 
-1. El archivo dentro de `public/assets/pdf/`.
-2. `models/data.json` en `personalIdentity.cv.pdfSrc`.
-3. El atributo `download` de `components/PersonalIdentity/PersonalIdentity.tsx`.
+Si se sustituye una imagen, cambiar su nombre/ruta para evitar servir copias optimizadas viejas: el optimizador no proporciona invalidación inmediata del caché.
 
-Después de cambiar cualquier asset, busca referencias al nombre anterior en todo el repositorio y comprueba la ruta con la misma capitalización. En Windows una diferencia de mayúsculas puede quedar oculta y fallar al desplegar en un sistema sensible a mayúsculas.
+El nombre de descarga del CV se deriva de `pdfSrc`. Al renombrarlo, sincronizar el archivo público y `models/data.json`, buscar referencias y verificar descarga. Revisar mayúsculas/minúsculas aunque Windows resuelva ambas.
 
-## Validación orientativa
+## Iconos, tecnologías y colores
 
-- Parsea los tres JSON activos para detectar sintaxis inválida.
-- Compara recursivamente las claves de `models/en.json` y `models/es.json` cuando cambie su estructura.
-- Busca rutas de `models/data.json` bajo `public/` y confirma que existan.
-- Para cambios de contenido o assets, valida además el render de ambas lenguas y los enlaces/descargas afectados.
+- El orden de `models/data.json.technologies` es el orden visible del stack.
+- Cada propiedad `color` requiere su selector `.color-<valor>` y variable de color en `app/globals.css`.
+- Los SVG de acción y enlace conservan `w-full h-full`; todos los SVG decorativos tienen `aria-hidden=true` y `focusable=false`.
+- `otherLink`, cuando existe, es el enlace preferido; no reintroducir una condición por `iconId`.
+- Evitar reformatear el JSON de datos completo: sus paths SVG y placeholders extensos requieren diffs puntuales.
+
+La decisión de esta refactorización fue mantener la paleta y no cambiar zoom. El texto separador y algunos textos de tecnologías en hover tienen contraste insuficiente; no asumir conformidad WCAG completa por el puntaje de Lighthouse.

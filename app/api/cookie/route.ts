@@ -1,21 +1,27 @@
-import { LocaleType } from "@/utils/dictionaries";
-import { cookies } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import { isLocale, localeCookieMaxAge, localeCookieName } from '@/utils/locale';
 
 export async function POST(request: Request) {
-    try {
-        const newLang: LocaleType = await request.json();
+  let locale: unknown;
+  try {
+    locale = await request.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 });
+  }
+  if (!isLocale(locale)) {
+    return NextResponse.json({ error: 'Unsupported locale' }, { status: 400 });
+  }
 
-        (await cookies()).set({
-            name: 'lang',
-            value: newLang,
-            maxAge: 24 * 60 * 60, // One day
-            sameSite: 'strict',
-            path: '/',
-        })
-        
-        return NextResponse.json({ status: 201, msg: 'Cookie set successfully' });
-    } catch (error) {
-        return NextResponse.json({ status: 500, msg: "Error: " + error });
-    }
+  try {
+    const response = NextResponse.json({ locale }, { headers: { 'Cache-Control': 'no-store' } });
+    response.cookies.set(localeCookieName, locale, {
+      maxAge: localeCookieMaxAge,
+      path: '/',
+      sameSite: 'lax',
+      secure: new URL(request.url).protocol === 'https:' || request.headers.get('x-forwarded-proto')?.split(',')[0].trim() === 'https',
+    });
+    return response;
+  } catch {
+    return NextResponse.json({ error: 'Unable to save locale' }, { status: 500 });
+  }
 }

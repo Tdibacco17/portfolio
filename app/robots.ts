@@ -6,6 +6,5 @@ export default function robots(): MetadataRoute.Robots {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: "https://tomas-di-bacco.vercel.app/sitemap.xml"
     }
 }

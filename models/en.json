@@ -6,7 +6,8 @@
             "gmail": "Contact me",
             "or": "or",
             "copy": "Copy email",
-            "success": "Copied"
+            "success": "Copied",
+            "error": "Could not copy. Use Contact me or try again."
         },
         "cv": "Download resume"
     },
@@ -69,5 +70,10 @@
             "English - (Basic - A2)"
         ]
     },
-    "scrollToTop": "Scroll to top"
+    "scrollToTop": "Scroll to top",
+    "languageHandler": {
+        "switchLabel": "EN: switch to Spanish",
+        "error": "Could not save the language. Allow cookies and try again.",
+        "changed": "Language changed to English."
+    }
 }

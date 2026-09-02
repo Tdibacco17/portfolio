@@ -1,25 +1,24 @@
-import AboutMe from "@/components/AboutMe/AboutMe";
-import Education from "@/components/Education/Education";
-import Experience from "@/components/Experience/Experience";
-import PersonalIdentity from "@/components/PersonalIdentity/PersonalIdentity";
-import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
-import Stack from "@/components/Stack/Stack";
-import getLocale from "@/utils/getLocale";
-import { getUserAgent } from "@/utils/getUserAgent";
-import { headers } from "next/headers";
+import AboutMe from '@/components/about-me';
+import Education from '@/components/education';
+import Experience from '@/components/experience';
+import PersonalIdentity from '@/components/personal-identity';
+import ScrollToTop from '@/components/scroll-to-top';
+import Stack from '@/components/stack';
+import { getLocale } from '@/utils/get-locale';
+import { getDictionary } from '@/utils/dictionaries';
 
 export default async function Home() {
-  const { flag } = await getLocale();
-  const { isMobile } = await getUserAgent((await headers()).get('user-agent'));
+  const { locale } = await getLocale();
+  const dict = await getDictionary(locale);
 
   return (
     <>
-      <PersonalIdentity flag={flag} isMobile={isMobile} />
-      <AboutMe flag={flag} />
-      <Experience flag={flag} isMobile={isMobile} />
-      <Stack flag={flag} isMobile={isMobile} />
-      <Education flag={flag} isMobile={isMobile} />
-      <ScrollToTop flag={flag} />
+      <PersonalIdentity content={dict.personalIdentity} />
+      <AboutMe content={dict.aboutMe} />
+      <Experience content={dict.experience} />
+      <Stack title={dict.technologies.title} />
+      <Education content={dict.education} languages={dict.languages} />
+      <ScrollToTop label={dict.scrollToTop} />
     </>
   );
 }
