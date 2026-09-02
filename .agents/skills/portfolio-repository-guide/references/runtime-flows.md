@@ -2,7 +2,7 @@
 
 ## Render de la home
 
-1. `app/layout.tsx` obtiene locale y clasificación de dispositivo.
+1. `app/layout.tsx` espera las lecturas asíncronas de `cookies()` y `headers()` para obtener locale y clasificación de dispositivo.
 2. El layout renderiza `LanguageHandler` y después la ruta solicitada.
 3. `app/page.tsx` vuelve a obtener locale y dispositivo para componer las seis áreas de la home.
 4. Los componentes servidor cargan el diccionario correspondiente y pasan a los componentes cliente sólo los datos necesarios para interacción.
@@ -23,8 +23,8 @@ sin coincidencia
 - `utils/getLocale.ts` reconoce únicamente `en` y `es`; `defaultLocale` es `en`.
 - `models/en.json` y `models/es.json` son cargados por `utils/dictionaries.ts` mediante imports dinámicos del lado servidor.
 - `LanguageHandler` recibe el locale resuelto y la cookie. Si falta o no coincide, llama a `POST /api/cookie` desde un `useEffect`.
-- Al pulsar el selector, publica el locale opuesto como un string JSON, y luego navega a `/` para volver a renderizar.
-- `app/api/cookie/route.ts` guarda `lang` por un día, con `sameSite: 'strict'` y `path: '/'`.
+- Al pulsar el selector, publica el locale opuesto como un string JSON, y luego ejecuta `router.refresh()` para volver a renderizar los Server Components sin recargar la ruta.
+- `app/api/cookie/route.ts` espera `cookies()` y guarda `lang` por un día, con `sameSite: 'strict'` y `path: '/'`.
 - Si el cambio de idioma no devuelve estado lógico `201`, `LanguageHandler` invoca `notFound()`; el `app/not-found.tsx` actual redirige a `/`.
 - El atributo `<html lang>` está actualmente fijo en `en`; no asumas que refleja el locale elegido.
 
@@ -39,6 +39,7 @@ header User-Agent de la solicitud
 ```
 
 - `next.config.mjs` expone `process.env.BASE_PATH` al código que construye las URLs internas.
+- El servidor local necesita compilarse con un `BASE_PATH` absoluto que apunte al origen donde se ejecutará; sin esa variable el fetch servidor de user-agent intenta resolver `undefined/api/userAgent`.
 - Ante una respuesta lógica distinta de `201`, `getUserAgent` conserva el `isMobile` devuelto por la API.
 - `isMobile` no sólo acompaña el layout responsivo: desactiva varios estados hover. La elección de `otherLink` (`wa.me`) para WhatsApp es un acoplamiento separado basado en el `iconId`.
 - `PersonalIdentity`, `Experience`, `Stack`, `LanguageHandler`, `CopyToClipboard` e iconos reciben o propagan este indicador.
@@ -47,11 +48,11 @@ header User-Agent de la solicitud
 
 Componentes cliente explícitos:
 
-- `components/LanguageHandler/LanguageHandler.tsx`: `useEffect`, fetch, click y `window.location`.
+- `components/LanguageHandler/LanguageHandler.tsx`: `useEffect`, fetch, click y `useRouter`.
 - `components/CopyToClipboard/CopyToClipboard.tsx`: `useState`, Clipboard API y timeout.
 - `components/ScrollToTop/ScrollToTop.client.tsx`: click, `window` y scroll.
 
-Mantén las lecturas de `headers()` y `cookies()` del lado servidor. Si una pieza compartida pasa a usar hooks o APIs del navegador, revisa el límite de bundle que crea `'use client'`.
+Mantén las lecturas asíncronas de `headers()` y `cookies()` del lado servidor. Si una pieza compartida pasa a usar hooks o APIs del navegador, revisa el límite de bundle que crea `'use client'`.
 
 ## Contratos internos actuales
 

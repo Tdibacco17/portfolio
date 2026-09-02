@@ -10,7 +10,7 @@ import { headers } from "next/headers";
 
 export default async function Home() {
   const { flag } = await getLocale();
-  const { isMobile } = await getUserAgent(headers().get('user-agent'));
+  const { isMobile } = await getUserAgent((await headers()).get('user-agent'));
 
   return (
     <>

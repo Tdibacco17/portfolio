@@ -18,7 +18,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                             alt={data.experience.houseofcb.img.alt}
                             width={2560}
                             height={1127}
-                            priority
+                            preload
                             quality={100}
                             placeholder="blur"
                             blurDataURL={data.experience.houseofcb.img.blurData}
@@ -45,7 +45,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                             alt={data.experience.strongwood.img.alt}
                             width={2560}
                             height={1127}
-                            priority
+                            preload
                             quality={100}
                             placeholder="blur"
                             blurDataURL={data.experience.strongwood.img.blurData}
@@ -72,7 +72,7 @@ export default async function Experience({ flag, isMobile }: { flag: LocaleType,
                             alt={data.experience.watts.img.alt}
                             width={1920}
                             height={847}
-                            priority
+                            preload
                             quality={100}
                             placeholder="blur"
                             blurDataURL={data.experience.watts.img.blurData}

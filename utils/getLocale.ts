@@ -12,7 +12,7 @@ interface LocaleInterface {
 export default async function getLocale(): Promise<LocaleInterface> {
     
     // Get cookie language
-    const cookieLang = cookies().get('lang')?.value
+    const cookieLang = (await cookies()).get('lang')?.value
     if (cookieLang !== undefined && typeof cookieLang === 'string' && locales.includes(cookieLang))
         return {
             lang: { locale: cookieLang as LocaleType, cookie: cookieLang as LocaleType },
@@ -20,7 +20,7 @@ export default async function getLocale(): Promise<LocaleInterface> {
         }
 
     //Get browser language
-    const acceptLanguage = headers().get('accept-language');
+    const acceptLanguage = (await headers()).get('accept-language');
     if (acceptLanguage === null || acceptLanguage === undefined)
         return {
             lang: { locale: defaultLocale as LocaleType, cookie: undefined },

@@ -17,7 +17,7 @@ export default async function PersonalIdentity({ flag, isMobile }: { flag: Local
                     alt={data.personalIdentity.img.alt}
                     width={1200}
                     height={1600}
-                    priority
+                    preload
                     quality={100}
                     placeholder="blur"
                     blurDataURL={data.personalIdentity.img.blurData}

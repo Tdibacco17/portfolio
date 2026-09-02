@@ -27,7 +27,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const { lang } = await getLocale();
-  const { isMobile } = await getUserAgent(headers().get('user-agent'));
+  const { isMobile } = await getUserAgent((await headers()).get('user-agent'));
 
   return (
     <html lang="en">

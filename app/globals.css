@@ -1,7 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@theme {
+  --color-soft: #707070;
+  --color-lightPrimary: #a0a0a0;
+  --color-lightSecondary: #ededed;
+  --color-darkSecondary: #161616e6;
+  --color-link-hover: #a586df;
+
+  --background-color-darkPrimary: #282828;
+  --background-color-darkPrimaryHover: #2e2e2e;
+  --background-color-lightPrimary: #ffffff;
+  --background-color-lightPrimary-hover: #ffffffe6;
+
+  --radius-custom: 8px;
+  --radius-otherCustom: 12px;
+
+  --border-color-darkPrimary: #2e2e2e;
+  --border-color-lightPrimary: #ededed;
+
+  --fill-soft: #707070;
+  --fill-softHover: #a0a0a0;
+
+  --stroke-soft: #707070;
+  --stroke-softHover: #a0a0a0;
+  --stroke-dark: #161616e6;
+}
+
+/* Preserve Tailwind v3's default border color after migrating to v4. */
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer base {
 :root {
   --react-color: #61DAFB;
   --redux-color: #764ABC;
@@ -95,8 +131,9 @@ li {
 li::marker {
   color: #707070;
 }
+}
 
-
+@layer components {
 .icon-container path,
 .icon-container p {
   transition: fill 2.2s ease-in-out, color 2.2s ease-in-out;
@@ -281,4 +318,5 @@ li::marker {
 .mobile-color-php {
   fill: var(--php-color);
   color: var(--php-color);
+}
 }

@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     try {
         const newLang: LocaleType = await request.json();
 
-        cookies().set({
+        (await cookies()).set({
             name: 'lang',
             value: newLang,
             maxAge: 24 * 60 * 60, // One day

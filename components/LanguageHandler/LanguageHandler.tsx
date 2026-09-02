@@ -1,6 +1,6 @@
 'use client'
 import { LocaleType } from "@/utils/dictionaries"
-import { notFound } from "next/navigation"
+import { notFound, useRouter } from "next/navigation"
 import { useEffect } from "react";
 import { IconComponent } from "../Icons/Icons";
 import data from "@/models/data.json"
@@ -22,12 +22,13 @@ const fetchCookieData = async (lang: string) => {
 }
 
 export default function LanguageHandler({ localeLang, cookieLang, isMobile }: { localeLang: LocaleType, cookieLang: LocaleType | undefined, isMobile: boolean }) {
+    const router = useRouter();
     const changeLang: LocaleType = localeLang === 'en' ? 'es' : 'en';
 
     const handleSetCookie = async () => {
         const fetchCookie = await fetchCookieData(changeLang)
         if (fetchCookie.status !== 201) return notFound()
-        return window.location.href = '/'
+        router.refresh()
     }
 
     useEffect(() => {

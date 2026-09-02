@@ -4,9 +4,9 @@
 
 - Repositorio remoto: `Tdibacco17/portfolio`.
 - Aplicación: portfolio personal de una sola página.
-- Framework: Next.js 14.2.4 con App Router y React 18.
-- Lenguaje: TypeScript estricto; alias `@/*` apuntando a la raíz.
-- UI: Tailwind CSS 3.4, CSS global y fuente Geist.
+- Framework: Next.js 16.3.4 con App Router y React 19.2.8.
+- Runtime y lenguaje: Node.js 22 o posterior, TypeScript 6 estricto y alias `@/*` apuntando a la raíz.
+- UI: Tailwind CSS 4.3.3 mediante `@tailwindcss/postcss`, CSS global y fuente Geist.
 - Persistencia: no hay base de datos. El contenido vive en JSON y los assets en `public/`.
 
 ## Entradas principales
@@ -31,7 +31,7 @@
 | Experiencia | `components/Experience/Experience.tsx` | Renderiza House of CB, Strongwood y 25Watts con imagen y bullets. |
 | Tecnologías | `components/Stack/Stack.tsx` | Recorre `models/data.json` con `Object.values`; el orden del JSON es visible. |
 | Educación | `components/Education/Education.tsx` | Bootcamp, certificado e idiomas. |
-| Idioma | `components/LanguageHandler/LanguageHandler.tsx` | Componente cliente que inicializa/cambia la cookie y recarga la home. |
+| Idioma | `components/LanguageHandler/LanguageHandler.tsx` | Componente cliente que inicializa/cambia la cookie y refresca los Server Components. |
 | Iconos | `components/Icons/Icons.tsx` | Tipos y renderizadores compartidos para enlaces, acciones y tecnologías. |
 | Secciones | `components/Section/Section.tsx` | Rótulo visual reutilizado por las secciones. |
 | Volver arriba | `components/ScrollToTop/ScrollToTop.tsx` | Wrapper servidor que obtiene el diccionario. |
@@ -57,18 +57,20 @@ Los componentes sin `'use client'` son compatibles con Server Components. `Icons
 
 | Archivo | Qué controla |
 | --- | --- |
-| `package.json` | Dependencias y scripts. |
-| `next.config.mjs` | Optimización de imágenes y exposición de `BASE_PATH`. |
-| `tailwind.config.ts` | Rutas escaneadas y tokens visuales propios. |
-| `tsconfig.json` | TypeScript estricto, `noEmit` y alias `@/*`. |
-| `.eslintrc.json` | Extiende `next/core-web-vitals`. |
-| `postcss.config.mjs` | Pipeline de Tailwind/PostCSS. |
+| `package.json` | Dependencias, requisito de Node.js y scripts. |
+| `package-lock.json` | Árbol reproducible de dependencias para `npm ci`. |
+| `next.config.mjs` | Optimización de imágenes, allowlist de calidad que conserva `quality={100}` y exposición de `BASE_PATH`. |
+| `app/globals.css` | Import de Tailwind, tokens `@theme`, compatibilidad de bordes, capas base/componentes y estilos globales. |
+| `tsconfig.json` | TypeScript estricto, JSX moderno, tipos generados de Next y alias `@/*`. |
+| `eslint.config.mjs` | Flat Config con `next/core-web-vitals` e ignores de artefactos generados. |
+| `postcss.config.mjs` | Pipeline de Tailwind 4 mediante `@tailwindcss/postcss`. |
 
 ## Comandos disponibles
 
 - `npm run dev`: servidor de desarrollo.
-- `npm run build`: build de producción; es la verificación integral disponible.
+- `npm run build`: build de producción con Next.js.
 - `npm run start`: sirve el build.
-- `npm run lint`: lint configurado por Next.js.
+- `npm run lint`: ejecuta ESLint con Flat Config sobre el repositorio.
+- `npm run typecheck`: comprueba TypeScript sin emitir archivos.
 
 No hay script de tests ni framework de pruebas configurado. Elige la verificación proporcional al cambio y no afirmes que existe cobertura automatizada.
