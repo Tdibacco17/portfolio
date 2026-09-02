@@ -21,7 +21,7 @@ El orden vigente es House of CB, Strongwood y 25Watts. Las medidas del catálogo
 
 ## Imágenes y CV
 
-- Perfil: `/assets/img/tomas.webp`.
+- Perfil: `/assets/img/tomas-v2.webp`; su `blurData` en `models/data.json` es una miniatura WebP de 8 px de ancho generada desde esa misma imagen. Next/Image aplica el desenfoque durante la carga.
 - Experiencias: `/assets/img/houseofcb.avif`, `/assets/img/strongwood.png`, `/assets/img/25Watts.jpg`.
 - CV: `/assets/pdf/TomasDiBacco_Resume.pdf`.
 
