@@ -1,0 +1,4 @@
+interface:
+  display_name: "Portfolio Repository Guide"
+  short_description: "Mapa y memoria evolutiva del portfolio"
+  default_prompt: "Usa $portfolio-repository-guide para ubicar el cambio y conservar el aprendizaje del repositorio."
