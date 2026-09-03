@@ -22,7 +22,7 @@ export default function PersonalIdentity({ content, locale }: { content: Diction
           {Object.values(data.personalIdentity.networks).map(iconData => <IconLink key={iconData.iconId} iconData={iconData} />)}
         </div>
         <a href={data.personalIdentity.contact.gmail.link}
-          className="text-lightPrimary underline decoration-[#A0A0A0] underline-offset-2 hover:text-link-hover">
+          className="text-lightPrimary underline decoration-[#A0A0A0] underline-offset-2 hover:text-lightSecondary">
           {data.personalIdentity.contact.copy.link}
         </a>
       </div>
