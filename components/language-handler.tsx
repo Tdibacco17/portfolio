@@ -20,6 +20,7 @@ export default function LanguageHandler({ locale, needsCookie, labels, icon }: {
   const [refreshing, startTransition] = useTransition();
   const initialization = useRef<Promise<void> | null>(null);
   const changing = useRef(false);
+  const requestedLocale = useRef<Locale | null>(null);
   const messageId = useId();
 
   useEffect(() => {
@@ -32,6 +33,15 @@ export default function LanguageHandler({ locale, needsCookie, labels, icon }: {
     return () => { active = false; };
   }, [locale, needsCookie]);
 
+  useEffect(() => {
+    if (!changingLanguage || refreshing || requestedLocale.current !== locale) return;
+    requestedLocale.current = null;
+    setChangingLanguage(false);
+    setBusy(false);
+    setChanged(true);
+    changing.current = false;
+  }, [changingLanguage, locale, refreshing]);
+
   async function changeLanguage() {
     if (changing.current || busy || refreshing) return;
     changing.current = true;
@@ -41,12 +51,13 @@ export default function LanguageHandler({ locale, needsCookie, labels, icon }: {
     setChanged(false);
     try {
       await initialization.current?.catch(() => {});
-      await setLocale(locale === 'en' ? 'es' : 'en');
+      const nextLocale = locale === 'en' ? 'es' : 'en';
+      await setLocale(nextLocale);
+      requestedLocale.current = nextLocale;
       startTransition(() => router.refresh());
-      setChanged(true);
     } catch {
+      requestedLocale.current = null;
       setError(true);
-    } finally {
       setChangingLanguage(false);
       setBusy(false);
       changing.current = false;
