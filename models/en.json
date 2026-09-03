@@ -33,7 +33,7 @@
                         "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
                         "Built internal tools for multiple departments, automating manual tasks to save staff time.",
                         "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
-                        "Collaborated with the backend team on PHP features and staging tasks. I am currently migrating functionality from PHP to the Next.js server with direct SQL database access to reduce response times.",
+                        "Built server-side features in Next.js with direct SQL access and collaborated with the backend team on PHP and staging tasks.",
                         "Created and updated email templates for e-commerce communications.",
                         "For a bar, another business owned by my contractor, I independently developed a React Native and Expo app and prepared its App Store and Google Play releases.",
                         "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
