@@ -10,7 +10,7 @@
 
 Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technologies`, `education`, `languages` y `languageHandler`. Un cambio estructural exige actualizar ambos idiomas. No usar fallbacks silenciosos para ocultar claves ausentes: el build corre las pruebas de contenido.
 
-`aboutMe.description` replica el resumen de la variante Full Stack de `cv/content.json` en cada idioma. La prueba de contenido exige igualdad exacta para evitar que el portfolio y el descargable vuelvan a divergir.
+`aboutMe.description` divide en dos párrafos el resumen de la variante Full Stack de `cv/content.json` en cada idioma. La prueba de contenido vuelve a unirlos y exige igualdad exacta para evitar que el portfolio y el descargable vuelvan a divergir.
 
 ## Agregar una experiencia
 

@@ -13,7 +13,10 @@
     },
     "aboutMe": {
         "section": "Sobre mi",
-        "description": "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL. Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles. Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción, con foco en simplificar procesos y mejorar la experiencia del usuario."
+        "description": [
+            "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL. Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles.",
+            "Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción, con foco en simplificar procesos y mejorar la experiencia del usuario."
+        ]
     },
     "experience": {
         "section": "Experiencia",
@@ -27,10 +30,11 @@
                     "period": "may. 2024 - actualidad",
                     "list": [
                         "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
-                        "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
                         "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
-                        "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
+                        "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
                         "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
+                        "Colaboré con el equipo backend en funcionalidades desarrolladas en PHP y tareas de staging. Actualmente migro funcionalidades desde PHP al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
+                        "Creé y actualicé plantillas de email para comunicaciones del e-commerce.",
                         "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
                         "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
                     ]
@@ -43,7 +47,7 @@
             "stages": [
                 {
                     "id": "original-website",
-                    "title": "Sitio web original",
+                    "title": "Sitio web",
                     "period": "abr. 2023 - sep. 2023",
                     "list": [
                         "Desarrollé el sitio de la fábrica de muebles con Next.js y React. Definí la arquitectura, diseñé la UI/UX y acordé requerimientos y entregas con el cliente."

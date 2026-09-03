@@ -74,8 +74,10 @@ describe('bilingual content', () => {
 
   it('keeps the website introduction synchronized with the Full Stack CV', () => {
     const source = JSON.parse(readFileSync(resolve('cv/content.json'), 'utf8'));
-    expect(spanish.aboutMe.description).toBe(source.locales.es.variants.fullstack.summary);
-    expect(english.aboutMe.description).toBe(source.locales.en.variants.fullstack.summary);
+    expect(spanish.aboutMe.description).toHaveLength(2);
+    expect(english.aboutMe.description).toHaveLength(2);
+    expect(spanish.aboutMe.description.join(' ')).toBe(source.locales.es.variants.fullstack.summary);
+    expect(english.aboutMe.description.join(' ')).toBe(source.locales.en.variants.fullstack.summary);
   });
 
   it('reserves the visual timeline for Strongwood multiple stages', () => {
