@@ -86,9 +86,14 @@
             {
               "name": "25Watts",
               "role": "Desarrollador Frontend",
-              "bullets": [
-                "Desarrollé portfolios, e-commerce, blogs y landing pages con WordPress, React y Next.js.",
-                "Implementé funcionalidades e integraciones con APIs, cuidando el rendimiento y la calidad del código. Trabajé con Scrum y control de versiones con Git."
+              "phases": [
+                {
+                  "name": "Sitios web para clientes",
+                  "bullets": [
+                    "Desarrollé portfolios, e-commerce, blogs y landing pages con WordPress, React y Next.js.",
+                    "Implementé funcionalidades e integraciones con APIs, cuidando el rendimiento y la calidad del código. Trabajé con Scrum y control de versiones con Git."
+                  ]
+                }
               ],
               "timeline_id": "watts"
             }
@@ -127,9 +132,14 @@
             {
               "name": "Donatella",
               "role": "Desarrollador Full Stack · freelance",
-              "bullets": [
-                "Desarrollé una herramienta multiusuario para un local de venta y alquiler de vestidos: facturación con ARCA, clientes, historial de facturas y envío automático por email.",
-                "Gestioné el despliegue, la configuración de dominio y email y la puesta en marcha con el cliente."
+              "phases": [
+                {
+                  "name": "Sistema de facturación y gestión",
+                  "bullets": [
+                    "Desarrollé una herramienta multiusuario para un local de venta y alquiler de vestidos: facturación con ARCA, clientes, historial de facturas y envío automático por email.",
+                    "Gestioné el despliegue, la configuración de dominio y email y la puesta en marcha con el cliente."
+                  ]
+                }
               ],
               "timeline_id": "donatella"
             }
@@ -178,9 +188,14 @@
             {
               "name": "25Watts",
               "role": "Desarrollador Frontend",
-              "bullets": [
-                "Desarrollé portfolios, e-commerce, blogs y landing pages con WordPress, React y Next.js.",
-                "Implementé funcionalidades e integraciones con APIs, cuidando el rendimiento y la calidad del código. Trabajé con Scrum y control de versiones con Git."
+              "phases": [
+                {
+                  "name": "Sitios web para clientes",
+                  "bullets": [
+                    "Desarrollé portfolios, e-commerce, blogs y landing pages con WordPress, React y Next.js.",
+                    "Implementé funcionalidades e integraciones con APIs, cuidando el rendimiento y la calidad del código. Trabajé con Scrum y control de versiones con Git."
+                  ]
+                }
               ],
               "timeline_id": "watts"
             }
@@ -219,9 +234,14 @@
             {
               "name": "Donatella",
               "role": "Desarrollador Full Stack · freelance",
-              "bullets": [
-                "Desarrollé una herramienta multiusuario para un local de venta y alquiler de vestidos: facturación con ARCA, clientes, historial de facturas y envío automático por email.",
-                "Gestioné el despliegue, la configuración de dominio y email y la puesta en marcha con el cliente."
+              "phases": [
+                {
+                  "name": "Sistema de facturación y gestión",
+                  "bullets": [
+                    "Desarrollé una herramienta multiusuario para un local de venta y alquiler de vestidos: facturación con ARCA, clientes, historial de facturas y envío automático por email.",
+                    "Gestioné el despliegue, la configuración de dominio y email y la puesta en marcha con el cliente."
+                  ]
+                }
               ],
               "timeline_id": "donatella"
             }
@@ -286,9 +306,14 @@
             {
               "name": "25Watts",
               "role": "Frontend Developer",
-              "bullets": [
-                "Built portfolios, e-commerce sites, blogs and landing pages with WordPress, React and Next.js.",
-                "Implemented features and API integrations, focusing on performance and code quality. Worked with Scrum and Git version control."
+              "phases": [
+                {
+                  "name": "Client websites",
+                  "bullets": [
+                    "Built portfolios, e-commerce sites, blogs and landing pages with WordPress, React and Next.js.",
+                    "Implemented features and API integrations, focusing on performance and code quality. Worked with Scrum and Git version control."
+                  ]
+                }
               ],
               "timeline_id": "watts"
             }
@@ -327,9 +352,14 @@
             {
               "name": "Donatella",
               "role": "Freelance Full Stack Developer",
-              "bullets": [
-                "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
-                "Managed deployment, domain and email setup, and client onboarding."
+              "phases": [
+                {
+                  "name": "Billing and management system",
+                  "bullets": [
+                    "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
+                    "Managed deployment, domain and email setup, and client onboarding."
+                  ]
+                }
               ],
               "timeline_id": "donatella"
             }
@@ -378,9 +408,14 @@
             {
               "name": "25Watts",
               "role": "Frontend Developer",
-              "bullets": [
-                "Built portfolios, e-commerce sites, blogs and landing pages with WordPress, React and Next.js.",
-                "Implemented features and API integrations, focusing on performance and code quality. Worked with Scrum and Git version control."
+              "phases": [
+                {
+                  "name": "Client websites",
+                  "bullets": [
+                    "Built portfolios, e-commerce sites, blogs and landing pages with WordPress, React and Next.js.",
+                    "Implemented features and API integrations, focusing on performance and code quality. Worked with Scrum and Git version control."
+                  ]
+                }
               ],
               "timeline_id": "watts"
             }
@@ -419,9 +454,14 @@
             {
               "name": "Donatella",
               "role": "Freelance Full Stack Developer",
-              "bullets": [
-                "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
-                "Managed deployment, domain and email setup, and client onboarding."
+              "phases": [
+                {
+                  "name": "Billing and management system",
+                  "bullets": [
+                    "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
+                    "Managed deployment, domain and email setup, and client onboarding."
+                  ]
+                }
               ],
               "timeline_id": "donatella"
             }

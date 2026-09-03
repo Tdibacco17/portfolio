@@ -137,8 +137,12 @@ describe('bilingual content', () => {
       expect(dictionary.experience.houseofcb.stages[0].period)
         .toBe(singlePeriod(source, houseofcb.timeline_id, locale));
       expect(dictionary.experience.watts.subTitle).toBe(watts.role);
+      expect(watts.phases.map((phase: { name: string }) => phase.name))
+        .toEqual(dictionary.experience.watts.stages.map(stage => stage.title));
       expect(dictionary.experience.watts.stages[0].period)
         .toBe(singlePeriod(source, watts.timeline_id, locale));
+      expect(donatella.phases.map((phase: { name: string }) => phase.name))
+        .toEqual(dictionary.experience.donatella.stages.map(stage => stage.title));
       expect(dictionary.experience.donatella.stages[0].period)
         .toBe(singlePeriod(source, donatella.timeline_id, locale));
       expect(dictionary.education.title).toBe(education.name);

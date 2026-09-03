@@ -16,6 +16,13 @@ Consulta estas lecciones antes de modificar las áreas relacionadas. Registra s�
 - Evidencia: los diccionarios web mueven `may. 2024 - actualidad` y `oct. 2022 - abr. 2024` al `period` de la primera etapa; el subtítulo de empresa queda sólo el rol. `cv/content.json` y el generador conservan el tramo continuo en el encabezado `rol | período`. Las pruebas comparan esos `period` de etapa contra `cv/content.json.timelines`.
 - Regla reusable: en el portfolio web, mostrar fechas o contexto debajo del título de la etapa. El subtítulo de la empresa es el rol, más freelance cuando aplica. El CV sigue mostrando un tramo laboral continuo en el encabezado de la empresa. No copiar la presentación del CV a la web ni viceversa.
 
+### Un hito único también usa `phases` en el CV
+
+- Fecha: 2026-09-03.
+- Contexto: Donatella y 25Watts tenían viñetas sueltas bajo la empresa, sin la cabecera de etapa que ya existía en la web.
+- Evidencia: sin `phases`, `VerticalTimeline` agrupa empresa y viñetas en un solo nodo (punto aislado). Con un array de una fase, hay nodo de empresa más hito indentado y rail, igual que Strongwood y House of CB. Los cuatro PDF muestran `Sitios web para clientes` / `Client websites` y `Sistema de facturación y gestión` / `Billing and management system`. La fecha del período único sigue en `rol | período`; no se duplica en la etapa.
+- Regla reusable: si la web tiene título de etapa, el CV usa `phases` aunque haya un solo ítem. No omitir `phases` para ahorrar estructura ni copiar la fecha del encabezado de empresa a una etapa de período único.
+
 ### Ampliar el CV conserva las etapas anteriores
 
 - Evidencia: la primera ampliación había dejado una sola fecha global para un cliente con varios proyectos y había deducido un rango abierto para un desarrollo de duración limitada. La corrección incorpora `phases` en `cv/content.json`, las renderiza en `scripts/generate-cv.py` y verifica su presencia en los cuatro PDF.
