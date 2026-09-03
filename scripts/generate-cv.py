@@ -220,7 +220,6 @@ def build_pdf(source, locale, variant, output_dir):
         if group == 'projects':
             story.append(PageBreak())
         section(translation['labels'][group], separator=group != 'projects')
-        items = []
         for entry_index, entry in enumerate(content[group]):
             timeline = source['timelines']['companies'][entry['timeline_id']]
             company = escape(entry['name'])
@@ -256,15 +255,10 @@ def build_pdf(source, locale, variant, output_dir):
             else:
                 paragraphs = heading + [Paragraph(escape(bullet), styles['bullet'], bulletText='•') for bullet in entry['bullets']]
                 entry_items.append({'content': paragraphs, 'radius': 3.5 if group == 'projects' else 3})
-            if group == 'projects':
-                # A separate rail for each client keeps every phase under its company.
-                if entry_index:
-                    story.append(Spacer(1, 14))
-                story.append(VerticalTimeline(entry_items))
-            else:
-                items.extend(entry_items)
-        if group != 'projects':
-            story.append(VerticalTimeline(items))
+            # A separate rail for each company keeps its phases visually scoped.
+            if entry_index:
+                story.append(Spacer(1, 14))
+            story.append(VerticalTimeline(entry_items))
 
     section('Formación' if locale == 'es' else 'Education')
     story.append(Paragraph(translation['education'], styles['compact']))
