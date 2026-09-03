@@ -112,6 +112,13 @@ def validate_timelines(source):
                         raise ValueError('A project phase references a missing timeline period')
                     if 'context' in phase and not phase['context'].strip():
                         raise ValueError('A phase context must not be empty')
+            education = translation['education']
+            education_timeline = timelines['companies'][education['timeline_id']]
+            if education_timeline['kind'] != 'calendar' or len(education_timeline['periods']) != 1:
+                raise ValueError('Education requires a calendar timeline with exactly one period')
+            for key in ['name', 'role', 'description']:
+                if not education[key].strip():
+                    raise ValueError(f'Education {key} must not be empty')
 
 
 class VerticalTimeline(Flowable):
@@ -181,8 +188,6 @@ def build_pdf(source, locale, variant, output_dir):
         'body': ParagraphStyle('body', fontName='CV', fontSize=11, leading=15, textColor=INK, alignment=TA_LEFT),
         'section': ParagraphStyle('section', fontName='CVBold', fontSize=11.5, leading=15, textColor=INK,
                                   spaceAfter=10, keepWithNext=True),
-        'entry': ParagraphStyle('entry', fontName='CVBold', fontSize=11, leading=15, textColor=INK,
-                                spaceBefore=8, spaceAfter=1, keepWithNext=True),
         'company': ParagraphStyle('company', fontName='CVBold', fontSize=12, leading=16, textColor=INK,
                                   spaceAfter=1, keepWithNext=True),
         'role': ParagraphStyle('role', fontName='CVItalic', fontSize=11, leading=15, textColor=INK,
@@ -229,16 +234,11 @@ def build_pdf(source, locale, variant, output_dir):
                 period_label = f'{months} meses de desarrollo' if locale == 'es' else f'{months}-month development project'
             elif len(timeline['periods']) == 1:
                 period_label = format_period(timeline['periods'][0], locale)
-            if group == 'projects':
-                role = escape(entry['role']) + (' | ' + period_label if period_label else '')
-                heading = [Paragraph(company, styles['company']), Paragraph(role, styles['role'])]
-            else:
-                company += ' - ' + period_label if period_label else ''
-                heading = [Paragraph(escape(entry['role']), styles['entry']),
-                           Paragraph(company, styles['role'])]
+            role = escape(entry['role']) + (' | ' + period_label if period_label else '')
+            heading = [Paragraph(company, styles['company']), Paragraph(role, styles['role'])]
             entry_items = []
             if entry.get('phases'):
-                entry_items.append({'content': heading, 'radius': 3.5 if group == 'projects' else 3})
+                entry_items.append({'content': heading, 'radius': 3.5})
                 for phase in entry['phases']:
                     phase_label = ''
                     if phase.get('timeline_period'):
@@ -254,14 +254,19 @@ def build_pdf(source, locale, variant, output_dir):
                     entry_items.append({'content': paragraphs, 'indent': 14, 'radius': 2.4})
             else:
                 paragraphs = heading + [Paragraph(escape(bullet), styles['bullet'], bulletText='•') for bullet in entry['bullets']]
-                entry_items.append({'content': paragraphs, 'radius': 3.5 if group == 'projects' else 3})
+                entry_items.append({'content': paragraphs, 'radius': 3.5})
             # A separate rail for each company keeps its phases visually scoped.
             if entry_index:
                 story.append(Spacer(1, 14))
             story.append(VerticalTimeline(entry_items))
 
     section('Formación' if locale == 'es' else 'Education')
-    story.append(Paragraph(translation['education'], styles['compact']))
+    education = translation['education']
+    education_timeline = source['timelines']['companies'][education['timeline_id']]
+    education_period = format_period(education_timeline['periods'][0], locale)
+    story.append(Paragraph(escape(education['name']), styles['company']))
+    story.append(Paragraph(f'{escape(education["role"])} | {escape(education_period)}', styles['role']))
+    story.append(Paragraph(education['description'], styles['compact']))
 
     section(translation['labels']['skills'])
     for skill in content['skills']:

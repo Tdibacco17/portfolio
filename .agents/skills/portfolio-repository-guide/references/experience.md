@@ -9,6 +9,13 @@ Consulta estas lecciones antes de modificar las áreas relacionadas. Registra s�
 - Evidencia: el encabezado de una empresa estaba fuera del timeline y sus etapas compartían una línea con el siguiente cliente, haciendo ambigua la pertenencia. `scripts/generate-cv.py` ahora genera un timeline por cliente, con la empresa como nodo principal y las etapas indentadas; los cuatro PDF muestran grupos separados.
 - Regla reusable: al representar varios proyectos de una empresa, conservar una jerarquía visible empresa-etapas y cortar la conexión antes del siguiente cliente. No depender sólo de la cercanía de un nombre externo a la línea.
 
+### El período continuo pertenece al encabezado de la empresa
+
+- Fecha: 2026-09-03.
+- Contexto: sincronización entre portfolio web y los cuatro PDF del CV.
+- Evidencia: House of CB mostraba `may. 2024 - actualidad` sólo dentro de la etapa de e-commerce, dejando la aplicación móvil y dashboard con un texto contextual pero sin período visible. El cambio mueve el período continuo al subtítulo de la empresa en web y al encabezado `rol | período` en PDF; las pruebas de contenido comparan esos subtítulos contra `cv/content.json.timelines`.
+- Regla reusable: cuando una empresa o cliente tiene un único tramo laboral que cubre varias etapas, mostrar el período junto al rol de la empresa y dejar fechas por etapa sólo para tramos independientes o contextos específicos.
+
 ### Ampliar el CV conserva las etapas anteriores
 
 - Evidencia: la primera ampliación había dejado una sola fecha global para un cliente con varios proyectos y había deducido un rango abierto para un desarrollo de duración limitada. La corrección incorpora `phases` en `cv/content.json`, las renderiza en `scripts/generate-cv.py` y verifica su presencia en los cuatro PDF.

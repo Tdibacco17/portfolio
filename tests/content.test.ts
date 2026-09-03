@@ -6,6 +6,37 @@ import spanish from '@/models/es.json';
 import data from '@/models/data.json';
 import { experiences } from '@/models/experiences';
 
+const monthNames = {
+  es: ['ene.', 'feb.', 'mar.', 'abr.', 'may.', 'jun.', 'jul.', 'ago.', 'sep.', 'oct.', 'nov.', 'dic.'],
+  en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+} as const;
+
+type Locale = keyof typeof monthNames;
+
+interface CvPeriod {
+  start: string;
+  end: string | null;
+}
+
+interface CvTimeline {
+  periods: CvPeriod[];
+}
+
+function formatMonth(value: string, locale: Locale): string {
+  const [year, month] = value.split('-').map(Number);
+  return `${monthNames[locale][month - 1]} ${year}`;
+}
+
+function formatPeriod(period: CvPeriod, locale: Locale): string {
+  const end = period.end ? formatMonth(period.end, locale) : (locale === 'es' ? 'actualidad' : 'Present');
+  return `${formatMonth(period.start, locale)} - ${end}`;
+}
+
+function singlePeriod(source: { timelines: { companies: Record<string, CvTimeline> } }, timelineId: string, locale: Locale): string {
+  const [period] = source.timelines.companies[timelineId].periods;
+  return formatPeriod(period, locale);
+}
+
 function shape(value: unknown): unknown {
   if (Array.isArray(value)) return Array.from(new Set(value.map(item => JSON.stringify(shape(item))))).sort();
   if (value && typeof value === 'object') {
@@ -38,7 +69,7 @@ describe('bilingual content', () => {
         expect(new Set(experience.stages.map(stage => stage.id)).size).toBe(experience.stages.length);
         for (const stage of experience.stages) {
           expect(stage.title.trim()).not.toBe('');
-          expect(stage.period.trim()).not.toBe('');
+          if ('period' in stage && stage.period !== undefined) expect(stage.period.trim()).not.toBe('');
           expect(stage.list.length).toBeGreaterThan(0);
         }
       }
@@ -90,6 +121,30 @@ describe('bilingual content', () => {
       expect(cvEntry.phases.map((phase: { bullets: string[] }) => phase.bullets))
         .toEqual(dictionary.experience.houseofcb.stages.map(stage => stage.list));
       expect(cvEntry.phases[1].context).toBe(dictionary.experience.houseofcb.stages[1].period);
+    }
+  });
+
+  it('keeps single-period subtitles and education synchronized with the Full Stack CV', () => {
+    const source = JSON.parse(readFileSync(resolve('cv/content.json'), 'utf8'));
+    for (const [locale, dictionary] of [['es', spanish], ['en', english]] as const) {
+      const content = source.locales[locale].variants.fullstack;
+      const houseofcb = content.experience.find((entry: { timeline_id: string }) => entry.timeline_id === 'houseofcb');
+      const watts = content.experience.find((entry: { timeline_id: string }) => entry.timeline_id === 'watts');
+      const donatella = content.projects.find((entry: { timeline_id: string }) => entry.timeline_id === 'donatella');
+      const education = source.locales[locale].education;
+
+      expect(dictionary.experience.houseofcb.subTitle)
+        .toBe(`${houseofcb.role} | ${singlePeriod(source, houseofcb.timeline_id, locale)}`);
+      expect(dictionary.experience.houseofcb.stages[0]).not.toHaveProperty('period');
+      expect(dictionary.experience.watts.subTitle)
+        .toBe(`${watts.role} | ${singlePeriod(source, watts.timeline_id, locale)}`);
+      expect(dictionary.experience.watts.stages[0]).not.toHaveProperty('period');
+      expect(dictionary.experience.donatella.stages[0].period)
+        .toBe(singlePeriod(source, donatella.timeline_id, locale));
+      expect(dictionary.education.title).toBe(education.name);
+      expect(dictionary.education.subTitle)
+        .toBe(`${education.role} | ${singlePeriod(source, education.timeline_id, locale)}`);
+      expect(dictionary.education.firstParagraph.text).toBe(education.description);
     }
   });
 

@@ -7,7 +7,7 @@ export interface ExperienceTranslation {
   stages: {
     id: string;
     title: string;
-    period: string;
+    period?: string;
     list: string[];
   }[];
 }

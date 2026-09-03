@@ -4,10 +4,10 @@
   "review_notes": [
     "New experience supplements the original CV. Preserve earlier projects, stages, responsibilities and supplied metrics when changing emphasis between Full Stack and Frontend.",
     "Strongwood has three distinct stages: original website April-September 2023; ERP/CRM November 2025-present; website redesign May-June 2026. Keep all three visible and do not imply uninterrupted work since 2023.",
-    "Donatella involved four months of initial development. Exact calendar dates are not confirmed; do not infer a start date from monthly billing. Subsequent maintenance and feature requests are separate from the initial development duration.",
+    "Donatella initial development ran from January to May 2026. Subsequent maintenance and feature requests are separate from the initial development period.",
     "The bar app and dashboard were built for another business of the person who contracts Tomas for House of CB. Describe this within the current engagement with explicit attribution; do not present it as a House of CB product or a separate freelance contract.",
     "English A2 is confirmed. Written work with a London-based team relies on translation tools; do not describe written or spoken English as fluent.",
-    "Henry March-August 2022 is retained from the supplied PDF; the website currently lists a different Henry end year.",
+    "Henry March-August 2022 is retained from the supplied PDF and used consistently across website and generated CVs.",
     "The Next.js 14 migration and 30% performance improvement are claims supplied in the original CV, retained here rather than independently measured. The author corrected traffic volume to an average of 2,000 users per hour.",
     "Editorial review: use short action-led bullets, standard job titles and technologies in context. Omit generic claims and repeated setup details from the printed CV without changing project stages or dates. Tailor relevant, truthful keywords to each job description; do not claim an ATS score or guaranteed selection.",
     "PostgreSQL and MySQL are listed in the published portfolio and models/data.json. They are general skills, not an assertion about the stack of Strongwood ERP or Donatella; those project stacks remain to be confirmed.",
@@ -41,7 +41,12 @@
         "projects": "Experiencia freelance",
         "education": "Formación e idiomas"
       },
-      "education": "Más de 700 horas de formación intensiva en desarrollo Full Stack con Scrum. Desarrollé una SPA individual y un e-commerce en equipo.",
+      "education": {
+        "name": "Henry Bootcamp",
+        "role": "Desarrollador Full Stack",
+        "timeline_id": "henry",
+        "description": "Más de 700 horas de formación intensiva en desarrollo Full Stack con Scrum. Desarrollé una SPA individual y un e-commerce en equipo."
+      },
       "languages": "<b>Idiomas:</b> español nativo · inglés básico (A2). Trabajo por escrito con un equipo de Londres usando herramientas de traducción.",
       "variants": {
         "fullstack": {
@@ -236,7 +241,12 @@
         "projects": "Freelance experience",
         "education": "Education and languages"
       },
-      "education": "Completed 700+ hours of intensive Full Stack development training with Scrum. Built an individual SPA and a team e-commerce project.",
+      "education": {
+        "name": "Henry Bootcamp",
+        "role": "Full Stack Developer",
+        "timeline_id": "henry",
+        "description": "Completed 700+ hours of intensive Full Stack development training with Scrum. Built an individual SPA and a team e-commerce project."
+      },
       "languages": "<b>Languages:</b> Spanish (native) · English (basic, A2). Written collaboration with a London-based team using translation tools.",
       "variants": {
         "fullstack": {
@@ -489,8 +499,32 @@
         ]
       },
       "donatella": {
-        "kind": "duration",
-        "months": 4
+        "kind": "calendar",
+        "periods": [
+          {
+            "id": "development",
+            "label": {
+              "es": "Desarrollo",
+              "en": "Development"
+            },
+            "start": "2026-01",
+            "end": "2026-05"
+          }
+        ]
+      },
+      "henry": {
+        "kind": "calendar",
+        "periods": [
+          {
+            "id": "bootcamp",
+            "label": {
+              "es": "Bootcamp",
+              "en": "Bootcamp"
+            },
+            "start": "2022-03",
+            "end": "2022-08"
+          }
+        ]
       }
     }
   }

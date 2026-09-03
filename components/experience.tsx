@@ -8,7 +8,7 @@ function StageContent({ stage }: { stage: ExperienceTranslation['stages'][number
     <>
       <div className="flex flex-col gap-1">
         <h4 className="text-lg font-bold">{stage.title}</h4>
-        <p className="text-sm text-lightPrimary">{stage.period}</p>
+        {stage.period ? <p className="text-sm text-lightPrimary">{stage.period}</p> : null}
       </div>
       <ul className="mt-4 text-base">
         {stage.list.map((item, index) => <li key={index}>{item}</li>)}

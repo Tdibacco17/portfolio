@@ -22,12 +22,11 @@
         "section": "Experience",
         "houseofcb": {
             "title": "House of CB",
-            "subTitle": "Full Stack Developer",
+            "subTitle": "Full Stack Developer | May 2024 - Present",
             "stages": [
                 {
                     "id": "ecommerce-internal-tools",
                     "title": "E-commerce and internal tools",
-                    "period": "May 2024 - Present",
                     "list": [
                         "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
                         "Reorganized the frontend architecture and established a more maintainable structure, creating reusable components and responsive interfaces with React and Tailwind CSS while incorporating UX improvements.",
@@ -86,7 +85,7 @@
                 {
                     "id": "management-system",
                     "title": "Billing and management system",
-                    "period": "4 months of development",
+                    "period": "Jan 2026 - May 2026",
                     "list": [
                         "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
                         "Managed deployment, domain and email configuration, and the client launch. I continue to add features on request."
@@ -96,12 +95,11 @@
         },
         "watts": {
             "title": "25Watts",
-            "subTitle": "Frontend Developer",
+            "subTitle": "Frontend Developer | Oct 2022 - Apr 2024",
             "stages": [
                 {
                     "id": "client-websites",
                     "title": "Client websites",
-                    "period": "Oct 2022 - Apr 2024",
                     "list": [
                         "Built portfolios, e-commerce sites, blogs, and landing pages with WordPress, React, and Next.js.",
                         "Implemented features and API integrations with attention to performance and code quality. Worked with Scrum and Git-based version control."
@@ -116,7 +114,7 @@
     "education": {
         "section": "Education",
         "title": "Henry Bootcamp",
-        "subTitle": "Full Stack Developer, Mar 2022 - Aug 2022",
+        "subTitle": "Full Stack Developer | Mar 2022 - Aug 2022",
         "firstParagraph": {
             "text": "Completed 700+ hours of intensive Full Stack development training with Scrum. Built an individual SPA and a team e-commerce project."
         },
