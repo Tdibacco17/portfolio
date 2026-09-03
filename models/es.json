@@ -30,10 +30,10 @@
                     "period": "may. 2024 - actualidad",
                     "list": [
                         "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
-                        "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                        "Reorganicé la arquitectura del frontend y establecí una estructura más mantenible, creando componentes reutilizables e interfaces responsive con React y Tailwind CSS e incorporando mejoras de UX.",
                         "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
                         "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
-                        "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging."
+                        "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y colaboré con el equipo backend en PHP y tareas de staging."
                     ]
                 },
                 {
@@ -41,7 +41,7 @@
                     "title": "Aplicación móvil y dashboard",
                     "period": "Proyecto para otro negocio del contratante",
                     "list": [
-                        "Desarrollé de forma independiente una app para un bar con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                        "Desarrollé de forma independiente una app para un bar con React Native y Expo, y gestioné todo el proceso de publicación en App Store y Google Play.",
                         "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
                     ]
                 }
@@ -64,7 +64,7 @@
                     "title": "Sistema de gestión ERP y CRM",
                     "period": "nov. 2025 - actualidad",
                     "list": [
-                        "Digitalicé los procesos de la fábrica en una aplicación multiusuario con trazabilidad de producción y métricas por área para la toma de decisiones.",
+                        "Digitalicé la operación de la fábrica en una aplicación multiusuario que el equipo utiliza a diario para centralizar la trazabilidad de producción y consultar métricas por área para la toma de decisiones.",
                         "Integré la gestión de clientes y finanzas: gastos previstos y reales, cobros, egresos y sueldos.",
                         "Definí los requerimientos, diseñé las interfaces y gestioné el despliegue. Continúo incorporando mejoras junto al cliente."
                     ]

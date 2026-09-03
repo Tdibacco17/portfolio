@@ -62,17 +62,17 @@
                   "name": "E-commerce y herramientas internas",
                   "bullets": [
                     "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
-                    "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                    "Reorganicé la arquitectura del frontend y establecí una estructura más mantenible, creando componentes reutilizables e interfaces responsive con React y Tailwind CSS e incorporando mejoras de UX.",
                     "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
                     "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
-                    "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging."
+                    "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y colaboré con el equipo backend en PHP y tareas de staging."
                   ]
                 },
                 {
                   "name": "Aplicación móvil y dashboard",
                   "context": "Proyecto para otro negocio del contratante",
                   "bullets": [
-                    "Desarrollé de forma independiente una app para un bar con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                    "Desarrollé de forma independiente una app para un bar con React Native y Expo, y gestioné todo el proceso de publicación en App Store y Google Play.",
                     "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
                   ]
                 }
@@ -103,7 +103,7 @@
                 {
                   "name": "Sistema de gestión ERP y CRM",
                   "bullets": [
-                    "Digitalicé los procesos de la fábrica en una aplicación multiusuario con trazabilidad de producción y métricas por área para la toma de decisiones.",
+                    "Digitalicé la operación de la fábrica en una aplicación multiusuario que el equipo utiliza a diario para centralizar la trazabilidad de producción y consultar métricas por área para la toma de decisiones.",
                     "Integré la gestión de clientes y finanzas: gastos previstos y reales, cobros, egresos y sueldos.",
                     "Definí los requerimientos, diseñé las interfaces y gestioné el despliegue. Continúo incorporando mejoras junto al cliente."
                   ],
@@ -153,18 +153,18 @@
                 {
                   "name": "E-commerce y herramientas internas",
                   "bullets": [
-                    "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                    "Reorganicé la arquitectura del frontend y establecí una estructura más mantenible, creando componentes reutilizables e interfaces responsive con React y Tailwind CSS e incorporando mejoras de UX.",
                     "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
                     "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
                     "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
-                    "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging."
+                    "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y colaboré con el equipo backend en PHP y tareas de staging."
                   ]
                 },
                 {
                   "name": "Aplicación móvil y dashboard",
                   "context": "Proyecto para otro negocio del contratante",
                   "bullets": [
-                    "Desarrollé de forma independiente una app para un bar con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                    "Desarrollé de forma independiente una app para un bar con React Native y Expo, y gestioné todo el proceso de publicación en App Store y Google Play.",
                     "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
                   ]
                 }
@@ -195,7 +195,7 @@
                 {
                   "name": "Sistema de gestión ERP y CRM",
                   "bullets": [
-                    "Diseñé y desarrollé interfaces y flujos para una aplicación multiusuario basada en los procesos de la fábrica, con trazabilidad de producción y métricas por área para tomar decisiones.",
+                    "Digitalicé la operación de la fábrica en una aplicación multiusuario que el equipo utiliza a diario para centralizar la trazabilidad de producción y consultar métricas por área para la toma de decisiones.",
                     "Integré la gestión de clientes y finanzas: gastos previstos y reales, cobros, egresos y sueldos.",
                     "Relevé requerimientos con el cliente y gestioné el despliegue. Continúo incorporando mejoras según las necesidades del equipo."
                   ],
@@ -257,17 +257,17 @@
                   "name": "E-commerce and internal tools",
                   "bullets": [
                     "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
-                    "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                    "Reorganized the frontend architecture and established a more maintainable structure, creating reusable components and responsive interfaces with React and Tailwind CSS while incorporating UX improvements.",
                     "Built internal tools for multiple departments, automating manual tasks to save staff time.",
                     "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
-                    "Built server-side features in Next.js with direct SQL access and email templates for the e-commerce platform. I also collaborated with the backend team on PHP and staging tasks."
+                    "Built server-side features in Next.js with direct SQL access and collaborated with the backend team on PHP and staging tasks."
                   ]
                 },
                 {
                   "name": "Mobile application and dashboard",
                   "context": "Project for another business owned by my contractor",
                   "bullets": [
-                    "Independently developed a bar app with React Native and Expo and prepared its App Store and Google Play releases.",
+                    "Independently developed a bar app with React Native and Expo and managed the entire publishing process for the App Store and Google Play.",
                     "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
                   ]
                 }
@@ -298,7 +298,7 @@
                 {
                   "name": "ERP and CRM system",
                   "bullets": [
-                    "Digitized factory workflows in a multi-user application with production traceability and metrics by area to support decision-making.",
+                    "Digitized the factory's operations through a multi-user application that the team uses daily to centralize production traceability and review metrics by area for decision-making.",
                     "Integrated customer and financial management: projected and actual expenses, incoming and outgoing payments, and payroll.",
                     "Defined requirements, designed interfaces and managed deployment. Continue adding improvements with the client."
                   ],
@@ -348,18 +348,18 @@
                 {
                   "name": "E-commerce and internal tools",
                   "bullets": [
-                    "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                    "Reorganized the frontend architecture and established a more maintainable structure, creating reusable components and responsive interfaces with React and Tailwind CSS while incorporating UX improvements.",
                     "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
                     "Built internal tools for multiple departments, automating manual tasks to save staff time.",
                     "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
-                    "Built server-side features in Next.js with direct SQL access and email templates for the e-commerce platform. I also collaborated with the backend team on PHP and staging tasks."
+                    "Built server-side features in Next.js with direct SQL access and collaborated with the backend team on PHP and staging tasks."
                   ]
                 },
                 {
                   "name": "Mobile application and dashboard",
                   "context": "Project for another business owned by my contractor",
                   "bullets": [
-                    "Independently developed a bar app with React Native and Expo and prepared its App Store and Google Play releases.",
+                    "Independently developed a bar app with React Native and Expo and managed the entire publishing process for the App Store and Google Play.",
                     "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
                   ]
                 }
@@ -390,7 +390,7 @@
                 {
                   "name": "ERP and CRM system",
                   "bullets": [
-                    "Designed and built interfaces and workflows for a multi-user application based on factory processes, with production traceability and metrics by area to support decision-making.",
+                    "Digitized the factory's operations through a multi-user application that the team uses daily to centralize production traceability and review metrics by area for decision-making.",
                     "Integrated customer and financial management: projected and actual expenses, incoming and outgoing payments, and payroll.",
                     "Gathered requirements with the client and managed deployment. Continue adding improvements based on the team’s needs."
                   ],

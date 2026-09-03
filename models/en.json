@@ -30,10 +30,10 @@
                     "period": "May 2024 - Present",
                     "list": [
                         "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
-                        "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                        "Reorganized the frontend architecture and established a more maintainable structure, creating reusable components and responsive interfaces with React and Tailwind CSS while incorporating UX improvements.",
                         "Built internal tools for multiple departments, automating manual tasks to save staff time.",
                         "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
-                        "Built server-side features in Next.js with direct SQL access and email templates for the e-commerce platform. I also collaborated with the backend team on PHP and staging tasks."
+                        "Built server-side features in Next.js with direct SQL access and collaborated with the backend team on PHP and staging tasks."
                     ]
                 },
                 {
@@ -41,7 +41,7 @@
                     "title": "Mobile application and dashboard",
                     "period": "Project for another business owned by my contractor",
                     "list": [
-                        "Independently developed a bar app with React Native and Expo and prepared its App Store and Google Play releases.",
+                        "Independently developed a bar app with React Native and Expo and managed the entire publishing process for the App Store and Google Play.",
                         "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
                     ]
                 }
@@ -64,7 +64,7 @@
                     "title": "ERP and CRM management system",
                     "period": "Nov 2025 - Present",
                     "list": [
-                        "Digitized the factory’s processes in a multi-user application with production traceability and metrics by department for decision-making.",
+                        "Digitized the factory's operations through a multi-user application that the team uses daily to centralize production traceability and review metrics by area for decision-making.",
                         "Integrated customer and financial management, including projected and actual expenses, payments, outflows, and payroll.",
                         "Defined requirements, designed the interfaces, and managed deployment. I continue to add improvements in collaboration with the client."
                     ]
