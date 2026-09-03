@@ -1,0 +1,457 @@
+{
+  "status": "draft_for_review",
+  "preferred_variant": "fullstack",
+  "review_notes": [
+    "New experience supplements the original CV. Preserve earlier projects, stages, responsibilities and supplied metrics when changing emphasis between Full Stack and Frontend.",
+    "Strongwood has three distinct stages: original website April-September 2023; ERP/CRM November 2025-present; website redesign May-June 2026. Keep all three visible and do not imply uninterrupted work since 2023.",
+    "Donatella involved four months of initial development. Exact calendar dates are not confirmed; do not infer a start date from monthly billing. Subsequent maintenance and feature requests are separate from the initial development duration.",
+    "The bar app and dashboard were built for another business of the person who contracts Tomas for House of CB. Describe this within the current engagement with explicit attribution; do not present it as a House of CB product or a separate freelance contract.",
+    "English A2 is confirmed. Written work with a London-based team relies on translation tools; do not describe written or spoken English as fluent.",
+    "Henry March-August 2022 is retained from the supplied PDF; the website currently lists a different Henry end year.",
+    "The Next.js 14 migration, 30% performance improvement and 3,000+ users/hour are claims supplied in the original CV (public/assets/pdf/TomasDiBacco_Resume.pdf), retained here rather than independently measured.",
+    "Editorial review: use short action-led bullets, standard job titles and technologies in context. Omit generic claims and repeated setup details from the printed CV without changing project stages or dates. Tailor relevant, truthful keywords to each job description; do not claim an ATS score or guaranteed selection.",
+    "PostgreSQL and MySQL are listed in the published portfolio and models/data.json. They are general skills, not an assertion about the stack of Strongwood ERP or Donatella; those project stacks remain to be confirmed.",
+    "The supplied 30% performance claim is preserved; the measurement, baseline and method remain to be clarified with the author.",
+    "Additional background for future tailoring: uses AI for development and GitFlow; handled domains, Cloudflare and email setup for both freelance clients. Generic tool/practice claims and repeated setup lists are omitted where they add little to the printed narrative."
+  ],
+  "person": {
+    "name": "Tomás Di Bacco",
+    "email": "tomasdibacco@gmail.com",
+    "phone": "+54 11 6663 7192",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/tomas-di-bacco/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/Tdibacco17"
+      },
+      {
+        "label": "Portfolio",
+        "url": "https://tomas-di-bacco.vercel.app/"
+      }
+    ]
+  },
+  "locales": {
+    "es": {
+      "labels": {
+        "skills": "Tecnologías",
+        "experience": "Experiencia profesional",
+        "projects": "Experiencia freelance",
+        "education": "Formación e idiomas"
+      },
+      "education": "<b>Henry Bootcamp · Desarrollo Full Stack</b> | mar. 2022 - ago. 2022. Más de 700 horas de formación en frontend y backend. Proyecto individual SPA y e-commerce en equipo con Scrum.",
+      "languages": "<b>Idiomas:</b> español nativo · inglés básico (A2). Trabajo por escrito con un equipo de Londres usando herramientas de traducción.",
+      "variants": {
+        "fullstack": {
+          "title": "Desarrollador Full Stack",
+          "summary": "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL. Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles. Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción, con foco en simplificar procesos y mejorar la experiencia del usuario.",
+          "skills": [
+            "<b>Desarrollo:</b> React, Next.js, TypeScript, JavaScript, Node.js, Express.",
+            "<b>Datos e interfaces:</b> SQL, PostgreSQL, MySQL, Tailwind CSS, CSS, React Native, Expo.",
+            "<b>Herramientas:</b> Docker, Git, Cloudflare, WordPress · Scrum."
+          ],
+          "experience": [
+            {
+              "name": "House of CB",
+              "role": "Desarrollador Full Stack",
+              "bullets": [
+                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe más de 3.000 usuarios por hora.",
+                "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
+                "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
+                "Gestiono despliegues y actualizaciones de producción con Docker.",
+                "Comparto las decisiones técnicas y la planificación del frontend con otro desarrollador. Acompañé la incorporación de nuevos compañeros mediante mentoría.",
+                "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido de la app, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
+              ],
+              "timeline_id": "houseofcb"
+            },
+            {
+              "name": "25Watts",
+              "role": "Desarrollador Frontend",
+              "bullets": [
+                "Desarrollé portfolios, e-commerce, blogs y landing pages con WordPress, React y Next.js.",
+                "Implementé funcionalidades e integraciones con APIs, cuidando el rendimiento y la calidad del código. Trabajé con Scrum y control de versiones con Git."
+              ],
+              "timeline_id": "watts"
+            }
+          ],
+          "projects": [
+            {
+              "name": "Strongwood",
+              "role": "Desarrollador Full Stack · freelance",
+              "phases": [
+                {
+                  "name": "Sitio web original",
+                  "bullets": [
+                    "Desarrollé el sitio de la fábrica de muebles con Next.js y React. Definí la arquitectura, diseñé la UI/UX y acordé requerimientos y entregas con el cliente."
+                  ],
+                  "timeline_period": "original_website"
+                },
+                {
+                  "name": "Sistema de gestión ERP y CRM",
+                  "bullets": [
+                    "Digitalicé los procesos de la fábrica en una aplicación multiusuario con trazabilidad de producción y métricas por área para la toma de decisiones.",
+                    "Integré la gestión de clientes y finanzas: gastos previstos y reales, cobros, egresos y sueldos.",
+                    "Definí los requerimientos, diseñé las interfaces y gestioné el despliegue. Continúo incorporando mejoras junto al cliente."
+                  ],
+                  "timeline_period": "erp_crm"
+                },
+                {
+                  "name": "Rediseño del sitio web",
+                  "bullets": [
+                    "Implementé el rediseño del sitio existente, coordinando con la diseñadora y el cliente desde los requerimientos hasta el despliegue."
+                  ],
+                  "timeline_period": "website_redesign"
+                }
+              ],
+              "timeline_id": "strongwood"
+            },
+            {
+              "name": "Donatella",
+              "role": "Desarrollador Full Stack · freelance",
+              "bullets": [
+                "Desarrollé una herramienta multiusuario para un local de venta y alquiler de vestidos: facturación con ARCA, clientes, historial de facturas y envío automático por email.",
+                "Gestioné el despliegue, la configuración de dominio y email y la puesta en marcha con el cliente."
+              ],
+              "timeline_id": "donatella"
+            }
+          ],
+          "headline_stack": [
+            "React",
+            "Next.js",
+            "Node.js",
+            "SQL"
+          ]
+        },
+        "frontend": {
+          "title": "Desarrollador Frontend",
+          "summary": "Desarrollador Frontend con experiencia desde 2022 en React y Next.js. Desarrollo interfaces responsive y componentes reutilizables, y mejoro el rendimiento de las aplicaciones. Trabajo con diseñadores y clientes para facilitar su uso, con experiencia adicional en backend, móvil y despliegue.",
+          "skills": [
+            "<b>Frontend:</b> React, Next.js, TypeScript, JavaScript, Tailwind CSS, CSS, WordPress.",
+            "<b>Backend y móvil:</b> Node.js, Express, SQL, PostgreSQL, MySQL, React Native, Expo.",
+            "<b>Herramientas:</b> Docker, Git, Cloudflare · Scrum."
+          ],
+          "experience": [
+            {
+              "name": "House of CB",
+              "role": "Desarrollador Full Stack",
+              "bullets": [
+                "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe más de 3.000 usuarios por hora.",
+                "Comparto las decisiones técnicas y la planificación del frontend con otro desarrollador. Acompañé la incorporación de nuevos compañeros mediante mentoría.",
+                "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
+                "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
+                "Gestiono despliegues y actualizaciones de producción con Docker.",
+                "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido de la app, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
+              ],
+              "timeline_id": "houseofcb"
+            },
+            {
+              "name": "25Watts",
+              "role": "Desarrollador Frontend",
+              "bullets": [
+                "Desarrollé portfolios, e-commerce, blogs y landing pages con WordPress, React y Next.js.",
+                "Implementé funcionalidades e integraciones con APIs, cuidando el rendimiento y la calidad del código. Trabajé con Scrum y control de versiones con Git."
+              ],
+              "timeline_id": "watts"
+            }
+          ],
+          "projects": [
+            {
+              "name": "Strongwood",
+              "role": "Desarrollador Full Stack · freelance",
+              "phases": [
+                {
+                  "name": "Sitio web original",
+                  "bullets": [
+                    "Desarrollé el sitio de la fábrica de muebles con Next.js y React. Definí la arquitectura, diseñé la UI/UX y acordé requerimientos y entregas con el cliente."
+                  ],
+                  "timeline_period": "original_website"
+                },
+                {
+                  "name": "Sistema de gestión ERP y CRM",
+                  "bullets": [
+                    "Diseñé y desarrollé interfaces y flujos para una aplicación multiusuario basada en los procesos de la fábrica, con trazabilidad de producción y métricas por área para tomar decisiones.",
+                    "Integré la gestión de clientes y finanzas: gastos previstos y reales, cobros, egresos y sueldos.",
+                    "Relevé requerimientos con el cliente y gestioné el despliegue. Continúo incorporando mejoras según las necesidades del equipo."
+                  ],
+                  "timeline_period": "erp_crm"
+                },
+                {
+                  "name": "Rediseño del sitio web",
+                  "bullets": [
+                    "Implementé el rediseño del sitio existente, coordinando con la diseñadora y el cliente desde los requerimientos hasta el despliegue."
+                  ],
+                  "timeline_period": "website_redesign"
+                }
+              ],
+              "timeline_id": "strongwood"
+            },
+            {
+              "name": "Donatella",
+              "role": "Desarrollador Full Stack · freelance",
+              "bullets": [
+                "Desarrollé una herramienta multiusuario para un local de venta y alquiler de vestidos: facturación con ARCA, clientes, historial de facturas y envío automático por email.",
+                "Gestioné el despliegue, la configuración de dominio y email y la puesta en marcha con el cliente."
+              ],
+              "timeline_id": "donatella"
+            }
+          ],
+          "headline_stack": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ]
+        }
+      }
+    },
+    "en": {
+      "labels": {
+        "skills": "Technical skills",
+        "experience": "Professional experience",
+        "projects": "Freelance experience",
+        "education": "Education and languages"
+      },
+      "education": "<b>Henry Bootcamp · Full Stack Development</b> | Mar 2022 - Aug 2022. 700+ hours of frontend and backend training. Built an individual SPA and a team e-commerce project using Scrum.",
+      "languages": "<b>Languages:</b> Spanish (native) · English (basic, A2). Written collaboration with a London-based team using translation tools.",
+      "variants": {
+        "fullstack": {
+          "title": "Full Stack Developer",
+          "summary": "Full Stack Developer with professional experience since 2022 in React, Next.js, Node.js and SQL. I build e-commerce platforms, business management systems and mobile applications. I work with teams and clients from requirements definition through production deployment, focusing on simplifying processes and improving the user experience.",
+          "skills": [
+            "<b>Development:</b> React, Next.js, TypeScript, JavaScript, Node.js, Express.",
+            "<b>Data and UI:</b> SQL, PostgreSQL, MySQL, Tailwind CSS, CSS, React Native, Expo.",
+            "<b>Tools:</b> Docker, Git, Cloudflare, WordPress · Scrum."
+          ],
+          "experience": [
+            {
+              "name": "House of CB",
+              "role": "Full Stack Developer",
+              "bullets": [
+                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves over 3,000 users per hour.",
+                "Collaborated with the PHP backend team on email templates and staging. Currently migrating functionality to the Next.js server with direct SQL database access to reduce response times.",
+                "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                "Built web applications and internal tools for different departments, automating manual tasks to save staff time.",
+                "Manage production deployments and updates with Docker.",
+                "Share frontend technical decisions and planning with another developer. Mentored new team members during onboarding.",
+                "Independently developed a bar app with React Native and Expo for another business owned by the person who contracts me, including setup for publication on the App Store and Google Play.",
+                "The project includes a dashboard to manage notifications, events and app content, track users and purchases, and run a points-based loyalty program."
+              ],
+              "timeline_id": "houseofcb"
+            },
+            {
+              "name": "25Watts",
+              "role": "Frontend Developer",
+              "bullets": [
+                "Built portfolios, e-commerce sites, blogs and landing pages with WordPress, React and Next.js.",
+                "Implemented features and API integrations, focusing on performance and code quality. Worked with Scrum and Git version control."
+              ],
+              "timeline_id": "watts"
+            }
+          ],
+          "projects": [
+            {
+              "name": "Strongwood",
+              "role": "Freelance Full Stack Developer",
+              "phases": [
+                {
+                  "name": "Original company website",
+                  "bullets": [
+                    "Built the furniture manufacturer’s website with Next.js and React. Defined the architecture, designed the UI/UX and agreed on requirements and deliverables with the client."
+                  ],
+                  "timeline_period": "original_website"
+                },
+                {
+                  "name": "ERP and CRM system",
+                  "bullets": [
+                    "Digitized factory workflows in a multi-user application with production traceability and metrics by area to support decision-making.",
+                    "Integrated customer and financial management: projected and actual expenses, incoming and outgoing payments, and payroll.",
+                    "Defined requirements, designed interfaces and managed deployment. Continue adding improvements with the client."
+                  ],
+                  "timeline_period": "erp_crm"
+                },
+                {
+                  "name": "Website redesign",
+                  "bullets": [
+                    "Implemented the website redesign, working with the designer and client from requirements through deployment."
+                  ],
+                  "timeline_period": "website_redesign"
+                }
+              ],
+              "timeline_id": "strongwood"
+            },
+            {
+              "name": "Donatella",
+              "role": "Freelance Full Stack Developer",
+              "bullets": [
+                "Built a multi-user tool for a dress sales and rental business: ARCA tax authority integration for invoicing, customer management, invoice history and automatic invoice emails.",
+                "Managed deployment, domain and email setup, and client onboarding."
+              ],
+              "timeline_id": "donatella"
+            }
+          ],
+          "headline_stack": [
+            "React",
+            "Next.js",
+            "Node.js",
+            "SQL"
+          ]
+        },
+        "frontend": {
+          "title": "Frontend Developer",
+          "summary": "Frontend Developer with experience since 2022 in React and Next.js. I build responsive interfaces and reusable components, and improve application performance. I work with designers and clients to make applications easy to use, with additional experience in backend, mobile development and deployment.",
+          "skills": [
+            "<b>Frontend:</b> React, Next.js, TypeScript, JavaScript, Tailwind CSS, CSS, WordPress.",
+            "<b>Backend and mobile:</b> Node.js, Express, SQL, PostgreSQL, MySQL, React Native, Expo.",
+            "<b>Tools:</b> Docker, Git, Cloudflare · Scrum."
+          ],
+          "experience": [
+            {
+              "name": "House of CB",
+              "role": "Full Stack Developer",
+              "bullets": [
+                "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves over 3,000 users per hour.",
+                "Share frontend technical decisions and planning with another developer. Mentored new team members during onboarding.",
+                "Collaborated with the PHP backend team on email templates and staging. Currently migrating functionality to the Next.js server with direct SQL database access to reduce response times.",
+                "Built web applications and internal tools for different departments, automating manual tasks to save staff time.",
+                "Manage production deployments and updates with Docker.",
+                "Independently developed a bar app with React Native and Expo for another business owned by the person who contracts me, including setup for publication on the App Store and Google Play.",
+                "The project includes a dashboard to manage notifications, events and app content, track users and purchases, and run a points-based loyalty program."
+              ],
+              "timeline_id": "houseofcb"
+            },
+            {
+              "name": "25Watts",
+              "role": "Frontend Developer",
+              "bullets": [
+                "Built portfolios, e-commerce sites, blogs and landing pages with WordPress, React and Next.js.",
+                "Implemented features and API integrations, focusing on performance and code quality. Worked with Scrum and Git version control."
+              ],
+              "timeline_id": "watts"
+            }
+          ],
+          "projects": [
+            {
+              "name": "Strongwood",
+              "role": "Freelance Full Stack Developer",
+              "phases": [
+                {
+                  "name": "Original company website",
+                  "bullets": [
+                    "Built the furniture manufacturer’s website with Next.js and React. Defined the architecture, designed the UI/UX and agreed on requirements and deliverables with the client."
+                  ],
+                  "timeline_period": "original_website"
+                },
+                {
+                  "name": "ERP and CRM system",
+                  "bullets": [
+                    "Designed and built interfaces and workflows for a multi-user application based on factory processes, with production traceability and metrics by area to support decision-making.",
+                    "Integrated customer and financial management: projected and actual expenses, incoming and outgoing payments, and payroll.",
+                    "Gathered requirements with the client and managed deployment. Continue adding improvements based on the team’s needs."
+                  ],
+                  "timeline_period": "erp_crm"
+                },
+                {
+                  "name": "Website redesign",
+                  "bullets": [
+                    "Implemented the website redesign, working with the designer and client from requirements through deployment."
+                  ],
+                  "timeline_period": "website_redesign"
+                }
+              ],
+              "timeline_id": "strongwood"
+            },
+            {
+              "name": "Donatella",
+              "role": "Freelance Full Stack Developer",
+              "bullets": [
+                "Built a multi-user tool for a dress sales and rental business: ARCA tax authority integration for invoicing, customer management, invoice history and automatic invoice emails.",
+                "Managed deployment, domain and email setup, and client onboarding."
+              ],
+              "timeline_id": "donatella"
+            }
+          ],
+          "headline_stack": [
+            "React",
+            "Next.js",
+            "TypeScript"
+          ]
+        }
+      }
+    }
+  },
+  "timelines": {
+    "as_of": "2026-09",
+    "companies": {
+      "houseofcb": {
+        "kind": "calendar",
+        "periods": [
+          {
+            "id": "employment",
+            "label": {
+              "es": "Desarrollo",
+              "en": "Development"
+            },
+            "start": "2024-05",
+            "end": null
+          }
+        ]
+      },
+      "watts": {
+        "kind": "calendar",
+        "periods": [
+          {
+            "id": "employment",
+            "label": {
+              "es": "Desarrollo",
+              "en": "Development"
+            },
+            "start": "2022-10",
+            "end": "2024-04"
+          }
+        ]
+      },
+      "strongwood": {
+        "kind": "calendar",
+        "periods": [
+          {
+            "id": "original_website",
+            "label": {
+              "es": "Web original",
+              "en": "Original site"
+            },
+            "start": "2023-04",
+            "end": "2023-09"
+          },
+          {
+            "id": "erp_crm",
+            "label": {
+              "es": "ERP / CRM",
+              "en": "ERP / CRM"
+            },
+            "start": "2025-11",
+            "end": null
+          },
+          {
+            "id": "website_redesign",
+            "label": {
+              "es": "Rediseño",
+              "en": "Redesign"
+            },
+            "start": "2026-05",
+            "end": "2026-06"
+          }
+        ]
+      },
+      "donatella": {
+        "kind": "duration",
+        "months": 4
+      }
+    }
+  }
+}

@@ -46,6 +46,9 @@
 | Catálogo ordenado de experiencias, IDs e imágenes | `models/experiences.ts` |
 | Textos traducibles | `models/en.json`, `models/es.json` |
 | Perfil, enlaces, SVG y tecnologías | `models/data.json` |
+| Contenido editable de los cuatro borradores de CV | `cv/content.json` |
+| Generador independiente de PDF y dependencias | `scripts/generate-cv.py`, `cv/requirements.txt` |
+| PDFs de CV para revisión y postulaciones | `output/pdf/` |
 
 No hay API de user-agent ni variable `BASE_PATH`: los estados hover se resuelven con CSS. El respaldo histórico y el asset alternativo de 25Watts sin consumidores fueron retirados; no son fuentes de contenido.
 
