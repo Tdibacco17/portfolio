@@ -22,11 +22,12 @@
         "section": "Experience",
         "houseofcb": {
             "title": "House of CB",
-            "subTitle": "Full Stack Developer · May 2024 - Present",
+            "subTitle": "Full Stack Developer",
             "stages": [
                 {
                     "id": "ecommerce-internal-tools",
                     "title": "E-commerce and internal tools",
+                    "period": "May 2024 - Present",
                     "list": [
                         "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
                         "Reorganized the frontend architecture and established a more maintainable structure, creating reusable components and responsive interfaces with React and Tailwind CSS while incorporating UX improvements.",
@@ -95,11 +96,12 @@
         },
         "watts": {
             "title": "25Watts",
-            "subTitle": "Frontend Developer · Oct 2022 - Apr 2024",
+            "subTitle": "Frontend Developer",
             "stages": [
                 {
                     "id": "client-websites",
                     "title": "Client websites",
+                    "period": "Oct 2022 - Apr 2024",
                     "list": [
                         "Built portfolios, e-commerce sites, blogs, and landing pages with WordPress, React, and Next.js.",
                         "Implemented features and API integrations with attention to performance and code quality. Worked with Scrum and Git-based version control."

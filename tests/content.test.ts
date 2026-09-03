@@ -124,7 +124,7 @@ describe('bilingual content', () => {
     }
   });
 
-  it('keeps single-period subtitles and education synchronized with the Full Stack CV', () => {
+  it('keeps website stage periods and education synchronized with the Full Stack CV timelines', () => {
     const source = JSON.parse(readFileSync(resolve('cv/content.json'), 'utf8'));
     for (const [locale, dictionary] of [['es', spanish], ['en', english]] as const) {
       const content = source.locales[locale].variants.fullstack;
@@ -133,12 +133,12 @@ describe('bilingual content', () => {
       const donatella = content.projects.find((entry: { timeline_id: string }) => entry.timeline_id === 'donatella');
       const education = source.locales[locale].education;
 
-      expect(dictionary.experience.houseofcb.subTitle)
-        .toBe(`${houseofcb.role} · ${singlePeriod(source, houseofcb.timeline_id, locale)}`);
-      expect(dictionary.experience.houseofcb.stages[0]).not.toHaveProperty('period');
-      expect(dictionary.experience.watts.subTitle)
-        .toBe(`${watts.role} · ${singlePeriod(source, watts.timeline_id, locale)}`);
-      expect(dictionary.experience.watts.stages[0]).not.toHaveProperty('period');
+      expect(dictionary.experience.houseofcb.subTitle).toBe(houseofcb.role);
+      expect(dictionary.experience.houseofcb.stages[0].period)
+        .toBe(singlePeriod(source, houseofcb.timeline_id, locale));
+      expect(dictionary.experience.watts.subTitle).toBe(watts.role);
+      expect(dictionary.experience.watts.stages[0].period)
+        .toBe(singlePeriod(source, watts.timeline_id, locale));
       expect(dictionary.experience.donatella.stages[0].period)
         .toBe(singlePeriod(source, donatella.timeline_id, locale));
       expect(dictionary.education.title).toBe(education.name);

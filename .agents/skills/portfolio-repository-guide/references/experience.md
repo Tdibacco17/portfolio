@@ -9,12 +9,12 @@ Consulta estas lecciones antes de modificar las áreas relacionadas. Registra s�
 - Evidencia: el encabezado de una empresa estaba fuera del timeline y sus etapas compartían una línea con el siguiente cliente, haciendo ambigua la pertenencia. `scripts/generate-cv.py` ahora genera un timeline por cliente, con la empresa como nodo principal y las etapas indentadas; los cuatro PDF muestran grupos separados.
 - Regla reusable: al representar varios proyectos de una empresa, conservar una jerarquía visible empresa-etapas y cortar la conexión antes del siguiente cliente. No depender sólo de la cercanía de un nombre externo a la línea.
 
-### El período continuo pertenece al encabezado de la empresa
+### En la web la fecha va debajo del título de la etapa
 
 - Fecha: 2026-09-03.
-- Contexto: sincronización entre portfolio web y los cuatro PDF del CV.
-- Evidencia: House of CB mostraba `may. 2024 - actualidad` sólo dentro de la etapa de e-commerce, dejando la aplicación móvil y dashboard con un texto contextual pero sin período visible. El cambio mueve el período continuo al subtítulo de la empresa en web y al encabezado `rol | período` en PDF; las pruebas de contenido comparan esos subtítulos contra `cv/content.json.timelines`.
-- Regla reusable: cuando una empresa o cliente tiene un único tramo laboral que cubre varias etapas, mostrar el período junto al rol de la empresa y dejar fechas por etapa sólo para tramos independientes o contextos específicos.
+- Contexto: alinear House of CB y 25Watts con Donatella y Strongwood, sin cambiar el CV.
+- Evidencia: los diccionarios web mueven `may. 2024 - actualidad` y `oct. 2022 - abr. 2024` al `period` de la primera etapa; el subtítulo de empresa queda sólo el rol. `cv/content.json` y el generador conservan el tramo continuo en el encabezado `rol | período`. Las pruebas comparan esos `period` de etapa contra `cv/content.json.timelines`.
+- Regla reusable: en el portfolio web, mostrar fechas o contexto debajo del título de la etapa. El subtítulo de la empresa es el rol, más freelance cuando aplica. El CV sigue mostrando un tramo laboral continuo en el encabezado de la empresa. No copiar la presentación del CV a la web ni viceversa.
 
 ### Ampliar el CV conserva las etapas anteriores
 

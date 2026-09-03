@@ -6,7 +6,7 @@
 - `models/experiences.ts`: catálogo ordenado, IDs, presentación por secciones o timeline y metadatos de imágenes de experiencias.
 - `models/data.json`: perfil, enlaces, SVG, CV y tecnologías. No importar este JSON completo desde componentes cliente.
 - `models/dictionary.ts`: contrato común; exige traducciones para cada `ExperienceId` derivado del catálogo.
-- `tests/content.test.ts`: compara claves y tipos de ambos idiomas, IDs únicos/correspondientes y assets existentes con capitalización correcta.
+- `tests/content.test.ts`: compara claves y tipos de ambos idiomas, IDs únicos/correspondientes, assets existentes con capitalización correcta, y los períodos de etapas web contra `cv/content.json.timelines`.
 
 Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technologies`, `education`, `languages` y `languageHandler`. Un cambio estructural exige actualizar ambos idiomas. No usar fallbacks silenciosos para ocultar claves ausentes: el build corre las pruebas de contenido.
 
@@ -16,7 +16,7 @@ Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technolo
 
 1. Añadir la imagen a `public/assets/img/`.
 2. Agregar una entrada al array `experiences` en `models/experiences.ts`, en su posición de presentación. Definir un ID estable, `layout`, `src`, `alt`, `blurData`, `width` y `height`.
-3. Agregar ese mismo ID bajo `experience` en ambos diccionarios, con `title`, `subTitle` y `stages`. Cada etapa requiere un ID estable, título y viñetas; `period` sólo va en la etapa cuando no corresponde mostrar el período a nivel de empresa. El orden y los IDs deben coincidir entre idiomas.
+3. Agregar ese mismo ID bajo `experience` en ambos diccionarios, con `title`, `subTitle` y `stages`. Cada etapa requiere un ID estable, título y viñetas. En la web, `period` va en la etapa y se muestra debajo de su título (fecha o contexto); el `subTitle` de la empresa es el rol, más freelance cuando aplica. El CV sigue mostrando un tramo laboral continuo en el encabezado de la empresa. El orden y los IDs deben coincidir entre idiomas.
 4. Ejecutar `npm run build` y comprobar el render en ambas lenguas. No modificar el JSX del renderizador.
 
 El orden vigente es House of CB, Strongwood, Donatella y 25Watts. `layout: timeline` está reservado para Strongwood; `layout: sections` muestra uno o varios hitos sin línea ni círculos y permite separar el e-commerce de la aplicación móvil dentro de House of CB. Las medidas del catálogo conservan las proporciones declaradas previamente; la imagen original de House of CB mide 2560×1128, mientras el atributo histórico de alto es 1127. Al sustituirla, comprobar el recorte real.
