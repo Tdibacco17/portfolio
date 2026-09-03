@@ -41,7 +41,7 @@
         "projects": "Experiencia freelance",
         "education": "Formación e idiomas"
       },
-      "education": "<b>Henry Bootcamp · Desarrollo Full Stack</b> | mar. 2022 - ago. 2022. Más de 700 horas de formación en frontend y backend. Proyecto individual SPA y e-commerce en equipo con Scrum.",
+      "education": "Más de 700 horas de formación intensiva en desarrollo Full Stack con Scrum. Desarrollé una SPA individual y un e-commerce en equipo.",
       "languages": "<b>Idiomas:</b> español nativo · inglés básico (A2). Trabajo por escrito con un equipo de Londres usando herramientas de traducción.",
       "variants": {
         "fullstack": {
@@ -56,17 +56,27 @@
             {
               "name": "House of CB",
               "role": "Desarrollador Full Stack",
-              "bullets": [
-                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
-                "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
-                "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
-                "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
-                "Gestiono despliegues y actualizaciones de producción con Docker.",
-                "Comparto las decisiones técnicas y la planificación del frontend con otro desarrollador. Acompañé la incorporación de nuevos compañeros mediante mentoría.",
-                "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
-                "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido de la app, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
-              ],
-              "timeline_id": "houseofcb"
+              "timeline_id": "houseofcb",
+              "phases": [
+                {
+                  "name": "E-commerce y herramientas internas",
+                  "bullets": [
+                    "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
+                    "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                    "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
+                    "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
+                    "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging."
+                  ]
+                },
+                {
+                  "name": "Aplicación móvil y dashboard",
+                  "context": "Proyecto para otro negocio del contratante",
+                  "bullets": [
+                    "Desarrollé de forma independiente una app para un bar con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                    "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
+                  ]
+                }
+              ]
             },
             {
               "name": "25Watts",
@@ -84,7 +94,7 @@
               "role": "Desarrollador Full Stack · freelance",
               "phases": [
                 {
-                  "name": "Sitio web original",
+                  "name": "Sitio web",
                   "bullets": [
                     "Desarrollé el sitio de la fábrica de muebles con Next.js y React. Definí la arquitectura, diseñé la UI/UX y acordé requerimientos y entregas con el cliente."
                   ],
@@ -138,17 +148,27 @@
             {
               "name": "House of CB",
               "role": "Desarrollador Full Stack",
-              "bullets": [
-                "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
-                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
-                "Comparto las decisiones técnicas y la planificación del frontend con otro desarrollador. Acompañé la incorporación de nuevos compañeros mediante mentoría.",
-                "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
-                "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
-                "Gestiono despliegues y actualizaciones de producción con Docker.",
-                "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
-                "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido de la app, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
-              ],
-              "timeline_id": "houseofcb"
+              "timeline_id": "houseofcb",
+              "phases": [
+                {
+                  "name": "E-commerce y herramientas internas",
+                  "bullets": [
+                    "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                    "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
+                    "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
+                    "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
+                    "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging."
+                  ]
+                },
+                {
+                  "name": "Aplicación móvil y dashboard",
+                  "context": "Proyecto para otro negocio del contratante",
+                  "bullets": [
+                    "Desarrollé de forma independiente una app para un bar con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                    "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
+                  ]
+                }
+              ]
             },
             {
               "name": "25Watts",
@@ -166,7 +186,7 @@
               "role": "Desarrollador Full Stack · freelance",
               "phases": [
                 {
-                  "name": "Sitio web original",
+                  "name": "Sitio web",
                   "bullets": [
                     "Desarrollé el sitio de la fábrica de muebles con Next.js y React. Definí la arquitectura, diseñé la UI/UX y acordé requerimientos y entregas con el cliente."
                   ],
@@ -216,7 +236,7 @@
         "projects": "Freelance experience",
         "education": "Education and languages"
       },
-      "education": "<b>Henry Bootcamp · Full Stack Development</b> | Mar 2022 - Aug 2022. 700+ hours of frontend and backend training. Built an individual SPA and a team e-commerce project using Scrum.",
+      "education": "Completed 700+ hours of intensive Full Stack development training with Scrum. Built an individual SPA and a team e-commerce project.",
       "languages": "<b>Languages:</b> Spanish (native) · English (basic, A2). Written collaboration with a London-based team using translation tools.",
       "variants": {
         "fullstack": {
@@ -231,17 +251,27 @@
             {
               "name": "House of CB",
               "role": "Full Stack Developer",
-              "bullets": [
-                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
-                "Collaborated with the PHP backend team on email templates and staging. Currently migrating functionality to the Next.js server with direct SQL database access to reduce response times.",
-                "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
-                "Built web applications and internal tools for different departments, automating manual tasks to save staff time.",
-                "Manage production deployments and updates with Docker.",
-                "Share frontend technical decisions and planning with another developer. Mentored new team members during onboarding.",
-                "Independently developed a bar app with React Native and Expo for another business owned by the person who contracts me, including setup for publication on the App Store and Google Play.",
-                "The project includes a dashboard to manage notifications, events and app content, track users and purchases, and run a points-based loyalty program."
-              ],
-              "timeline_id": "houseofcb"
+              "timeline_id": "houseofcb",
+              "phases": [
+                {
+                  "name": "E-commerce and internal tools",
+                  "bullets": [
+                    "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
+                    "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                    "Built internal tools for multiple departments, automating manual tasks to save staff time.",
+                    "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
+                    "Built server-side features in Next.js with direct SQL access and email templates for the e-commerce platform. I also collaborated with the backend team on PHP and staging tasks."
+                  ]
+                },
+                {
+                  "name": "Mobile application and dashboard",
+                  "context": "Project for another business owned by my contractor",
+                  "bullets": [
+                    "Independently developed a bar app with React Native and Expo and prepared its App Store and Google Play releases.",
+                    "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
+                  ]
+                }
+              ]
             },
             {
               "name": "25Watts",
@@ -259,7 +289,7 @@
               "role": "Freelance Full Stack Developer",
               "phases": [
                 {
-                  "name": "Original company website",
+                  "name": "Website",
                   "bullets": [
                     "Built the furniture manufacturer’s website with Next.js and React. Defined the architecture, designed the UI/UX and agreed on requirements and deliverables with the client."
                   ],
@@ -288,7 +318,7 @@
               "name": "Donatella",
               "role": "Freelance Full Stack Developer",
               "bullets": [
-                "Built a multi-user tool for a dress sales and rental business: ARCA tax authority integration for invoicing, customer management, invoice history and automatic invoice emails.",
+                "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
                 "Managed deployment, domain and email setup, and client onboarding."
               ],
               "timeline_id": "donatella"
@@ -313,17 +343,27 @@
             {
               "name": "House of CB",
               "role": "Full Stack Developer",
-              "bullets": [
-                "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
-                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
-                "Share frontend technical decisions and planning with another developer. Mentored new team members during onboarding.",
-                "Collaborated with the PHP backend team on email templates and staging. Currently migrating functionality to the Next.js server with direct SQL database access to reduce response times.",
-                "Built web applications and internal tools for different departments, automating manual tasks to save staff time.",
-                "Manage production deployments and updates with Docker.",
-                "Independently developed a bar app with React Native and Expo for another business owned by the person who contracts me, including setup for publication on the App Store and Google Play.",
-                "The project includes a dashboard to manage notifications, events and app content, track users and purchases, and run a points-based loyalty program."
-              ],
-              "timeline_id": "houseofcb"
+              "timeline_id": "houseofcb",
+              "phases": [
+                {
+                  "name": "E-commerce and internal tools",
+                  "bullets": [
+                    "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                    "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
+                    "Built internal tools for multiple departments, automating manual tasks to save staff time.",
+                    "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
+                    "Built server-side features in Next.js with direct SQL access and email templates for the e-commerce platform. I also collaborated with the backend team on PHP and staging tasks."
+                  ]
+                },
+                {
+                  "name": "Mobile application and dashboard",
+                  "context": "Project for another business owned by my contractor",
+                  "bullets": [
+                    "Independently developed a bar app with React Native and Expo and prepared its App Store and Google Play releases.",
+                    "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
+                  ]
+                }
+              ]
             },
             {
               "name": "25Watts",
@@ -341,7 +381,7 @@
               "role": "Freelance Full Stack Developer",
               "phases": [
                 {
-                  "name": "Original company website",
+                  "name": "Website",
                   "bullets": [
                     "Built the furniture manufacturer’s website with Next.js and React. Defined the architecture, designed the UI/UX and agreed on requirements and deliverables with the client."
                   ],
@@ -370,7 +410,7 @@
               "name": "Donatella",
               "role": "Freelance Full Stack Developer",
               "bullets": [
-                "Built a multi-user tool for a dress sales and rental business: ARCA tax authority integration for invoicing, customer management, invoice history and automatic invoice emails.",
+                "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
                 "Managed deployment, domain and email setup, and client onboarding."
               ],
               "timeline_id": "donatella"

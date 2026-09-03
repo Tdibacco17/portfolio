@@ -22,7 +22,7 @@ export default function Experience({ content }: { content: Dictionary['experienc
     <section className="relative" aria-labelledby="experience-heading">
       <SectionHeading id="experience-heading" text={content.section} />
       <div className="flex flex-col gap-40">
-        {experiences.map(({ id, img }) => (
+        {experiences.map(({ id, img, layout }) => (
           <article key={id} className="flex flex-col gap-6" aria-labelledby={`experience-${id}`}>
             <div className="max-h-64 overflow-hidden rounded-otherCustom flex justify-center items-center select-none pointer-events-none">
               <Image src={img.src} alt={img.alt} width={img.width} height={img.height}
@@ -33,7 +33,7 @@ export default function Experience({ content }: { content: Dictionary['experienc
               <h3 id={`experience-${id}`} className="text-2xl">{content[id].title}</h3>
               <p className="text-base text-lightPrimary">{content[id].subTitle}</p>
             </div>
-            {content[id].stages.length > 1 ? (
+            {layout === 'timeline' ? (
               <ol className="flex flex-col list-none" aria-label={`${content[id].title}: ${content[id].subTitle}`}>
                 {content[id].stages.map(stage => (
                   <li key={stage.id}
@@ -44,11 +44,15 @@ export default function Experience({ content }: { content: Dictionary['experienc
                   </li>
                 ))}
               </ol>
-            ) : content[id].stages.map(stage => (
-              <div key={stage.id}>
-                <StageContent stage={stage} />
+            ) : (
+              <div className="flex flex-col gap-10">
+                {content[id].stages.map(stage => (
+                  <div key={stage.id}>
+                    <StageContent stage={stage} />
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </article>
         ))}
       </div>

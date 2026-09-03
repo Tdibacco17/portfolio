@@ -80,12 +80,24 @@ describe('bilingual content', () => {
     expect(english.aboutMe.description.join(' ')).toBe(source.locales.en.variants.fullstack.summary);
   });
 
+  it('keeps the House of CB website sections synchronized with the Full Stack CV', () => {
+    const source = JSON.parse(readFileSync(resolve('cv/content.json'), 'utf8'));
+    for (const [locale, dictionary] of [['es', spanish], ['en', english]] as const) {
+      const cvEntry = source.locales[locale].variants.fullstack.experience
+        .find((entry: { timeline_id: string }) => entry.timeline_id === 'houseofcb');
+      expect(cvEntry.phases.map((phase: { name: string }) => phase.name))
+        .toEqual(dictionary.experience.houseofcb.stages.map(stage => stage.title));
+      expect(cvEntry.phases.map((phase: { bullets: string[] }) => phase.bullets))
+        .toEqual(dictionary.experience.houseofcb.stages.map(stage => stage.list));
+      expect(cvEntry.phases[1].context).toBe(dictionary.experience.houseofcb.stages[1].period);
+    }
+  });
+
   it('reserves the visual timeline for Strongwood multiple stages', () => {
     for (const dictionary of [english, spanish]) {
-      const timelineIds = experiences
-        .filter(({ id }) => dictionary.experience[id].stages.length > 1)
-        .map(({ id }) => id);
+      const timelineIds = experiences.filter(({ layout }) => layout === 'timeline').map(({ id }) => id);
       expect(timelineIds).toEqual(['strongwood']);
+      expect(dictionary.experience.houseofcb.stages).toHaveLength(2);
     }
   });
 

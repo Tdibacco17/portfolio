@@ -33,7 +33,11 @@ export default function PersonalIdentity({ content, locale }: { content: Diction
           successIcon={<Icon iconData={data.personalIdentity.contact.success} fill reduce />} />
       </div>
       */}
-      <div className="py-4">
+      <div className="flex flex-col items-center gap-3 py-4">
+        <a href={data.personalIdentity.contact.gmail.link}
+          className="text-lightPrimary underline decoration-[#A0A0A0] underline-offset-2 hover:text-link-hover">
+          {data.personalIdentity.contact.copy.link}
+        </a>
         <a href={cvSrc} download={cvSrc.split('/').pop()}
           className="text-lightPrimary font-bold underline-offset-2 underline decoration-[#A0A0A0] hover:text-link-hover"
           rel="noopener noreferrer" target="_blank">{content.cv}</a>

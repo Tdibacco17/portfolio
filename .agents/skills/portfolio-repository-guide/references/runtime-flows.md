@@ -6,7 +6,7 @@
 2. Una cookie `lang` válida (`en` o `es`) tiene prioridad. Sin ella, se negocia `Accept-Language`: variantes regionales, mayúsculas y calidad `q`; se descartan entradas inválidas y `q=0`.
 3. Sin coincidencia compatible, se usa español. Empates de calidad conservan el orden del header.
 4. El resultado es `{ locale, needsCookie }`. El servidor usa ese locale para el documento, el contenido y el PDF Full Stack ofrecido para descarga desde el primer render.
-5. `getDictionary(locale)` importa el JSON en servidor y también se memoiza por solicitud. No usar caché global para preferencias de visitantes.
+5. `getDictionary(locale)` importa el JSON en servidor y también se memoiza por solicitud. `generateMetadata()` usa el mismo locale y diccionario para traducir título y descripción. No usar caché global para preferencias de visitantes.
 
 ## Persistencia y cambios
 

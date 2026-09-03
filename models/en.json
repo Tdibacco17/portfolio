@@ -9,7 +9,7 @@
             "success": "Copied",
             "error": "Could not copy. Use Contact me or try again."
         },
-        "cv": "Download resume"
+        "cv": "Download résumé"
     },
     "aboutMe": {
         "section": "About me",
@@ -25,16 +25,23 @@
             "subTitle": "Full Stack Developer",
             "stages": [
                 {
-                    "id": "fullstack-development",
-                    "title": "E-commerce, internal tools, and mobile application",
+                    "id": "ecommerce-internal-tools",
+                    "title": "E-commerce and internal tools",
                     "period": "May 2024 - Present",
                     "list": [
                         "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
                         "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
                         "Built internal tools for multiple departments, automating manual tasks to save staff time.",
                         "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
-                        "Built server-side features in Next.js with direct SQL access and email templates for the e-commerce platform. I also collaborated with the backend team on PHP and staging tasks.",
-                        "For a bar, another business owned by my contractor, I independently developed a React Native and Expo app and prepared its App Store and Google Play releases.",
+                        "Built server-side features in Next.js with direct SQL access and email templates for the e-commerce platform. I also collaborated with the backend team on PHP and staging tasks."
+                    ]
+                },
+                {
+                    "id": "mobile-app-dashboard",
+                    "title": "Mobile application and dashboard",
+                    "period": "Project for another business owned by my contractor",
+                    "list": [
+                        "Independently developed a bar app with React Native and Expo and prepared its App Store and Google Play releases.",
                         "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
                     ]
                 }
@@ -81,7 +88,7 @@
                     "title": "Billing and management system",
                     "period": "4 months of development",
                     "list": [
-                        "Built a multi-user internal tool for a dress sales and rental business, integrating ARCA invoicing, customer management, invoice history, and automatic email delivery.",
+                        "Built a multi-user internal tool for a dress sales and rental business, integrating invoicing through Argentina’s tax authority, ARCA, customer management, invoice history, and automatic email delivery.",
                         "Managed deployment, domain and email configuration, and the client launch. I continue to add features on request."
                     ]
                 }
@@ -104,27 +111,31 @@
         }
     },
     "technologies": {
-        "title": "Stack"
+        "title": "Technical skills"
     },
     "education": {
         "section": "Education",
         "title": "Henry Bootcamp",
         "subTitle": "Full Stack Developer, Mar 2022 - Aug 2022",
         "firstParagraph": {
-            "text": "More than 700 hours of intensive learning in Full Stack development, applying agile methodologies (Scrum). Development of an individual project (SPA) and a group project focused on e-commerce."
+            "text": "Completed 700+ hours of intensive Full Stack development training with Scrum. Built an individual SPA and a team e-commerce project."
         },
         "certificate": "Certificate"
     },
     "languages": {
         "section": "Languages",
         "list": [
-            "Spanish - (Native)",
-            "English - (Basic - A2)"
+            "Spanish: native",
+            "English: basic (A2)"
         ]
     },
     "languageHandler": {
         "switchLabel": "EN: switch to Spanish",
         "error": "Could not save the language. Allow cookies and try again.",
         "changed": "Language changed to English."
+    },
+    "metadata": {
+        "title": "Tomás Di Bacco | Full Stack Developer",
+        "description": "Full Stack Developer specializing in React, Next.js, Node.js, and SQL. Experience in e-commerce, business management systems, and mobile applications."
     }
 }

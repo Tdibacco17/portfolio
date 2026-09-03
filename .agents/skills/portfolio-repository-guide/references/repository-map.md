@@ -42,7 +42,7 @@
 | Carga de diccionarios en servidor | `utils/dictionaries.ts` |
 | Escritura cliente y comprobación de persistencia | `utils/set-locale.ts` |
 | Contrato bilingüe | `models/dictionary.ts` |
-| Catálogo ordenado de experiencias, IDs e imágenes | `models/experiences.ts` |
+| Catálogo ordenado de experiencias, layout, IDs e imágenes | `models/experiences.ts` |
 | Textos traducibles | `models/en.json`, `models/es.json` |
 | Perfil, enlaces, SVG y tecnologías | `models/data.json` |
 | Contenido editable de los cuatro borradores de CV | `cv/content.json` |

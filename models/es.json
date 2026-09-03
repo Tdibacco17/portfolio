@@ -9,10 +9,10 @@
             "success": "Copiado",
             "error": "No se pudo copiar. Podés usar Contactame o volver a intentarlo."
         },
-        "cv": "Descargar curriculum"
+        "cv": "Descargar currículum"
     },
     "aboutMe": {
-        "section": "Sobre mi",
+        "section": "Sobre mí",
         "description": [
             "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL. Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles.",
             "Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción, con foco en simplificar procesos y mejorar la experiencia del usuario."
@@ -25,16 +25,23 @@
             "subTitle": "Desarrollador Full Stack",
             "stages": [
                 {
-                    "id": "fullstack-development",
-                    "title": "E-commerce, herramientas internas y aplicación móvil",
+                    "id": "ecommerce-internal-tools",
+                    "title": "E-commerce y herramientas internas",
                     "period": "may. 2024 - actualidad",
                     "list": [
                         "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
                         "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
                         "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
                         "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
-                        "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging.",
-                        "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                        "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging."
+                    ]
+                },
+                {
+                    "id": "mobile-app-dashboard",
+                    "title": "Aplicación móvil y dashboard",
+                    "period": "Proyecto para otro negocio del contratante",
+                    "list": [
+                        "Desarrollé de forma independiente una app para un bar con React Native y Expo y preparé su publicación en App Store y Google Play.",
                         "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
                     ]
                 }
@@ -111,20 +118,24 @@
         "title": "Henry Bootcamp",
         "subTitle": "Desarrollador Full Stack, mar. 2022 - ago. 2022",
         "firstParagraph": {
-            "text": "Más de 700 horas de aprendizaje intensivo en desarrollo Full Stack, aplicando metodologías ágiles (Scrum). Desarrollo de un proyecto individual (SPA) y uno grupal enfocado en e-commerce."
+            "text": "Más de 700 horas de formación intensiva en desarrollo Full Stack con Scrum. Desarrollé una SPA individual y un e-commerce en equipo."
         },
         "certificate": "Certificado"
     },
     "languages": {
         "section": "Idiomas",
         "list": [
-            "Español - (Nativo)",
-            "Inglés - (Basico A2)"
+            "Español: nativo",
+            "Inglés: básico (A2)"
         ]
     },
     "languageHandler": {
         "switchLabel": "ES: cambiar a inglés",
         "error": "No se pudo guardar el idioma. Permití las cookies y volvé a intentarlo.",
         "changed": "Idioma actualizado a español."
+    },
+    "metadata": {
+        "title": "Tomás Di Bacco | Desarrollador Full Stack",
+        "description": "Desarrollador Full Stack especializado en React, Next.js, Node.js y SQL. Experiencia en e-commerce, sistemas de gestión y aplicaciones móviles."
     }
 }

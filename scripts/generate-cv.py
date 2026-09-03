@@ -107,8 +107,11 @@ def validate_timelines(source):
                 timeline = timelines['companies'][entry['timeline_id']]
                 periods = {p['id'] for p in timeline.get('periods', [])}
                 for phase in entry.get('phases', []):
-                    if phase['timeline_period'] not in periods:
+                    timeline_period = phase.get('timeline_period')
+                    if timeline_period and timeline_period not in periods:
                         raise ValueError('A project phase references a missing timeline period')
+                    if 'context' in phase and not phase['context'].strip():
+                        raise ValueError('A phase context must not be empty')
 
 
 class VerticalTimeline(Flowable):
@@ -236,10 +239,18 @@ def build_pdf(source, locale, variant, output_dir):
                            Paragraph(company, styles['role'])]
             entry_items = []
             if entry.get('phases'):
-                entry_items.append({'content': heading, 'radius': 3.5})
+                entry_items.append({'content': heading, 'radius': 3.5 if group == 'projects' else 3})
                 for phase in entry['phases']:
-                    period = next(p for p in timeline['periods'] if p['id'] == phase['timeline_period'])
-                    paragraphs = [Paragraph(f'<b>{escape(phase["name"])}</b> | <i>{format_period(period, locale)}</i>', styles['phase'])]
+                    phase_label = ''
+                    if phase.get('timeline_period'):
+                        period = next(p for p in timeline['periods'] if p['id'] == phase['timeline_period'])
+                        phase_label = format_period(period, locale)
+                    elif phase.get('context'):
+                        phase_label = phase['context']
+                    phase_heading = f'<b>{escape(phase["name"])}</b>'
+                    if phase_label:
+                        phase_heading += f' | <i>{escape(phase_label)}</i>'
+                    paragraphs = [Paragraph(phase_heading, styles['phase'])]
                     paragraphs.extend(Paragraph(escape(bullet), styles['bullet'], bulletText='•') for bullet in phase['bullets'])
                     entry_items.append({'content': paragraphs, 'indent': 14, 'radius': 2.4})
             else:

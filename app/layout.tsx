@@ -7,11 +7,12 @@ import LanguageHandler from '@/components/language-handler';
 import Icon from '@/components/icons/icon';
 import data from '@/models/data.json';
 
-export const metadata: Metadata = {
-  title: "Tomás Di Bacco",
-  description: "Portfolio",
-  manifest: "/manifest.json"
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { locale } = await getLocale();
+  const dict = await getDictionary(locale);
+
+  return { ...dict.metadata, manifest: '/manifest.json' };
+}
 
 export const viewport: Viewport = {
   themeColor: '#232323',
