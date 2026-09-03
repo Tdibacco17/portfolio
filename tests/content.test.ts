@@ -65,7 +65,6 @@ describe('bilingual content', () => {
         const experience = dictionary.experience[id];
         expect(experience.title.trim()).not.toBe('');
         expect(experience.subTitle.trim()).not.toBe('');
-        if ('period' in experience && experience.period !== undefined) expect(experience.period.trim()).not.toBe('');
         expect(experience.stages.length).toBeGreaterThan(0);
         expect(new Set(experience.stages.map(stage => stage.id)).size).toBe(experience.stages.length);
         for (const stage of experience.stages) {
@@ -125,7 +124,7 @@ describe('bilingual content', () => {
     }
   });
 
-  it('keeps single-period roles, periods and education synchronized with the Full Stack CV', () => {
+  it('keeps single-period subtitles and education synchronized with the Full Stack CV', () => {
     const source = JSON.parse(readFileSync(resolve('cv/content.json'), 'utf8'));
     for (const [locale, dictionary] of [['es', spanish], ['en', english]] as const) {
       const content = source.locales[locale].variants.fullstack;
@@ -134,11 +133,11 @@ describe('bilingual content', () => {
       const donatella = content.projects.find((entry: { timeline_id: string }) => entry.timeline_id === 'donatella');
       const education = source.locales[locale].education;
 
-      expect(dictionary.experience.houseofcb.subTitle).toBe(houseofcb.role);
-      expect(dictionary.experience.houseofcb.period).toBe(singlePeriod(source, houseofcb.timeline_id, locale));
+      expect(dictionary.experience.houseofcb.subTitle)
+        .toBe(`${houseofcb.role} · ${singlePeriod(source, houseofcb.timeline_id, locale)}`);
       expect(dictionary.experience.houseofcb.stages[0]).not.toHaveProperty('period');
-      expect(dictionary.experience.watts.subTitle).toBe(watts.role);
-      expect(dictionary.experience.watts.period).toBe(singlePeriod(source, watts.timeline_id, locale));
+      expect(dictionary.experience.watts.subTitle)
+        .toBe(`${watts.role} · ${singlePeriod(source, watts.timeline_id, locale)}`);
       expect(dictionary.experience.watts.stages[0]).not.toHaveProperty('period');
       expect(dictionary.experience.donatella.stages[0].period)
         .toBe(singlePeriod(source, donatella.timeline_id, locale));

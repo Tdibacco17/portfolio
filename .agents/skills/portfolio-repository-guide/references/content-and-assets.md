@@ -16,7 +16,7 @@ Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technolo
 
 1. Añadir la imagen a `public/assets/img/`.
 2. Agregar una entrada al array `experiences` en `models/experiences.ts`, en su posición de presentación. Definir un ID estable, `layout`, `src`, `alt`, `blurData`, `width` y `height`.
-3. Agregar ese mismo ID bajo `experience` en ambos diccionarios, con `title`, `subTitle`, `stages` y, cuando corresponda, `period` a nivel experiencia para mostrar la fecha debajo del rol. Cada etapa requiere un ID estable, título y viñetas; `period` sólo va en la etapa cuando no corresponde mostrar el período a nivel de empresa. El orden y los IDs deben coincidir entre idiomas.
+3. Agregar ese mismo ID bajo `experience` en ambos diccionarios, con `title`, `subTitle` y `stages`. Cada etapa requiere un ID estable, título y viñetas; `period` sólo va en la etapa cuando no corresponde mostrar el período a nivel de empresa. El orden y los IDs deben coincidir entre idiomas.
 4. Ejecutar `npm run build` y comprobar el render en ambas lenguas. No modificar el JSX del renderizador.
 
 El orden vigente es House of CB, Strongwood, Donatella y 25Watts. `layout: timeline` está reservado para Strongwood; `layout: sections` muestra uno o varios hitos sin línea ni círculos y permite separar el e-commerce de la aplicación móvil dentro de House of CB. Las medidas del catálogo conservan las proporciones declaradas previamente; la imagen original de House of CB mide 2560×1128, mientras el atributo histórico de alto es 1127. Al sustituirla, comprobar el recorte real.

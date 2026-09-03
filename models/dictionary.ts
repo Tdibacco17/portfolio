@@ -4,7 +4,6 @@ import type { ExperienceId } from './experiences';
 export interface ExperienceTranslation {
   title: string;
   subTitle: string;
-  period?: string;
   stages: {
     id: string;
     title: string;

@@ -22,8 +22,7 @@
         "section": "Experiencia",
         "houseofcb": {
             "title": "House of CB",
-            "subTitle": "Desarrollador Full Stack",
-            "period": "may. 2024 - actualidad",
+            "subTitle": "Desarrollador Full Stack · may. 2024 - actualidad",
             "stages": [
                 {
                     "id": "ecommerce-internal-tools",
@@ -96,8 +95,7 @@
         },
         "watts": {
             "title": "25Watts",
-            "subTitle": "Desarrollador Frontend",
-            "period": "oct. 2022 - abr. 2024",
+            "subTitle": "Desarrollador Frontend · oct. 2022 - abr. 2024",
             "stages": [
                 {
                     "id": "client-websites",
