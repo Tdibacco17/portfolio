@@ -33,8 +33,7 @@
                         "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
                         "Desarrollé herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
                         "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
-                        "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y colaboré con el equipo backend en PHP y tareas de staging.",
-                        "Creé y actualicé plantillas de email para comunicaciones del e-commerce.",
+                        "Desarrollé funcionalidades de servidor en Next.js con acceso directo a SQL y plantillas de email para el e-commerce. También colaboré con el equipo backend en PHP y tareas de staging.",
                         "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
                         "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
                     ]
