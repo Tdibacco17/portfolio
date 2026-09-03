@@ -15,7 +15,7 @@
 - Cookie `lang`: Max-Age 2592000 (30 días), Path=/, SameSite=Lax y Secure bajo HTTPS, incluyendo terminación TLS informada por `x-forwarded-proto`.
 - La cookie no es HttpOnly: contiene una preferencia no sensible y el cliente comprueba su persistencia mediante `document.cookie`.
 - Si falta, es inválida o venció, `LanguageHandler` persiste automáticamente el idioma resuelto después de hidratar. Una visita con cookie válida no la renueva.
-- Una elección manual inicia otros 30 días. Tras confirmarse la escritura, `router.refresh()` actualiza contenido, `html[lang]` y el enlace del CV.
+- Una elección manual inicia otros 30 días. Mientras se guarda la cookie, el globo se reemplaza por un indicador de carga sutil; la persistencia automática inicial no lo muestra. Tras confirmarse la escritura, `router.refresh()` actualiza contenido, `html[lang]` y el enlace del CV.
 - La inicialización comparte una única promesa entre efectos de Strict Mode. El botón permanece deshabilitado durante la escritura y el refresh; una referencia evita cambios manuales duplicados.
 - La URL cliente es relativa. `setLocale` comprueba HTTP, cuerpo y cookie persistida; la solicitud tiene un límite de 10 segundos.
 - Los fallos dejan el contenido actual, presentan un mensaje visible con `role=status` y permiten reintentar. No redirigir a not-found, no refrescar en bucle ni anunciar éxito si se bloqueó la cookie.

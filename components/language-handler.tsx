@@ -14,6 +14,7 @@ export default function LanguageHandler({ locale, needsCookie, labels, icon }: {
 }) {
   const router = useRouter();
   const [busy, setBusy] = useState(needsCookie);
+  const [changingLanguage, setChangingLanguage] = useState(false);
   const [error, setError] = useState(false);
   const [changed, setChanged] = useState(false);
   const [refreshing, startTransition] = useTransition();
@@ -35,6 +36,7 @@ export default function LanguageHandler({ locale, needsCookie, labels, icon }: {
     if (changing.current || busy || refreshing) return;
     changing.current = true;
     setBusy(true);
+    setChangingLanguage(true);
     setError(false);
     setChanged(false);
     try {
@@ -45,6 +47,7 @@ export default function LanguageHandler({ locale, needsCookie, labels, icon }: {
     } catch {
       setError(true);
     } finally {
+      setChangingLanguage(false);
       setBusy(false);
       changing.current = false;
     }
@@ -54,8 +57,13 @@ export default function LanguageHandler({ locale, needsCookie, labels, icon }: {
     <div className="absolute right-0 sm:-top-3 -top-12">
       <button type="button" onClick={changeLanguage} disabled={busy || refreshing} aria-busy={busy || refreshing}
         aria-label={labels.switchLabel} aria-describedby={error ? messageId : undefined}
-        className="language-button text-base flex gap-2 items-center uppercase rounded-custom p-3 text-lightPrimary hover:bg-darkPrimaryHover hover:text-white [&_path]:fill-softHover hover:[&_path]:fill-white [@media(hover:none)]:text-white [@media(hover:none)]:bg-darkPrimaryHover [@media(hover:none)]:[&_path]:fill-white cursor-pointer">
-        {locale}{icon}
+        className="language-button text-base flex gap-2 items-center uppercase rounded-custom p-3 text-lightPrimary hover:bg-darkPrimaryHover hover:text-white [&_path]:fill-softHover hover:[&_path]:fill-white [@media(hover:none)]:text-white [@media(hover:none)]:bg-darkPrimaryHover [@media(hover:none)]:[&_path]:fill-white cursor-pointer disabled:cursor-wait">
+        {locale}
+        <span className="flex h-5 w-5 items-center justify-center" aria-hidden="true">
+          {changingLanguage
+            ? <span data-language-loading className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-soft border-t-white motion-reduce:animate-none" />
+            : icon}
+        </span>
       </button>
       <p id={messageId} role="status" aria-atomic="true"
         className={error ? 'absolute top-full right-0 mt-2 w-64 text-sm text-lightPrimary' : 'sr-only'}>
