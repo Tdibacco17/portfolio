@@ -46,7 +46,7 @@
       "variants": {
         "fullstack": {
           "title": "Desarrollador Full Stack",
-          "summary": "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL. Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles. Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción, con foco en simplificar procesos y mejorar la experiencia del usuario.",
+          "summary": "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL. Me apasiona crear soluciones de software que resuelvan problemas reales y aporten valor a quienes las usan. Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción, con foco en simplificar procesos y mejorar la experiencia del usuario.",
           "skills": [
             "<b>Desarrollo:</b> React, Next.js, TypeScript, JavaScript, Node.js, Express.",
             "<b>Datos e interfaces:</b> SQL, PostgreSQL, MySQL, Tailwind CSS, CSS, React Native, Expo.",
@@ -138,7 +138,7 @@
         },
         "frontend": {
           "title": "Desarrollador Frontend",
-          "summary": "Desarrollador Frontend con experiencia desde 2022 en React y Next.js. Desarrollo interfaces responsive y componentes reutilizables, y mejoro el rendimiento de las aplicaciones. Trabajo con diseñadores y clientes para facilitar su uso, con experiencia adicional en backend, móvil y despliegue.",
+          "summary": "Desarrollador Frontend con experiencia profesional desde 2022 en React y Next.js. Me apasiona crear interfaces que resuelvan problemas reales y aporten valor a quienes las usan. Trabajo con diseñadores y clientes para mejorar la experiencia del usuario, con experiencia adicional en backend, desarrollo móvil y despliegue.",
           "skills": [
             "<b>Frontend:</b> React, Next.js, TypeScript, JavaScript, Tailwind CSS, CSS, WordPress.",
             "<b>Backend y móvil:</b> Node.js, Express, SQL, PostgreSQL, MySQL, React Native, Expo.",
@@ -241,7 +241,7 @@
       "variants": {
         "fullstack": {
           "title": "Full Stack Developer",
-          "summary": "Full Stack Developer with professional experience since 2022 in React, Next.js, Node.js and SQL. I build e-commerce platforms, business management systems and mobile applications. I work with teams and clients from requirements definition through production deployment, focusing on simplifying processes and improving the user experience.",
+          "summary": "Full Stack Developer with professional experience since 2022 using React, Next.js, Node.js, and SQL. I am passionate about building software solutions that solve real problems and deliver value to the people who use them. I work with teams and clients from requirements definition through production, focusing on simplifying processes and improving the user experience.",
           "skills": [
             "<b>Development:</b> React, Next.js, TypeScript, JavaScript, Node.js, Express.",
             "<b>Data and UI:</b> SQL, PostgreSQL, MySQL, Tailwind CSS, CSS, React Native, Expo.",
@@ -333,7 +333,7 @@
         },
         "frontend": {
           "title": "Frontend Developer",
-          "summary": "Frontend Developer with experience since 2022 in React and Next.js. I build responsive interfaces and reusable components, and improve application performance. I work with designers and clients to make applications easy to use, with additional experience in backend, mobile development and deployment.",
+          "summary": "Frontend Developer with professional experience since 2022 using React and Next.js. I am passionate about building interfaces that solve real problems and deliver value to the people who use them. I work with designers and clients to improve the user experience, with additional experience in backend, mobile development, and deployment.",
           "skills": [
             "<b>Frontend:</b> React, Next.js, TypeScript, JavaScript, Tailwind CSS, CSS, WordPress.",
             "<b>Backend and mobile:</b> Node.js, Express, SQL, PostgreSQL, MySQL, React Native, Expo.",
