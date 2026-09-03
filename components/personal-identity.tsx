@@ -4,8 +4,11 @@ import type { Dictionary } from '@/models/dictionary';
 import Icon from './icons/icon';
 import IconLink from './icons/icon-link';
 import CopyToClipboard from './copy-to-clipboard';
+import type { Locale } from '@/utils/locale';
 
-export default function PersonalIdentity({ content }: { content: Dictionary['personalIdentity'] }) {
+export default function PersonalIdentity({ content, locale }: { content: Dictionary['personalIdentity']; locale: Locale }) {
+  const cvSrc = data.personalIdentity.cv.pdfSrc[locale];
+
   return (
     <section className="flex flex-col items-center gap-4" aria-labelledby="identity-heading">
       <div className="w-40 min-w-40 min-h-40 h-40 overflow-hidden rounded-full flex justify-center items-center select-none pointer-events-none">
@@ -31,7 +34,7 @@ export default function PersonalIdentity({ content }: { content: Dictionary['per
           successIcon={<Icon iconData={data.personalIdentity.contact.success} fill reduce />} />
       </div>
       <div className="py-4">
-        <a href={data.personalIdentity.cv.pdfSrc} download={data.personalIdentity.cv.pdfSrc.split('/').pop()}
+        <a href={cvSrc} download={cvSrc.split('/').pop()}
           className="text-lightPrimary font-bold underline-offset-2 underline decoration-[#A0A0A0] hover:text-link-hover"
           rel="noopener noreferrer" target="_blank">{content.cv}</a>
       </div>

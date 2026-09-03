@@ -1,4 +1,4 @@
-import { existsSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { basename, dirname, resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import english from '@/models/en.json';
@@ -31,9 +31,22 @@ describe('bilingual content', () => {
     for (const dictionary of [english, spanish]) {
       expect(Object.keys(dictionary.experience).filter(key => key !== 'section').sort()).toEqual([...ids].sort());
       for (const id of ids) {
-        expect(dictionary.experience[id].title.trim()).not.toBe('');
-        expect(dictionary.experience[id].list.length).toBeGreaterThan(0);
+        const experience = dictionary.experience[id];
+        expect(experience.title.trim()).not.toBe('');
+        expect(experience.subTitle.trim()).not.toBe('');
+        expect(experience.stages.length).toBeGreaterThan(0);
+        expect(new Set(experience.stages.map(stage => stage.id)).size).toBe(experience.stages.length);
+        for (const stage of experience.stages) {
+          expect(stage.title.trim()).not.toBe('');
+          expect(stage.period.trim()).not.toBe('');
+          expect(stage.list.length).toBeGreaterThan(0);
+        }
       }
+    }
+
+    for (const id of ids) {
+      expect(english.experience[id].stages.map(stage => stage.id))
+        .toEqual(spanish.experience[id].stages.map(stage => stage.id));
     }
   });
 
@@ -50,5 +63,22 @@ describe('bilingual content', () => {
       expect(img.width).toBeGreaterThan(0);
       expect(img.height).toBeGreaterThan(0);
     }
+  });
+
+  it('uses the confirmed average traffic figure in CV source content', () => {
+    const source = readFileSync(resolve('cv/content.json'), 'utf8');
+    expect(source).not.toMatch(/3[.,]?000|3,000/);
+    expect(source).toContain('promedio de 2.000 usuarios por hora');
+    expect(source).toContain('average of 2,000 users per hour');
+  });
+
+  it('serves the current Full Stack PDFs for both locales', () => {
+    for (const locale of ['ES', 'EN']) {
+      const filename = `TomasDiBacco_CV_FullStack_${locale}.pdf`;
+      expect(readFileSync(resolve('public/assets/pdf', filename)))
+        .toEqual(readFileSync(resolve('output/pdf', filename)));
+    }
+    expect(readFileSync(resolve('public/assets/pdf/TomasDiBacco_Resume.pdf')))
+      .toEqual(readFileSync(resolve('output/pdf/TomasDiBacco_CV_FullStack_ES.pdf')));
   });
 });

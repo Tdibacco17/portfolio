@@ -24,10 +24,10 @@
 
 | Archivo dentro de `components/` | Papel |
 | --- | --- |
-| `personal-identity.tsx` | Foto, identidad, redes, contacto y CV. |
+| `personal-identity.tsx` | Foto, identidad, redes, contacto y selección del CV Full Stack por locale. |
 | `copy-to-clipboard.tsx` | Cliente: botón de copia, estado accesible y temporizador. |
 | `about-me.tsx` | Presentación. |
-| `experience.tsx` | Un solo renderizador para el catálogo completo de experiencias. |
+| `experience.tsx` | Un solo renderizador de experiencias y sus timelines internos. |
 | `stack.tsx` | Recorre tecnologías en el orden de `models/data.json`. |
 | `education.tsx` | Educación, certificado e idiomas. |
 | `language-handler.tsx` | Cliente: persistencia automática, cambio de idioma y errores recuperables. |

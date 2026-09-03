@@ -1,7 +1,7 @@
 {
     "personalIdentity": {
         "name": "Tomás Di Bacco",
-        "roll": "Desarrollador Fullstack",
+        "roll": "Desarrollador Full Stack",
         "contact": {
             "gmail": "Contactame",
             "or": "o",
@@ -14,40 +14,93 @@
     "aboutMe": {
         "section": "Sobre mi",
         "description": {
-            "first": "Desarrollador Full Stack con +3 años de experiencia profesional en Next.js, React y tecnologías modernas del ecosistema web. Actualmente formo parte del equipo de House of CB.",
-            "second": "Apasionado por crear productos de software que optimicen procesos y mejoren la experiencia del usuario, contribuyendo al desarrollo de aplicaciones escalables y de alto rendimiento.",
-            "third": "Con experiencia en trabajo en equipo, metodologías ágiles y diseño de arquitecturas modernas de frontend."
+            "first": "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL.",
+            "second": "Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles. Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción.",
+            "third": "Me interesa crear productos que simplifiquen procesos y ayuden de forma concreta a sus usuarios. También desarrollo soluciones freelance para convertir el trabajo diario de cada negocio en herramientas digitales."
         }
     },
     "experience": {
         "section": "Experiencia",
         "houseofcb": {
             "title": "House of CB",
-            "subTitle": "Desarrollador Full Stack, may. 2024 - actualidad",
-            "list": [
-                "Migré una plataforma de e-commerce de alto tráfico a Next.js 14, logrando una arquitectura más escalable, eficiente y con una mejora del 30% en el rendimiento.",
-                "Reorganicé la estructura del proyecto, desarrollé componentes reutilizables y propuse mejoras en UX y performance para una plataforma que maneja +3000 usuarios por hora.",
-                "Diseñé páginas responsivas con React y Tailwind CSS, colaboré con el equipo backend en PHP y contribuí en plantillas de email y tareas de staging.",
-                "Participé en la toma de decisiones técnicas y en la organización del área de frontend dentro del equipo.",
-                "Actualmente trabajando en desarrollo con React Native y en la construcción de un dashboard para la gestión de la aplicación móvil."
+            "subTitle": "Desarrollador Full Stack",
+            "stages": [
+                {
+                    "id": "fullstack-development",
+                    "title": "E-commerce, herramientas internas y aplicación móvil",
+                    "period": "may. 2024 - actualidad",
+                    "list": [
+                        "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
+                        "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
+                        "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
+                        "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
+                        "Gestiono despliegues y actualizaciones de producción con Docker. Comparto decisiones técnicas y la planificación del frontend, y acompañé la incorporación de nuevos compañeros mediante mentoría.",
+                        "Para un bar, otro negocio de mi contratante, desarrollé de forma independiente una app con React Native y Expo y preparé su publicación en App Store y Google Play.",
+                        "El proyecto incluye un dashboard para gestionar notificaciones, eventos y contenido, seguir usuarios y compras, y administrar un programa de fidelización por puntos."
+                    ]
+                }
             ]
         },
         "strongwood": {
             "title": "Strongwood",
-            "subTitle": "Desarrollador Front End, abr. 2023 — sep. 2023",
-            "list": [
-                "Proyecto freelance para una empresa de fabricación de muebles, desarrollado con Next.js y React.",
-                "Diseñé e implementé toda la arquitectura del sitio web, UI/UX y funcionalidades de frontend.",
-                "Coordiné directamente con el cliente para relevar requerimientos y presentar entregables."
+            "subTitle": "Desarrollador Full Stack · freelance",
+            "stages": [
+                {
+                    "id": "original-website",
+                    "title": "Sitio web original",
+                    "period": "abr. 2023 - sep. 2023",
+                    "list": [
+                        "Desarrollé el sitio de la fábrica de muebles con Next.js y React. Definí la arquitectura, diseñé la UI/UX y acordé requerimientos y entregas con el cliente."
+                    ]
+                },
+                {
+                    "id": "erp-crm",
+                    "title": "Sistema de gestión ERP y CRM",
+                    "period": "nov. 2025 - actualidad",
+                    "list": [
+                        "Digitalicé los procesos de la fábrica en una aplicación multiusuario con trazabilidad de producción y métricas por área para la toma de decisiones.",
+                        "Integré la gestión de clientes y finanzas: gastos previstos y reales, cobros, egresos y sueldos.",
+                        "Definí los requerimientos, diseñé las interfaces y gestioné el despliegue. Continúo incorporando mejoras junto al cliente."
+                    ]
+                },
+                {
+                    "id": "website-redesign",
+                    "title": "Rediseño del sitio web",
+                    "period": "may. 2026 - jun. 2026",
+                    "list": [
+                        "Implementé el rediseño del sitio existente, coordinando con la diseñadora y el cliente desde los requerimientos hasta el despliegue."
+                    ]
+                }
+            ]
+        },
+        "donatella": {
+            "title": "Donatella",
+            "subTitle": "Desarrollador Full Stack · freelance",
+            "stages": [
+                {
+                    "id": "management-system",
+                    "title": "Sistema de facturación y gestión",
+                    "period": "4 meses de desarrollo",
+                    "list": [
+                        "Desarrollé una herramienta interna multiusuario para un local de venta y alquiler de vestidos, integrando facturación con ARCA, gestión de clientes, historial de facturas y envío automático por email.",
+                        "Gestioné el despliegue, la configuración del dominio y el email, y la puesta en marcha con el cliente. Continúo incorporando funcionalidades a pedido."
+                    ]
+                }
             ]
         },
         "watts": {
             "title": "25Watts",
-            "subTitle": "Desarrollador Front End, oct. 2022 — abr. 2024",
-            "list": [
-                "Desarrollé sitios web personalizados para clientes (portfolios, e-commerce, blogs, landing pages) utilizando WordPress, Next.js y React.",
-                "Implementé nuevas funcionalidades e integraciones con APIs, asegurando un correcto funcionamiento y rendimiento.",
-                "Trabajé bajo metodologías ágiles (Scrum) aplicando buenas prácticas en calidad de código y control de versiones."
+            "subTitle": "Desarrollador Frontend",
+            "stages": [
+                {
+                    "id": "client-websites",
+                    "title": "Sitios web para clientes",
+                    "period": "oct. 2022 - abr. 2024",
+                    "list": [
+                        "Desarrollé portfolios, e-commerce, blogs y landing pages con WordPress, React y Next.js.",
+                        "Implementé funcionalidades e integraciones con APIs, cuidando el rendimiento y la calidad del código. Trabajé con Scrum y control de versiones con Git."
+                    ]
+                }
             ]
         }
     },
@@ -57,7 +110,7 @@
     "education": {
         "section": "Educación",
         "title": "Henry Bootcamp",
-        "subTitle": "Desarrollador Full Stack, mar. 2022 — ago. 2024",
+        "subTitle": "Desarrollador Full Stack, mar. 2022 - ago. 2022",
         "firstParagraph": {
             "text": "Más de 700 horas de aprendizaje intensivo en desarrollo Full Stack, aplicando metodologías ágiles (Scrum). Desarrollo de un proyecto individual (SPA) y uno grupal enfocado en e-commerce."
         },

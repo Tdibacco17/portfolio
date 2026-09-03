@@ -4,7 +4,12 @@ import type { ExperienceId } from './experiences';
 export interface ExperienceTranslation {
   title: string;
   subTitle: string;
-  list: string[];
+  stages: {
+    id: string;
+    title: string;
+    period: string;
+    list: string[];
+  }[];
 }
 
 export type Dictionary = Omit<typeof spanish, 'experience'> & {

@@ -5,7 +5,7 @@
 1. Layout y página consumen `getLocale()`, memoizado con `React.cache` sólo dentro de la solicitud.
 2. Una cookie `lang` válida (`en` o `es`) tiene prioridad. Sin ella, se negocia `Accept-Language`: variantes regionales, mayúsculas y calidad `q`; se descartan entradas inválidas y `q=0`.
 3. Sin coincidencia compatible, se usa español. Empates de calidad conservan el orden del header.
-4. El resultado es `{ locale, needsCookie }`. El servidor usa ese locale para el documento y el contenido desde el primer render.
+4. El resultado es `{ locale, needsCookie }`. El servidor usa ese locale para el documento, el contenido y el PDF Full Stack ofrecido para descarga desde el primer render.
 5. `getDictionary(locale)` importa el JSON en servidor y también se memoiza por solicitud. No usar caché global para preferencias de visitantes.
 
 ## Persistencia y cambios
@@ -15,7 +15,7 @@
 - Cookie `lang`: Max-Age 2592000 (30 días), Path=/, SameSite=Lax y Secure bajo HTTPS, incluyendo terminación TLS informada por `x-forwarded-proto`.
 - La cookie no es HttpOnly: contiene una preferencia no sensible y el cliente comprueba su persistencia mediante `document.cookie`.
 - Si falta, es inválida o venció, `LanguageHandler` persiste automáticamente el idioma resuelto después de hidratar. Una visita con cookie válida no la renueva.
-- Una elección manual inicia otros 30 días. Tras confirmarse la escritura, `router.refresh()` actualiza contenido y `html[lang]`.
+- Una elección manual inicia otros 30 días. Tras confirmarse la escritura, `router.refresh()` actualiza contenido, `html[lang]` y el enlace del CV.
 - La inicialización comparte una única promesa entre efectos de Strict Mode. El botón permanece deshabilitado durante la escritura y el refresh; una referencia evita cambios manuales duplicados.
 - La URL cliente es relativa. `setLocale` comprueba HTTP, cuerpo y cookie persistida; la solicitud tiene un límite de 10 segundos.
 - Los fallos dejan el contenido actual, presentan un mensaje visible con `role=status` y permiten reintentar. No redirigir a not-found, no refrescar en bucle ni anunciar éxito si se bloqueó la cookie.

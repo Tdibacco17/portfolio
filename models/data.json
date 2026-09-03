@@ -59,7 +59,10 @@
             }
         },
         "cv": {
-            "pdfSrc": "/assets/pdf/TomasDiBacco_Resume.pdf"
+            "pdfSrc": {
+                "es": "/assets/pdf/TomasDiBacco_CV_FullStack_ES.pdf",
+                "en": "/assets/pdf/TomasDiBacco_CV_FullStack_EN.pdf"
+            }
         }
     },
     "technologies": {

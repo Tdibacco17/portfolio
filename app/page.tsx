@@ -13,7 +13,7 @@ export default async function Home() {
 
   return (
     <>
-      <PersonalIdentity content={dict.personalIdentity} />
+      <PersonalIdentity content={dict.personalIdentity} locale={locale} />
       <AboutMe content={dict.aboutMe} />
       <Experience content={dict.experience} />
       <Stack title={dict.technologies.title} />

@@ -1,7 +1,7 @@
 {
     "personalIdentity": {
         "name": "Tomás Di Bacco",
-        "roll": "Fullstack Developer",
+        "roll": "Full Stack Developer",
         "contact": {
             "gmail": "Contact me",
             "or": "or",
@@ -14,40 +14,93 @@
     "aboutMe": {
         "section": "About me",
         "description": {
-            "first": "Full Stack Developer with 3+ years of professional experience in Next.js, React, and modern web technologies. Currently working as part of the House of CB team.",
-            "second": "Passionate about building software products that optimize processes and enhance user experience, while contributing to scalable and high-performance applications.",
-            "third": "Skilled in team collaboration, Agile practices, and designing modern frontend architectures."
+            "first": "Full Stack Developer with professional experience since 2022 using React, Next.js, Node.js, and SQL.",
+            "second": "I build e-commerce platforms, management systems, and mobile applications. I work with teams and clients from requirement definition through production release.",
+            "third": "I enjoy building products that simplify processes and provide practical value to users. I also develop freelance solutions that turn each business’s daily work into digital tools."
         }
     },
     "experience": {
         "section": "Experience",
         "houseofcb": {
             "title": "House of CB",
-            "subTitle": "Full Stack Developer, May 2024 - Present",
-            "list": [
-                "Migrated a high-traffic e-commerce platform to Next.js 14, achieving a more scalable and efficient architecture with improved performance by 30%.",
-                "Reorganized project structure, developed reusable UI components, and proposed UX and performance enhancements for a platform handling +3000 users per hour.",
-                "Designed responsive pages with React and Tailwind CSS, collaborated with backend team in PHP, and contributed to email templates and staging tasks.",
-                "Participated in technical decision-making and frontend organization within the team.",
-                "Currently working on React Native development and building a dashboard for mobile app management."
+            "subTitle": "Full Stack Developer",
+            "stages": [
+                {
+                    "id": "fullstack-development",
+                    "title": "E-commerce, internal tools, and mobile application",
+                    "period": "May 2024 - Present",
+                    "list": [
+                        "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
+                        "Collaborated with the PHP backend team on email templates and staging. I am currently migrating features to the Next.js server with direct SQL database access to reduce response times.",
+                        "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
+                        "Built web applications and internal tools for multiple departments, automating manual tasks to save staff time.",
+                        "Manage production deployments and updates with Docker. I share frontend technical decisions and planning, and mentored new team members during onboarding.",
+                        "For a bar, another business owned by my contractor, I independently developed a React Native and Expo app and prepared its App Store and Google Play releases.",
+                        "The project includes a dashboard for managing notifications, events, and content, tracking users and purchases, and running a points-based loyalty program."
+                    ]
+                }
             ]
         },
         "strongwood": {
             "title": "Strongwood",
-            "subTitle": "Front End Developer, Apr 2023 - Sep 2023",
-            "list": [
-                "Freelance project for a furniture manufacturing company, developed with Next.js and React.",
-                "Designed and implemented full website architecture, UI/UX, and frontend features.",
-                "Coordinated directly with the client to gather requirements and present deliverables."
+            "subTitle": "Full Stack Developer · freelance",
+            "stages": [
+                {
+                    "id": "original-website",
+                    "title": "Original website",
+                    "period": "Apr 2023 - Sep 2023",
+                    "list": [
+                        "Built the furniture manufacturer’s website with Next.js and React. I defined the architecture, designed the UI/UX, and agreed on requirements and deliveries with the client."
+                    ]
+                },
+                {
+                    "id": "erp-crm",
+                    "title": "ERP and CRM management system",
+                    "period": "Nov 2025 - Present",
+                    "list": [
+                        "Digitized the factory’s processes in a multi-user application with production traceability and metrics by department for decision-making.",
+                        "Integrated customer and financial management, including projected and actual expenses, payments, outflows, and payroll.",
+                        "Defined requirements, designed the interfaces, and managed deployment. I continue to add improvements in collaboration with the client."
+                    ]
+                },
+                {
+                    "id": "website-redesign",
+                    "title": "Website redesign",
+                    "period": "May 2026 - Jun 2026",
+                    "list": [
+                        "Implemented the redesign of the existing website, coordinating with the designer and client from requirements through deployment."
+                    ]
+                }
+            ]
+        },
+        "donatella": {
+            "title": "Donatella",
+            "subTitle": "Full Stack Developer · freelance",
+            "stages": [
+                {
+                    "id": "management-system",
+                    "title": "Billing and management system",
+                    "period": "4 months of development",
+                    "list": [
+                        "Built a multi-user internal tool for a dress sales and rental business, integrating ARCA invoicing, customer management, invoice history, and automatic email delivery.",
+                        "Managed deployment, domain and email configuration, and the client launch. I continue to add features on request."
+                    ]
+                }
             ]
         },
         "watts": {
             "title": "25Watts",
-            "subTitle": "Front End Developer, Oct 2022 - Apr 2024",
-            "list": [
-                "Developed custom websites for clients (portfolios, e-commerce, blogs, landing pages) using WordPress, Next.js, and React.",
-                "Implemented new features and API integrations, ensuring smooth functionality and performance.",
-                "Worked under Agile methodologies (Scrum) and applied best practices in code quality and version control."
+            "subTitle": "Frontend Developer",
+            "stages": [
+                {
+                    "id": "client-websites",
+                    "title": "Client websites",
+                    "period": "Oct 2022 - Apr 2024",
+                    "list": [
+                        "Built portfolios, e-commerce sites, blogs, and landing pages with WordPress, React, and Next.js.",
+                        "Implemented features and API integrations with attention to performance and code quality. Worked with Scrum and Git-based version control."
+                    ]
+                }
             ]
         }
     },
@@ -57,7 +110,7 @@
     "education": {
         "section": "Education",
         "title": "Henry Bootcamp",
-        "subTitle": "Full Stack Developer, Mar 2022 — Aug 2024",
+        "subTitle": "Full Stack Developer, Mar 2022 - Aug 2022",
         "firstParagraph": {
             "text": "More than 700 hours of intensive learning in Full Stack development, applying agile methodologies (Scrum). Development of an individual project (SPA) and a group project focused on e-commerce."
         },

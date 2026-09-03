@@ -8,7 +8,7 @@
     "The bar app and dashboard were built for another business of the person who contracts Tomas for House of CB. Describe this within the current engagement with explicit attribution; do not present it as a House of CB product or a separate freelance contract.",
     "English A2 is confirmed. Written work with a London-based team relies on translation tools; do not describe written or spoken English as fluent.",
     "Henry March-August 2022 is retained from the supplied PDF; the website currently lists a different Henry end year.",
-    "The Next.js 14 migration, 30% performance improvement and 3,000+ users/hour are claims supplied in the original CV (public/assets/pdf/TomasDiBacco_Resume.pdf), retained here rather than independently measured.",
+    "The Next.js 14 migration and 30% performance improvement are claims supplied in the original CV, retained here rather than independently measured. The author corrected traffic volume to an average of 2,000 users per hour.",
     "Editorial review: use short action-led bullets, standard job titles and technologies in context. Omit generic claims and repeated setup details from the printed CV without changing project stages or dates. Tailor relevant, truthful keywords to each job description; do not claim an ATS score or guaranteed selection.",
     "PostgreSQL and MySQL are listed in the published portfolio and models/data.json. They are general skills, not an assertion about the stack of Strongwood ERP or Donatella; those project stacks remain to be confirmed.",
     "The supplied 30% performance claim is preserved; the measurement, baseline and method remain to be clarified with the author.",
@@ -57,7 +57,7 @@
               "name": "House of CB",
               "role": "Desarrollador Full Stack",
               "bullets": [
-                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe más de 3.000 usuarios por hora.",
+                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
                 "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
                 "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
                 "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
@@ -140,7 +140,7 @@
               "role": "Desarrollador Full Stack",
               "bullets": [
                 "Reorganicé el proyecto y creé componentes reutilizables e interfaces responsive con React y Tailwind CSS, incorporando mejoras de UX.",
-                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe más de 3.000 usuarios por hora.",
+                "Migré el e-commerce a Next.js 14 y mejoré su rendimiento un 30%. La plataforma recibe un promedio de 2.000 usuarios por hora.",
                 "Comparto las decisiones técnicas y la planificación del frontend con otro desarrollador. Acompañé la incorporación de nuevos compañeros mediante mentoría.",
                 "Colaboré con el equipo backend en PHP, plantillas de email y staging. Actualmente migro funcionalidades al servidor de Next.js con acceso directo a la base de datos SQL para reducir tiempos de respuesta.",
                 "Desarrollé aplicaciones web y herramientas internas para distintos sectores de la empresa, automatizando tareas manuales para ahorrar tiempo de trabajo.",
@@ -232,7 +232,7 @@
               "name": "House of CB",
               "role": "Full Stack Developer",
               "bullets": [
-                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves over 3,000 users per hour.",
+                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
                 "Collaborated with the PHP backend team on email templates and staging. Currently migrating functionality to the Next.js server with direct SQL database access to reduce response times.",
                 "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
                 "Built web applications and internal tools for different departments, automating manual tasks to save staff time.",
@@ -315,7 +315,7 @@
               "role": "Full Stack Developer",
               "bullets": [
                 "Reorganized the project and built reusable components and responsive interfaces with React and Tailwind CSS, incorporating UX improvements.",
-                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves over 3,000 users per hour.",
+                "Migrated the e-commerce platform to Next.js 14, improving performance by 30%. The platform serves an average of 2,000 users per hour.",
                 "Share frontend technical decisions and planning with another developer. Mentored new team members during onboarding.",
                 "Collaborated with the PHP backend team on email templates and staging. Currently migrating functionality to the Next.js server with direct SQL database access to reduce response times.",
                 "Built web applications and internal tools for different departments, automating manual tasks to save staff time.",
