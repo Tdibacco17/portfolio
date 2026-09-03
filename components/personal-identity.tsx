@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import data from '@/models/data.json';
 import type { Dictionary } from '@/models/dictionary';
-import Icon from './icons/icon';
 import IconLink from './icons/icon-link';
-import CopyToClipboard from './copy-to-clipboard';
 import type { Locale } from '@/utils/locale';
 
 export default function PersonalIdentity({ content, locale }: { content: Dictionary['personalIdentity']; locale: Locale }) {
@@ -22,6 +20,7 @@ export default function PersonalIdentity({ content, locale }: { content: Diction
       <div className="flex items-center gap-4 py-6">
         {Object.values(data.personalIdentity.networks).map(iconData => <IconLink key={iconData.iconId} iconData={iconData} />)}
       </div>
+      {/* Contact actions temporarily hidden for visual review.
       <div className="flex items-center justify-center gap-4 text-base sm:flex-row flex-col w-full sm:w-auto">
         <a target="_blank" rel="noopener noreferrer" href={data.personalIdentity.contact.gmail.link}
           className="cursor-pointer sm:w-44 w-full h-10 text-darkSecondary flex items-center justify-center gap-2 py-2 px-4 rounded-custom border-solid border-[1px] bg-lightPrimary border-lightPrimary font-bold hover:bg-lightPrimary-hover">
@@ -33,6 +32,7 @@ export default function PersonalIdentity({ content, locale }: { content: Diction
           copyIcon={<Icon iconData={data.personalIdentity.contact.copy} fill reduce />}
           successIcon={<Icon iconData={data.personalIdentity.contact.success} fill reduce />} />
       </div>
+      */}
       <div className="py-4">
         <a href={cvSrc} download={cvSrc.split('/').pop()}
           className="text-lightPrimary font-bold underline-offset-2 underline decoration-[#A0A0A0] hover:text-link-hover"

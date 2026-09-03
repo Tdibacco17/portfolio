@@ -13,11 +13,7 @@
     },
     "aboutMe": {
         "section": "Sobre mi",
-        "description": {
-            "first": "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL.",
-            "second": "Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles. Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción.",
-            "third": "Me interesa crear productos que simplifiquen procesos y ayuden de forma concreta a sus usuarios. También desarrollo soluciones freelance para convertir el trabajo diario de cada negocio en herramientas digitales."
-        }
+        "description": "Desarrollador Full Stack con experiencia profesional desde 2022 en React, Next.js, Node.js y SQL. Desarrollo e-commerce, sistemas de gestión y aplicaciones móviles. Trabajo con equipos y clientes desde la definición de necesidades hasta la puesta en producción, con foco en simplificar procesos y mejorar la experiencia del usuario."
     },
     "experience": {
         "section": "Experiencia",
@@ -123,7 +119,6 @@
             "Inglés - (Basico A2)"
         ]
     },
-    "scrollToTop": "Volver arriba",
     "languageHandler": {
         "switchLabel": "ES: cambiar a inglés",
         "error": "No se pudo guardar el idioma. Permití las cookies y volvé a intentarlo.",

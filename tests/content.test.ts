@@ -72,6 +72,21 @@ describe('bilingual content', () => {
     expect(source).toContain('average of 2,000 users per hour');
   });
 
+  it('keeps the website introduction synchronized with the Full Stack CV', () => {
+    const source = JSON.parse(readFileSync(resolve('cv/content.json'), 'utf8'));
+    expect(spanish.aboutMe.description).toBe(source.locales.es.variants.fullstack.summary);
+    expect(english.aboutMe.description).toBe(source.locales.en.variants.fullstack.summary);
+  });
+
+  it('reserves the visual timeline for Strongwood multiple stages', () => {
+    for (const dictionary of [english, spanish]) {
+      const timelineIds = experiences
+        .filter(({ id }) => dictionary.experience[id].stages.length > 1)
+        .map(({ id }) => id);
+      expect(timelineIds).toEqual(['strongwood']);
+    }
+  });
+
   it('serves the current Full Stack PDFs for both locales', () => {
     for (const locale of ['ES', 'EN']) {
       const filename = `TomasDiBacco_CV_FullStack_${locale}.pdf`;

@@ -14,7 +14,7 @@
 | Ruta | Responsabilidad |
 | --- | --- |
 | `app/layout.tsx` | Metadata, fuente, idioma del documento, main y selector de idioma. |
-| `app/page.tsx` | Carga el diccionario y compone identidad, presentación, experiencia, stack, educación y volver arriba. |
+| `app/page.tsx` | Carga el diccionario y compone identidad, presentación, experiencia, stack y educación. |
 | `app/globals.css` | Layout, tokens, hover de tecnologías, foco visible y movimiento reducido. |
 | `app/api/cookie/route.ts` | Valida y guarda la cookie de idioma mediante POST. |
 | `app/not-found.tsx` | Conserva la redirección de rutas inexistentes a la home. |
@@ -32,7 +32,6 @@
 | `education.tsx` | Educación, certificado e idiomas. |
 | `language-handler.tsx` | Cliente: persistencia automática, cambio de idioma y errores recuperables. |
 | `section-heading.tsx` | Encabezado h2 con el posicionamiento visual de los rótulos de sección. |
-| `scroll-to-top.tsx` | Enlace nativo a `#top`, sin JavaScript cliente. |
 
 ## Fuentes de verdad
 

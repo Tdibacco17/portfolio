@@ -8,7 +8,9 @@
 - `models/dictionary.ts`: contrato común; exige traducciones para cada `ExperienceId` derivado del catálogo.
 - `tests/content.test.ts`: compara claves y tipos de ambos idiomas, IDs únicos/correspondientes y assets existentes con capitalización correcta.
 
-Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technologies`, `education`, `languages`, `scrollToTop` y `languageHandler`. Un cambio estructural exige actualizar ambos idiomas. No usar fallbacks silenciosos para ocultar claves ausentes: el build corre las pruebas de contenido.
+Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technologies`, `education`, `languages` y `languageHandler`. Un cambio estructural exige actualizar ambos idiomas. No usar fallbacks silenciosos para ocultar claves ausentes: el build corre las pruebas de contenido.
+
+`aboutMe.description` replica el resumen de la variante Full Stack de `cv/content.json` en cada idioma. La prueba de contenido exige igualdad exacta para evitar que el portfolio y el descargable vuelvan a divergir.
 
 ## Agregar una experiencia
 
@@ -17,7 +19,7 @@ Las ramas traducibles son `personalIdentity`, `aboutMe`, `experience`, `technolo
 3. Agregar ese mismo ID bajo `experience` en ambos diccionarios, con `title`, `subTitle` y `stages`. Cada etapa requiere un ID estable, título, período y viñetas; el orden y los IDs deben coincidir entre idiomas.
 4. Ejecutar `npm run build` y comprobar el render en ambas lenguas. No modificar el JSX del renderizador.
 
-El orden vigente es House of CB, Strongwood, Donatella y 25Watts. Cada bloque renderiza un timeline vertical propio; una empresa puede tener uno o varios hitos. Las medidas del catálogo conservan las proporciones declaradas previamente; la imagen original de House of CB mide 2560×1128, mientras el atributo histórico de alto es 1127. Al sustituirla, comprobar el recorte real.
+El orden vigente es House of CB, Strongwood, Donatella y 25Watts. Los bloques con varias etapas renderizan un timeline vertical; los que tienen un solo hito muestran el mismo título, período y viñetas sin línea ni círculo. Las medidas del catálogo conservan las proporciones declaradas previamente; la imagen original de House of CB mide 2560×1128, mientras el atributo histórico de alto es 1127. Al sustituirla, comprobar el recorte real.
 
 ## Imágenes y CV
 

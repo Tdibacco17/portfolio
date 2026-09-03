@@ -29,5 +29,4 @@ Sólo `language-handler.tsx` y `copy-to-clipboard.tsx` declaran `'use client'`. 
 - Táctil: `(hover: none)` conserva la apariencia activa del selector de idioma; las tecnologías mantienen sus colores de reposo.
 - `IconLink` usa `otherLink ?? link`: conserva el destino WhatsApp sin depender de un ID numérico ni de user-agent.
 - Copiar email: botón nativo, aviso de éxito/error, bloqueo de escrituras simultáneas y limpieza del temporizador al desmontar.
-- Volver arriba: enlace a main con `id=top` y `tabIndex=-1`. `scroll-margin-top` compensa el margen inicial, de modo que el destino sea el inicio del documento y reciba foco.
 - `prefers-reduced-motion` desactiva desplazamiento suave y transiciones de tecnologías.
