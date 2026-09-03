@@ -22,7 +22,8 @@
         "section": "Experience",
         "houseofcb": {
             "title": "House of CB",
-            "subTitle": "Full Stack Developer | May 2024 - Present",
+            "subTitle": "Full Stack Developer",
+            "period": "May 2024 - Present",
             "stages": [
                 {
                     "id": "ecommerce-internal-tools",
@@ -95,7 +96,8 @@
         },
         "watts": {
             "title": "25Watts",
-            "subTitle": "Frontend Developer | Oct 2022 - Apr 2024",
+            "subTitle": "Frontend Developer",
+            "period": "Oct 2022 - Apr 2024",
             "stages": [
                 {
                     "id": "client-websites",

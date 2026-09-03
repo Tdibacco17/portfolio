@@ -32,9 +32,11 @@ export default function Experience({ content }: { content: Dictionary['experienc
             <div>
               <h3 id={`experience-${id}`} className="text-2xl">{content[id].title}</h3>
               <p className="text-base text-lightPrimary">{content[id].subTitle}</p>
+              {content[id].period ? <p className="text-sm text-lightPrimary">{content[id].period}</p> : null}
             </div>
             {layout === 'timeline' ? (
-              <ol className="flex flex-col list-none" aria-label={`${content[id].title}: ${content[id].subTitle}`}>
+              <ol className="flex flex-col list-none"
+                aria-label={`${content[id].title}: ${content[id].subTitle}${content[id].period ? `, ${content[id].period}` : ''}`}>
                 {content[id].stages.map(stage => (
                   <li key={stage.id}
                     className="relative pb-10 pl-8 before:absolute before:bottom-0 before:left-[5px] before:top-3 before:w-px before:bg-soft last:pb-0 last:before:hidden">
