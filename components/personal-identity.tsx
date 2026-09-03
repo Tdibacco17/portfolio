@@ -17,8 +17,14 @@ export default function PersonalIdentity({ content, locale }: { content: Diction
         <h1 id="identity-heading" className="text-2xl">{content.name}</h1>
         <p className="text-lightPrimary text-xl">{content.roll}</p>
       </div>
-      <div className="flex items-center gap-4 py-6">
-        {Object.values(data.personalIdentity.networks).map(iconData => <IconLink key={iconData.iconId} iconData={iconData} />)}
+      <div className="flex flex-col items-center gap-3 py-4">
+        <div className="flex items-center gap-4">
+          {Object.values(data.personalIdentity.networks).map(iconData => <IconLink key={iconData.iconId} iconData={iconData} />)}
+        </div>
+        <a href={data.personalIdentity.contact.gmail.link}
+          className="text-lightPrimary underline decoration-[#A0A0A0] underline-offset-2 hover:text-link-hover">
+          {data.personalIdentity.contact.copy.link}
+        </a>
       </div>
       {/* Contact actions temporarily hidden for visual review.
       <div className="flex items-center justify-center gap-4 text-base sm:flex-row flex-col w-full sm:w-auto">
@@ -33,11 +39,7 @@ export default function PersonalIdentity({ content, locale }: { content: Diction
           successIcon={<Icon iconData={data.personalIdentity.contact.success} fill reduce />} />
       </div>
       */}
-      <div className="flex flex-col items-center gap-3 py-4">
-        <a href={data.personalIdentity.contact.gmail.link}
-          className="text-lightPrimary underline decoration-[#A0A0A0] underline-offset-2 hover:text-link-hover">
-          {data.personalIdentity.contact.copy.link}
-        </a>
+      <div className="py-4">
         <a href={cvSrc} download={cvSrc.split('/').pop()}
           className="text-lightPrimary font-bold underline-offset-2 underline decoration-[#A0A0A0] hover:text-link-hover"
           rel="noopener noreferrer" target="_blank">{content.cv}</a>
