@@ -55,7 +55,7 @@ No hay API de user-agent ni variable `BASE_PATH`: los estados hover se resuelven
 
 - `next.config.mjs`: tamaños responsivos y calidades 75/100; mantiene AVIF/WebP. Usa el TTL predeterminado de Next.
 - `vitest.config.ts`: pruebas Node, alias de la raíz e inclusión de `tests/**/*.test.ts`.
-- `npm run dev` / `npm run start`: desarrollo / producción.
+- `npm run dev -- -p 4000` / `npm run start -- -p 4000`: desarrollo / producción local. Usar siempre el puerto 4000 para este repositorio; 3000 y 3001 están reservados para otros trabajos del usuario.
 - `npm run test`: negociación, endpoint, persistencia cliente y contratos de contenido.
 - `npm run lint` / `npm run typecheck`: ESLint y TypeScript.
 - `npm run build`: ejecuta las pruebas antes del build; detecta traducciones y assets faltantes antes de publicar.
