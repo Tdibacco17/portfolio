@@ -3,8 +3,8 @@
 ## Identidad y convenciones
 
 - Paquete `portfolio`, remoto `Tdibacco17/portfolio`: portfolio personal de una sola página, sin base de datos.
-- Next.js 16.3.4 (App Router), React 19.2.8, TypeScript 6 estricto, Tailwind CSS 4.3.3 y Geist.
-- Node.js mínimo 22.12.0, requerido por Vite, dependencia de Vitest. El alias `@/*` apunta a la raíz.
+- Next.js 16.4.2 (App Router), React 19.3.1, TypeScript 6 estricto, Tailwind CSS 4.3.3 y Geist.
+- Node.js 24 LTS: `engines.node: 24.x` en `package.json` selecciona esa rama en Vercel; `.nvmrc` indica 24 para desarrollo. Mantener `@types/node` en la misma major. El alias `@/*` apunta a la raíz.
 - Componentes directamente en `components/`, archivos kebab-case y funciones React PascalCase. No crear una carpeta por componente.
 - `components/icons/` agrupa `icon.tsx`, `icon-link.tsx` y `tech-icon.tsx`; el icono básico no importa enlaces ni datos del portfolio.
 - Concentrar la documentación de mantenimiento en esta skill. Entregar informes de tareas y mediciones en la conversación, sin agregar archivos Markdown al repositorio salvo pedido explícito.
@@ -53,6 +53,7 @@ No hay API de user-agent ni variable `BASE_PATH`: los estados hover se resuelven
 
 ## Configuración y verificación
 
+- npm y `package-lock.json` son la fuente de instalación reproducible: `npm ci` con Node 24. La combinación `eslint-config-next` 16.4.2 / ESLint 10 funciona, aunque los peers pendientes de algunos plugins generan advertencias; no usar `--strict-peer-deps` con esta combinación. TypeScript permanece en `~6.0.3` por el rango soportado por `typescript-eslint`.
 - `next.config.mjs`: tamaños responsivos y calidades 75/100; mantiene AVIF/WebP. Usa el TTL predeterminado de Next.
 - `vitest.config.ts`: pruebas Node, alias de la raíz e inclusión de `tests/**/*.test.ts`.
 - `npm run dev -- -p 4000` / `npm run start -- -p 4000`: desarrollo / producción local. Usar siempre el puerto 4000 para este repositorio; 3000 y 3001 están reservados para otros trabajos del usuario.

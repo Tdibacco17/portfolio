@@ -58,10 +58,10 @@ Consulta estas lecciones antes de modificar las áreas relacionadas. Registra s�
 
 ### Alinea TypeScript y ESLint con `eslint-config-next`
 
-- Fecha: 2026-09-02.
-- Contexto: actualización integral a Next.js 16, React 19 y Tailwind CSS 4.
-- Evidencia: la prueba con TypeScript 7 y ESLint 10 hizo fallar `npm run lint` por el rango soportado por `typescript-eslint`; TypeScript 6.0.3 y ESLint 9.39.5 pasaron lint, typecheck y build con `eslint-config-next` 16.3.4.
-- Regla reusable: antes de subir TypeScript o ESLint a la última versión absoluta, comprobar los peers y rangos transitivos de `eslint-config-next` y validar la combinación ejecutando el lint real del repositorio.
+- Fecha: 2026-10-16.
+- Contexto: actualización de dependencias con Node 24 y Next.js 16.4.2.
+- Evidencia: la combinación anterior con `eslint-config-next` 16.3.4 falló al subir TypeScript 7 y ESLint 10. La documentación incluida en Next 16.4.2 declara compatibilidad con ESLint 10 y el paquete adapta las reglas de React e importación. Con Node 24.22.0, `npm ci` y el lint real pasan con ESLint 10.13.0 y TypeScript 6.0.3. Algunos plugins aún declaran peers hasta ESLint 9: npm emite advertencias y `--strict-peer-deps` falla con `ERESOLVE`. `typescript-eslint` 8.71.2 sigue limitado a TypeScript `>=4.8.4 <6.1.0`.
+- Regla reusable: comprobar la documentación de la versión instalada y los rangos transitivos antes de conservar una restricción histórica. Validar instalación reproducible y lint real. Para ESLint 10 con Next 16.4, usar npm normalmente y aceptar las advertencias documentadas de plugins; no agregar `--force` ni `--legacy-peer-deps`. Mantener TypeScript 6 mientras su parser no soporte TypeScript 7.
 
 ### Los estilos globales de Tailwind 4 deben declarar su capa
 
